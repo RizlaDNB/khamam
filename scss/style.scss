@@ -1,0 +1,11 @@
+@import 'preloader.scss';
+@import 'header.scss';
+@import 'landing.scss';
+
+
+.container {
+    max-width: 1190px;
+
+    margin: 0 auto;
+    padding: 0 15px;
+}
