@@ -1,0 +1,79 @@
+@import 'mixins.scss';
+
+// VARS
+$fontColorMain: #101010;
+$fontColorAlt: #F5723C;
+
+.presentation {
+    position: relative;
+
+    min-height: 700px;
+
+    padding-left: 200px;
+
+    background-color: #f1f1f1;
+
+    &-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        &__slide-name {
+            width: 300px;
+            height: 91px;
+
+            position: absolute;
+            z-index: 2;
+
+            bottom: 72px;
+            left: 380px;
+
+            background-color: #fefefe;
+        }
+
+        &__pattern {
+            width: 380px;
+            height: 350px;
+
+            background-color: #fefefe;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            z-index: 2;
+
+            bottom: -50%;
+            right: 0;
+
+            transform: translateY(-50%);
+
+        }
+    }
+
+    &-slider {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+
+.slide {
+
+    &__image {
+        width: 100%;
+        height: 700px;
+
+        img {
+            max-width: 1780px;
+            height: 700px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

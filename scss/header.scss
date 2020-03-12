@@ -1,18 +1,118 @@
+@import 'mixins.scss';
+
+// VARS
+$fontColorMain: #101010;
+$fontColorAlt: #F5723C;
+
+
 .header {
-    position: fixed;
-    left: 0;
-    top: 0;
+    background: url(../img/bg.marble_white_1.png) center no-repeat;
+    overflow: hidden;
+    position: relative;
 
-    width: 200px;
-    height: 100%;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    padding-bottom: 120px;
 
-    background-color: #e7e7e7;
+    &-top {
+        display: flex;
+        justify-content: center;
 
-    &-button {}
+        margin-bottom: 180px;
 
-    &-nav {
-        &-list {
-            &__item {}
+        &__logo {
+            text-decoration: none;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &-phone {
+        position: absolute;
+        right: 60px;
+        top: 70px;
+
+        &::before {
+            content: '';
+            position: absolute;
+
+            top: 50%;
+            left: -75px;
+            transform: translateY(-25px);
+
+            width: 50px;
+            height: 50px;
+
+            background: url(../img/phone_icon.png) center no-repeat;
+            border: 1px solid #F5723C;
+        }
+
+        a {
+            display: block;
+            color: $fontColorMain;
+            @include fontGilroyMedium();
+            font-size: 22px;
+            line-height: 22px;
+            text-decoration: none;
+        }
+
+        span {
+            color: #6C7072;
+            @include fontGilroyMedium();
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    &-middle {
+        margin-bottom: 175px;
+        
+        h1 {
+            margin: 0;
+
+            @include fontGilroyMedium();
+            font-size: 50px;
+            line-height: 73px;
+            color: $fontColorMain;
+            letter-spacing: -0.8px;
+            
+            a {
+                color: $fontColorAlt;
+            }
+        }
+    }
+
+    &-bottom {
+        margin-left: 10px;
+
+        a {
+            display: flex;
+            text-decoration: none;
+    
+            span {
+                margin-top: 27px;
+                margin-right: 35px;
+    
+                position: relative;
+    
+                @include fontGilroyBold();
+                font-size: 22px;
+                line-height: 39px;
+                color: $fontColorMain;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 35px;
+                    left: 0;
+    
+                    height: 2px;
+                    width: 100%;
+    
+                    background-color: $fontColorAlt;
+                }
+            }
         }
     }
 }

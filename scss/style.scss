@@ -1,11 +1,49 @@
 @import 'preloader.scss';
+@import 'fonts.scss';
+@import 'scroll-indicator.scss';
 @import 'header.scss';
 @import 'landing.scss';
+@import 'presentation.scss';
+@import 'mixins.scss';
+
+
+
+// VARS
+$fontColorMain: #101010;
+$fontColorAlt: #F5723C;
+
 
 
 .container {
-    max-width: 1190px;
+    max-width: 1160px;
 
     margin: 0 auto;
     padding: 0 15px;
+}
+
+body {
+    position: relative;
+
+    // cursor: url("../img/cursor/cursor.png"), default;
+}
+
+.nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    
+    width: 200px;
+    height: 100%;
+    background-color: #e7e7e7;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &-button {}
+    p {}
+    &-list {
+        &__item {}
+    }
 }

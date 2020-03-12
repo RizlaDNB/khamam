@@ -11,54 +11,87 @@
 <body>
     
     <!-- PRELOADER -->
-    <div class="preloader-wrapper">
+    <!-- <div class="preloader-wrapper">
         <div class="preloader">
 
         </div>
+    </div> -->
+
+    <div class="scroll-indicator">
+        <div class="scroll-indicator__progress" id="progressBar"></div>
     </div>
 
-
-
+    <!-- HEADER -->
     <header class="header">
-        <div class="header-button"></div>
-        <nav class="header-nav">
+        <nav class="nav">
+            <button class="nav-button"></button>
             <p>главная</p>
-            <ul class="header-nav-list">
-                <li class="header-nav-list__item selected-nav-item"><a href="#">01</a></li>
-                <li class="header-nav-list__item"><a href="#">02</a></li>
-                <li class="header-nav-list__item"><a href="#">03</a></li>
-                <li class="header-nav-list__item"><a href="#">04</a></li>
-                <li class="header-nav-list__item"><a href="#">05</a></li>
+            <ul class="nav-list">
+                <li class="nav-list__item selected-nav-item"><a href="#">01</a></li>
+                <li class="nav-list__item"><a href="#">02</a></li>
+                <li class="nav-list__item"><a href="#">03</a></li>
+                <li class="nav-list__item"><a href="#">04</a></li>
+                <li class="nav-list__item"><a href="#">05</a></li>
             </ul>
         </nav>
+
+
+
+        <div class="container">
+            <div class="header-top">
+                <a href="#" class="header-top__logo">
+                    <img src="img/main-logo.png" alt="Natura Techno. Создание частных спа пространств" aria-label="Natura Techno. Создание частных спа пространств">
+                </a>
+            </div>
+
+            <div class="header-phone">
+                <a href="tel:+74950666661">+7 495 066-66-61</a>
+                <span>Viber/WhatsApp</span>
+            </div>
+
+            <div class="header-middle">
+                <h1 class="header-middle__title">Строим <a href="#">хамамы</a> и <a href="#">сауны</a> премиального качества. Соблюдаем сроки и строго следуем дизайн-проекту, а также гарантируем качество.</h1>
+            </div>
+
+            <div class="header-bottom">
+                <a href="#">
+                    <span>Узнать больше</span>
+                    <div class="header-bottom__arrow">
+                        <svg width="105" height="127" viewBox="0 0 105 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M102.706 75.3614L103.416 74.6532L102.706 73.945L93.6017 64.8688L92.8956 64.165L92.1896 64.8688L59.9376 97.0211L59.9376 2V1L58.9376 1L46.0624 1L45.0624 1V2L45.0624 97.0211L12.8104 64.8688L12.1044 64.165L11.3983 64.8688L2.29399 73.945L1.58359 74.6532L2.29399 75.3614L51.794 124.708L52.5 125.412L53.206 124.708L102.706 75.3614Z" stroke="#F5723C" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
     </header>
 
 
 
-    <section class="landing">
-        <div class="container">
-            <div class="landing-top">
-                <div class="landing-top__logo">
-                    <img src="img/main-logo.png" alt="Natura Techno" aria-label="Natura Techno. Создание частных спа пространств">
+    <!-- Presentation -->
+    <section class="presentation">
+
+        <nav class="nav">
+        </nav>
+
+        <div class="presentation-content">
+            <div class="presentation-content__slide-name"></div>
+            <div class="presentation-content__pattern">
+                <img src="img/pattern-slider.svg" alt="">
+            </div>
+        </div>
+        <div class="presentation-slider">
+            <div class="slide">
+                <div class="slide__image">
+                    <img src="img/sauna.png" alt="">
                 </div>
             </div>
-
-            <div class="landing-middle">
-                <h1 class="landing-middle__title">Строим <a href="#">хамамы</a> и <a href="#">сауны</a> премиального качества. Соблюдаем сроки и строго следуем дизайн-проекту, а также гарантируем качество.</h1>
-            </div>
-
-            <div class="landing-bottom">
-                <span>Узнать больше</span>
-                <div class="landing-bottom__arrow"></div>
-            </div>
-        </div>
-            
-        <div class="landing-phone">
-            <div class="landing-phone__icon"></div>
-            <a href="tel:+74950666661">+7 495 066-66-61</a>
-            <span>Viber/WhatsApp</span>
         </div>
     </section>
+
+
+
+    <script src="js/scroll-progress-bar.js"></script>
 
 </body>
 </html>
