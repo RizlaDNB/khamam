@@ -148,6 +148,242 @@
     object-fit: cover;
     object-position: center; }
 
+.features {
+  background: url(../img/bg.marble_white_1.png) bottom no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-left: 200px;
+  height: 3331px; }
+  .features__facts {
+    padding-right: 200px; }
+    .features__facts .facts {
+      position: relative;
+      min-height: 958px; }
+      .features__facts .facts__header {
+        position: relative;
+        top: 235px;
+        left: -90px; }
+        .features__facts .facts__header h1 {
+          transform: rotate(-90deg);
+          display: inline-block;
+          margin: 0;
+          font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 80px;
+          line-height: 75px;
+          color: #F5723C; }
+          .features__facts .facts__header h1 span {
+            color: #101010; }
+      .features__facts .facts__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .features__facts .facts__card .card__title {
+          font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 55px;
+          line-height: 100%; }
+        .features__facts .facts__card .card__subtitle {
+          font-family: 'Gilroy Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 22px;
+          line-height: 24px; }
+      .features__facts .facts .card--objects {
+        position: absolute;
+        top: 130px;
+        left: 604px;
+        z-index: 1;
+        width: 460px;
+        height: 296px;
+        border: 2px solid #F5723C; }
+        .features__facts .facts .card--objects span {
+          color: #101010; }
+      .features__facts .facts .card--market {
+        position: absolute;
+        top: 371px;
+        left: 504px;
+        z-index: 2;
+        width: 400px;
+        height: 245px;
+        background: url(../img/marble_black_small.jpg) center no-repeat;
+        color: #ffffff; }
+        .features__facts .facts .card--market h2 {
+          margin: 0; }
+      .features__facts .facts .card--build {
+        position: absolute;
+        top: 576px;
+        left: 364px;
+        z-index: 3;
+        width: 400px;
+        height: 270px;
+        background-color: #ffffff;
+        box-shadow: 20px 10px 65px rgba(0, 0, 0, 0.1); }
+        .features__facts .facts .card--build h2 {
+          margin: 0;
+          color: #F5723C; }
+        .features__facts .facts .card--build span {
+          color: #101010; }
+      .features__facts .facts__deco-ring {
+        position: absolute;
+        top: 770px;
+        left: 286px;
+        z-index: 2;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #F5723C;
+        border-radius: 50%; }
+  .features__time {
+    padding-top: 50px;
+    padding-right: 200px; }
+    .features__time .time {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .features__time .time__header {
+        max-width: 50%; }
+        .features__time .time__header h1 {
+          margin: 0;
+          font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 66px;
+          line-height: 70px;
+          color: #101010; }
+      .features__time .time__content {
+        max-width: 48%;
+        border-top: 4px solid #F5723C; }
+        .features__time .time__content h2 {
+          margin-top: 65px;
+          font-family: 'Gilroy Bold','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 22px;
+          line-height: 30px;
+          color: #101010;
+          letter-spacing: -1px; }
+          .features__time .time__content h2 a {
+            color: #F5723C; }
+        .features__time .time__content p {
+          margin: 0;
+          font-family: 'Gilroy Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 20px;
+          line-height: 28px;
+          color: #101010;
+          letter-spacing: -1px; }
+      .features__time .time__nav-arrow {
+        flex-basis: 100%;
+        margin-top: 70px;
+        display: flex;
+        justify-content: flex-end; }
+        .features__time .time__nav-arrow svg {
+          margin-right: 100px; }
+  .features__services .services {
+    position: relative; }
+    .features__services .services__header h1 {
+      position: relative;
+      top: 55px;
+      right: 150px;
+      display: inline-block;
+      margin: 0;
+      max-width: 100%;
+      transform: rotate(-90deg);
+      font-size: 80px;
+      line-height: 75px;
+      font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #101010; }
+      .features__services .services__header h1 span {
+        color: #F5723C; }
+    .features__services .services__deco-pattern {
+      position: absolute;
+      top: -40px;
+      left: 440px;
+      z-index: 0;
+      width: 380px;
+      height: 350px;
+      background-color: #fefefe;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .features__services .services__deco-pattern img {
+        transform: rotate(180deg); }
+    .features__services .services__item {
+      position: relative; }
+      .features__services .services__item a {
+        text-decoration: none;
+        position: absolute;
+        width: 100%;
+        height: 100%; }
+        .features__services .services__item a .service__header {
+          border-top: 1px solid #ffffff;
+          border-bottom: 1px solid #ffffff;
+          display: inline-block; }
+          .features__services .services__item a .service__header h2 {
+            display: inline-block;
+            max-width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 36px;
+            line-height: 39px;
+            color: #ffffff; }
+        .features__services .services__item a .service__number span {
+          font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 100px;
+          line-height: 117px;
+          color: #ffffff; }
+        .features__services .services__item a .service__link {
+          display: flex;
+          align-items: center; }
+          .features__services .services__item a .service__link span {
+            font-family: 'Gilroy Bold','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 22px;
+            line-height: 39px;
+            color: #ffffff;
+            position: relative; }
+            .features__services .services__item a .service__link span::before {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 2px;
+              width: 100%;
+              background-color: #ffffff; }
+          .features__services .services__item a .service__link svg {
+            transform: rotate(-90deg);
+            margin-left: 35px; }
+            .features__services .services__item a .service__link svg path {
+              stroke: #ffffff;
+              fill: #ffffff; }
+    .features__services .services .service--hammam {
+      width: 1140px;
+      min-height: 600px;
+      background: url(../img/services/hammam.jpg) center no-repeat;
+      position: absolute;
+      top: 90px;
+      right: -16px;
+      z-index: 2; }
+      .features__services .services .service--hammam a {
+        padding-left: 100px;
+        padding-top: 70px; }
+        .features__services .services .service--hammam a .service__number {
+          margin-top: 20px; }
+        .features__services .services .service--hammam a .service__link {
+          position: absolute;
+          top: 220px;
+          right: 185px; }
+    .features__services .services .service--sauna {
+      width: 1080px;
+      min-height: 600px;
+      background: url(../img/services/sauna.jpg) center no-repeat;
+      box-shadow: 0px 4px 90px rgba(0, 0, 0, 0.36);
+      position: absolute;
+      left: 0;
+      top: 585px;
+      z-index: 3; }
+      .features__services .services .service--sauna a {
+        padding-left: 100px;
+        padding-top: 70px; }
+        .features__services .services .service--sauna a .service__number {
+          margin-top: 20px; }
+        .features__services .services .service--sauna a .service__link {
+          position: absolute;
+          top: 220px;
+          right: 185px; }
+
 .container {
   max-width: 1160px;
   margin: 0 auto;
