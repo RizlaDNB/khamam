@@ -1,0 +1,110 @@
+@import 'mixins.scss';
+
+// VARS
+$fontColorMain: #101010;
+$fontColorAlt: #F5723C;
+
+.faq {
+    background: url(../img/bg.marble_white.jpg) center no-repeat;
+
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 100px;
+    padding-top: 140px;
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__header {
+        h1 {
+            margin: 0;
+
+            @include fontGilroyMedium();
+            font-size: 66px;
+            line-height: 70px;
+            color: $fontColorMain;
+
+            span {
+                color: $fontColorAlt;
+            }
+        }
+    }
+
+    &__content {
+        flex-basis: 65%;
+
+        margin-top: 25px;
+
+        .question-list {
+
+            &__item {
+                display: block;
+                box-sizing: border-box;
+
+                background-color: #ffffff;
+                box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.07);
+                
+                // margin-bottom: 20px;
+
+                padding-left: 40px;
+                padding-right: 28px;
+
+                cursor: pointer;
+
+                &-input {
+                    visibility: hidden;
+
+                    &:checked + .question-list__item-header + span,
+                    &:checked + .question-list__item-content + p {
+                        color: #ffffff;
+                    }
+                }
+
+                &-header {
+                    margin: 0;
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span {
+                        @include fontGilroyMedium();
+                        font-size: 20px;
+                        line-height: 26px;
+                        color: $fontColorMain;
+                        font-weight: normal;
+                    }
+
+                    svg {
+                        path {
+                            fill: #f5723c;
+                        }
+                    }
+                }
+
+                &-content {
+                    box-sizing: border-box;
+
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+
+                    padding-right: 150px;
+
+                    max-height: 0;
+                    overflow: hidden;
+
+                    p {
+                        margin: 0;
+
+                        @include fontGilroyRegular();
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -5,14 +5,12 @@ $fontColorMain: #101010;
 $fontColorAlt: #F5723C;
 
 .features {
-    background: url(../img/bg.marble_white_1.png) bottom no-repeat;
+    background: url(../img/bg.marble_white.jpg) bottom no-repeat;
     background-size: cover;
 
     position: relative;
 
     padding-left: 200px;
-
-    height: 3331px;
 
     &__facts {
         padding-right: 200px;
@@ -198,6 +196,8 @@ $fontColorAlt: #F5723C;
     }
 
     &__services {
+        min-height: 1270px;
+
         .services {
             position: relative;
 
@@ -223,26 +223,35 @@ $fontColorAlt: #F5723C;
                     }
                 }
             }
-            &__deco-pattern {
-                position: absolute;
-                top: -40px;
-                left: 440px;
-                z-index: 0;
 
-                width: 380px;
-                height: 350px;
-                background-color: #fefefe;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                img {
-                    transform: rotate(180deg);
-                }
-            }
             &__item {
                 position: relative;
+                
+                filter: grayscale(100%);
+
+                transition: all 0.5s ease;
+
+                &:hover {
+                    filter: grayscale(0%);
+                    transition: all 0.5s ease;
+
+                    a {
+                        .service__link {
+                            span {
+                                margin-right: 10px;
+                                transition: all 0.5s ease;
+                            }
+
+                            svg {
+                                path {
+                                    stroke: $fontColorAlt;
+                                    fill: $fontColorAlt;
+                                    transition: all 0.5s ease;
+                                }
+                            }
+                        }
+                    }
+                }
 
                 a {
                     text-decoration: none;
@@ -268,6 +277,7 @@ $fontColorAlt: #F5723C;
                             font-size: 36px;
                             line-height: 39px;
                             color: #ffffff;
+                            letter-spacing: -1px;
                         }
                     }
 
@@ -290,6 +300,7 @@ $fontColorAlt: #F5723C;
                             line-height: 39px;
                             color: #ffffff;
                             position: relative;
+                            transition: all 0.5s ease;
 
                             &::before {
                                 content: '';
@@ -311,6 +322,7 @@ $fontColorAlt: #F5723C;
                             path {
                                 stroke: #ffffff;
                                 fill: #ffffff;
+                                transition: all 0.5s ease;
                             }
                         }
                     }
@@ -325,24 +337,28 @@ $fontColorAlt: #F5723C;
 
                 position: absolute;
                 top: 90px;
-                right: -16px;
+                right: 0;
                 z-index: 2;
 
                 a {
-                    padding-left: 100px;
-                    padding-top: 70px;
+                    .service__header {
+                        margin-top: 70px;
+                        margin-left: 115px;
+                    }
 
                     .service__number {
-                        margin-top: 20px;
+                        margin-top: 25px;
+                        margin-left: 115px;
                     }
 
                     .service__link {
                         position: absolute;
                         top: 220px;
-                        right: 185px;
+                        right: 70px;
                     }
                 }
             }
+
             .service--sauna {
                 width: 1080px;
                 min-height: 600px;
@@ -355,17 +371,153 @@ $fontColorAlt: #F5723C;
                 z-index: 3;
 
                 a {
-                    padding-left: 100px;
-                    padding-top: 70px;
+                    .service__header {
+                        margin-top: 90px;
+                        margin-left: 175px;
+                    }
 
                     .service__number {
-                        margin-top: 20px;
+                        margin-top: 255px;
+                        margin-left: 175px;
                     }
 
                     .service__link {
                         position: absolute;
-                        top: 220px;
-                        right: 185px;
+                        top: 430px;
+                        right: 110px;
+                    }
+                }
+            }
+
+
+
+            &__deco-pattern {
+                position: absolute;
+                top: -40px;
+                left: 440px;
+                z-index: 0;
+
+                width: 380px;
+                height: 350px;
+                background-color: #fefefe;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    transform: rotate(180deg);
+                }
+            }
+            &__deco-triangle {
+                position: absolute;
+                top: 835px;
+                left: 1019px;
+                z-index: 0;
+
+
+                div {
+                    position: absolute;
+                    top: 270px;
+                    left: -20px;
+                    z-index: 1;
+
+                    width: 160px;
+                    height: 160px;
+                    border-radius: 50%;
+
+                    background-color: #ffffff;
+                    box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.07);
+                }
+            }
+        }
+    }
+    
+    &__projects {
+        padding-top: 100px;
+        padding-bottom: 145px;
+
+        padding-right: 200px;
+
+        .projects {
+            display: flex;
+            justify-content: space-between;
+
+            &__header {
+                max-width: 50%;
+
+                h1 {
+                    margin: 0;
+
+                    @include fontGilroyMedium();
+                    font-size: 58px;
+                    line-height: 60px;
+                    color: $fontColorMain;
+
+                    span {
+                        color: $fontColorAlt;
+                    }
+                }
+            }
+            &__content {
+                max-width: 50%;
+
+                padding-top: 65px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 15px;
+                    left: 28px;
+
+                    width: 86%;
+                    height: 4px;
+                    background-color: $fontColorAlt;
+                }
+
+                p {
+                    @include fontGilroyMedium();
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: $fontColorMain;
+
+                    display: inline-block;
+
+                    padding-left: 90px;
+                    margin: 0;
+                    margin-bottom: 30px;
+
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 28px;
+                        transform: translateY(-50%);
+
+                        width: 35px;
+                        height: 35px;
+
+                        background-color: $fontColorAlt;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 28px;
+                        transform: translateY(-50%);
+
+                        width: 35px;
+                        height: 35px;
+
+                        background: url(../img/projects/check.png) center no-repeat;
+                    }
+
+                    span {
+                        @include fontGilroyBold();
                     }
                 }
             }

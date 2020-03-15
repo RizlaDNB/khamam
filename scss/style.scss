@@ -5,6 +5,10 @@
 @import 'landing.scss';
 @import 'presentation.scss';
 @import 'features.scss';
+@import 'project.scss';
+@import 'guarantee.scss';
+@import 'partners.scss';
+@import 'faq.scss';
 @import 'mixins.scss';
 
 
@@ -28,8 +32,14 @@ body {
     // cursor: url("../img/cursor/cursor.png"), default;
 }
 
+// *, *:before, *:after {
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+// }
+
 .nav {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 5;
