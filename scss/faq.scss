@@ -6,6 +6,7 @@ $fontColorAlt: #F5723C;
 
 .faq {
     background: url(../img/bg.marble_white.jpg) center no-repeat;
+    background-attachment: fixed;
 
     padding-left: 200px;
     padding-right: 200px;
@@ -46,28 +47,28 @@ $fontColorAlt: #F5723C;
                 background-color: #ffffff;
                 box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.07);
                 
-                // margin-bottom: 20px;
+                margin-bottom: 20px;
 
                 padding-left: 40px;
                 padding-right: 28px;
 
                 cursor: pointer;
 
-                &-input {
-                    visibility: hidden;
-
-                    &:checked + .question-list__item-header + span,
-                    &:checked + .question-list__item-content + p {
-                        color: #ffffff;
-                    }
-                }
+                position: relative;
+                overflow: hidden;
 
                 &-header {
+                    box-sizing: border-box;
                     margin: 0;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
 
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+
+                    position: relative;
+                    z-index: 2;
 
                     span {
                         @include fontGilroyMedium();
@@ -78,8 +79,11 @@ $fontColorAlt: #F5723C;
                     }
 
                     svg {
+                        transition: all 0.5s ease;
+
                         path {
                             fill: #f5723c;
+                            transition: all 0.5s ease;
                         }
                     }
                 }
@@ -87,13 +91,14 @@ $fontColorAlt: #F5723C;
                 &-content {
                     box-sizing: border-box;
 
-                    margin-top: 20px;
-                    margin-bottom: 20px;
-
-                    padding-right: 150px;
-
                     max-height: 0;
+
                     overflow: hidden;
+
+                    transition: all 0.5s ease;
+
+                    position: relative;
+                    z-index: 2;
 
                     p {
                         margin: 0;
@@ -103,6 +108,63 @@ $fontColorAlt: #F5723C;
                         line-height: 22px;
                         color: #000000;
                     }
+                }
+
+                &-background {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                    opacity: 0;
+
+                    transition: all 0.5s ease;
+
+                    img {
+                        display: block;
+
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                &-input {
+                    display: none;
+                }
+
+                &-input:checked ~ .question-list__item-header > span,
+                &-input:checked ~ .question-list__item-content > p {
+                    color: #ffffff;                  
+                }
+
+                &-input:checked ~ .question-list__item-content {
+                    max-height: 100vh;
+                    margin-bottom: 40px;
+
+                    padding-right: 150px;
+
+                    transition: all 0.5s ease;
+                }
+
+                &-input:checked ~ .question-list__item-header > svg {
+                    transform: rotate(180deg);
+                    transition: all 0.5s ease;
+
+                    path {
+                        fill: #ffffff;
+                        transition: all 0.5s ease;
+                    }
+
+                }
+
+                &-input:checked ~ .question-list__item-background {
+                    opacity: 1;
+                    transition: all 0.5s ease;
                 }
             }
         }
