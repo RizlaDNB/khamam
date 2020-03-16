@@ -94,6 +94,8 @@ $fontColorAlt: #F5723C;
         padding-left: 88px;
         padding-top: 105px;
 
+        position: relative;
+
         form {
 
             .form-group {
@@ -191,7 +193,7 @@ $fontColorAlt: #F5723C;
             }
 
             .from-group--confidential {
-                margin-top: 85px;
+                margin-top: 48px;
 
                 position: relative;
                 right: 558px;
@@ -203,7 +205,7 @@ $fontColorAlt: #F5723C;
                     left: -40px;
 
                     width: 420px;
-                    height: 1px;
+                    height: 2px;
 
                     background-color: $fontColorMain;
                     opacity: 0.3;
@@ -265,8 +267,12 @@ $fontColorAlt: #F5723C;
             }
 
             .form__button {
+                position: absolute;
+                left: 88px;
+                bottom: -112px;
+
                 width: 560px;
-                min-height: 270px;
+                min-height: 225px;
 
                 box-sizing: border-box;
 
@@ -277,7 +283,43 @@ $fontColorAlt: #F5723C;
                 justify-content: center;
                 align-items: center;
 
+                cursor: pointer;
+
+                &:hover {
+                    span {
+                        margin-right: 30px;
+
+                        transition: all 0.5s ease;
+                    }
+                }
+
+                span {
+                    @include fontGilroyBold();
+                    font-size: 22px;
+                    line-height: 39px;
+                    color: #ffffff;
+
+                    margin-right: 20px;
+
+                    position: relative;
+
+                    transition: all 0.5s ease;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+
+                        width: 100%;
+                        height: 2px;
+
+                        background-color: #ffffff;
+                    }
+                }
+
                 svg {
+                    transform: rotate(-90deg) scale(0.8);
                     path {
                         fill: #ffffff;
                     }

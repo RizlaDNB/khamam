@@ -5,9 +5,9 @@ $fontColorMain: #101010;
 $fontColorAlt: #F5723C;
 
 .partners {
-    background: url(../img/bg_marble_black.jpg) center no-repeat;
-
+    background: url(../img/bg_marble_black.jpg) bottom no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 
     box-sizing: border-box;
     padding-right: 200px;
