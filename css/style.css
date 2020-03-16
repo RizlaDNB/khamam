@@ -120,7 +120,7 @@
       position: absolute;
       z-index: 2;
       bottom: 72px;
-      left: 380px;
+      left: 180px;
       background-color: #fefefe; }
     .presentation-content__pattern {
       width: 380px;
@@ -1157,6 +1157,7 @@
         transition: all 0.5s ease; }
   .consulting__form form .form__button {
     position: absolute;
+    z-index: 2;
     left: 88px;
     bottom: -112px;
     width: 560px;
@@ -1191,6 +1192,53 @@
       transform: rotate(-90deg) scale(0.8); }
       .consulting__form form .form__button svg path {
         fill: #ffffff; }
+
+.footer {
+  background: url(../img/bg.marble_white.jpg) bottom no-repeat;
+  background-attachment: fixed;
+  box-sizing: border-box;
+  padding-right: 200px;
+  padding-top: 140px;
+  padding-bottom: 120px;
+  position: relative; }
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-between; }
+  .footer-details {
+    box-sizing: border-box;
+    flex-basis: 50%; }
+    .footer-details img {
+      margin-bottom: 15px; }
+    .footer-details p {
+      margin: 0;
+      margin-left: 10px;
+      font-family: 'Gilroy Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 18px;
+      line-height: 25px;
+      color: #101010; }
+  .footer-address {
+    box-sizing: border-box;
+    flex-basis: 50%;
+    padding-left: 30px;
+    padding-top: 15px; }
+    .footer-address p {
+      margin: 0;
+      font-family: 'Gilroy Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 18px;
+      line-height: 25px;
+      color: #101010; }
+    .footer-address a {
+      display: inline-block;
+      margin-top: 40px;
+      font-family: 'Gilroy Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 18px;
+      line-height: 25px;
+      color: #101010;
+      text-decoration: none; }
+  .footer-contacts {
+    position: absolute;
+    top: 160px;
+    right: 30px; }
 
 .container {
   max-width: 1160px;
