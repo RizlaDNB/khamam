@@ -820,7 +820,7 @@
       line-height: 30px;
       color: #ffffff; }
     .partners__header a {
-      display: block;
+      display: inline-block;
       margin-top: 195px; }
       .partners__header a svg path {
         fill: transparent;
