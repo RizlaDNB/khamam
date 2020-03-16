@@ -33,7 +33,6 @@
   background: url(../img/bg.marble_white.jpg) center no-repeat;
   overflow: hidden;
   position: relative;
-  padding-left: 200px;
   padding-right: 200px;
   padding-top: 50px;
   padding-bottom: 120px; }
@@ -107,7 +106,6 @@
 .presentation {
   position: relative;
   min-height: 700px;
-  padding-left: 200px;
   background-color: #f1f1f1; }
   .presentation-content {
     position: absolute;
@@ -151,8 +149,7 @@
 .features {
   background: url(../img/bg.marble_white.jpg) bottom no-repeat;
   background-size: cover;
-  position: relative;
-  padding-left: 200px; }
+  position: relative; }
   .features__facts {
     padding-right: 200px; }
     .features__facts .facts {
@@ -478,7 +475,6 @@
 
 .project {
   box-sizing: border-box;
-  padding-left: 200px;
   padding-right: 200px;
   background: url(../img/bg_marble_black.jpg) center no-repeat;
   background-size: cover;
@@ -602,7 +598,6 @@
 
 .guarantee {
   background: url(../img/bg.marble_white.jpg) center no-repeat;
-  padding-left: 200px;
   padding-right: 200px;
   padding-top: 180px; }
   .guarantee .guarantees__header {
@@ -792,7 +787,6 @@
   background: url(../img/bg_marble_black.jpg) center no-repeat;
   background-size: cover;
   box-sizing: border-box;
-  padding-left: 200px;
   padding-right: 200px;
   padding-top: 95px;
   padding-bottom: 140px; }
@@ -854,7 +848,6 @@
 .faq {
   background: url(../img/bg.marble_white.jpg) center no-repeat;
   background-attachment: fixed;
-  padding-left: 200px;
   padding-right: 200px;
   padding-bottom: 100px;
   padding-top: 140px; }
@@ -952,13 +945,244 @@
         opacity: 1;
         transition: all 0.5s ease; }
 
+.about {
+  padding-right: 200px;
+  padding-top: 170px;
+  padding-bottom: 140px;
+  background-color: #ffffff; }
+  .about-wrapper {
+    display: flex; }
+  .about__header {
+    flex-basis: 35%; }
+    .about__header h1 {
+      font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 66px;
+      line-height: 70px;
+      color: #101010;
+      letter-spacing: -1px;
+      margin: 0;
+      margin-left: 10px; }
+    .about__header-deco {
+      margin-top: 100px; }
+      .about__header-deco img {
+        transform: rotate(180deg); }
+  .about__content {
+    padding-top: 70px; }
+    .about__content p {
+      margin: 0;
+      margin-bottom: 40px;
+      font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 24px;
+      line-height: 38px;
+      color: #101010; }
+      .about__content p span {
+        font-family: 'Gilroy Bold','Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+.consulting-wrapper {
+  display: flex;
+  min-height: 679px; }
+
+.consulting__header {
+  flex-basis: 40.6%;
+  background-color: #f3f3f3;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding-top: 40px;
+  padding-right: 85px;
+  overflow: hidden; }
+  .consulting__header h1 {
+    display: inline-block;
+    font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 65px;
+    line-height: 65px;
+    color: #101010;
+    letter-spacing: -1px; }
+    .consulting__header h1 span {
+      color: #F5723C; }
+    .consulting__header h1 p {
+      margin: 0;
+      margin-top: 20px;
+      margin-left: 5px;
+      font-size: 22px;
+      line-height: 30px; }
+  .consulting__header-circle-top {
+    position: absolute;
+    left: -79px;
+    top: -130px;
+    box-sizing: border-box;
+    width: 259px;
+    height: 259px;
+    border: 1px solid #101010;
+    border-radius: 50%;
+    background-color: transparent;
+    opacity: 0.2; }
+  .consulting__header-circle-bottom {
+    position: absolute;
+    right: -69px;
+    bottom: -35px;
+    box-sizing: border-box;
+    width: 169px;
+    height: 169px;
+    border: 1px solid #101010;
+    border-radius: 50%;
+    background-color: transparent;
+    opacity: 0.2; }
+
+.consulting__form {
+  flex-basis: 59.4%;
+  background-color: #202020;
+  box-sizing: border-box;
+  padding-right: 200px;
+  padding-left: 88px;
+  padding-top: 105px; }
+  .consulting__form form .form-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 560px;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 20px;
+    margin-bottom: 35px; }
+    .consulting__form form .form-group label {
+      font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 15px;
+      line-height: 18px;
+      color: #ffffff;
+      transition: all 0.5s ease;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .consulting__form form .form-group input {
+      padding-top: 10px;
+      padding-bottom: 15px;
+      font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 20px;
+      line-height: 23px;
+      color: #797979;
+      transition: all 0.5s ease;
+      border: none;
+      background-color: #202020; }
+      .consulting__form form .form-group input:focus {
+        color: #F5723C;
+        transition: all 0.5s ease; }
+      .consulting__form form .form-group input:focus ~ .form-group__highlight {
+        color: #F5723C;
+        transition: all 0.5s ease; }
+      .consulting__form form .form-group input:focus ~ .form-group__underline::before {
+        width: 100%;
+        transition: all 0.5s ease; }
+      .consulting__form form .form-group input:focus ~ label {
+        color: #797979;
+        transition: all 0.5s ease; }
+    .consulting__form form .form-group__underline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #797979; }
+      .consulting__form form .form-group__underline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 0%;
+        background-color: #F5723C;
+        transition: all 0.5s ease; }
+    .consulting__form form .form-group__highlight {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 14px;
+      line-height: 16px;
+      color: #ffffff;
+      transition: all 0.5s ease; }
+  .consulting__form form .from-group--confidential {
+    margin-top: 85px;
+    position: relative;
+    right: 558px; }
+    .consulting__form form .from-group--confidential::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: -40px;
+      width: 420px;
+      height: 1px;
+      background-color: #101010;
+      opacity: 0.3; }
+    .consulting__form form .from-group--confidential label {
+      font-family: 'Gilroy Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 17px;
+      line-height: 20px;
+      color: #101010; }
+      .consulting__form form .from-group--confidential label span {
+        text-decoration: underline; }
+    .consulting__form form .from-group--confidential input:focus {
+      outline: none; }
+    .consulting__form form .from-group--confidential input:checked ~ .form-group__checkbox-indicator::before {
+      opacity: 1;
+      transition: all 0.5s ease; }
+    .consulting__form form .from-group--confidential input:focus ~ label {
+      color: #101010;
+      transition: all 0.5s ease; }
+    .consulting__form form .from-group--confidential .form-group__checkbox-indicator {
+      position: absolute;
+      top: 5px;
+      left: -40px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: #202020; }
+      .consulting__form form .from-group--confidential .form-group__checkbox-indicator::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background: url(../img/consulting/check.png) center no-repeat;
+        opacity: 0;
+        transition: all 0.5s ease; }
+  .consulting__form form .form__button {
+    width: 560px;
+    min-height: 270px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #F5723C;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .consulting__form form .form__button svg path {
+      fill: #ffffff; }
+
 .container {
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 15px; }
 
 body {
-  position: relative; }
+  position: relative;
+  padding-left: 200px; }
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
 
 .nav {
   position: fixed;

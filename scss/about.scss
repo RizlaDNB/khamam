@@ -1,0 +1,56 @@
+@import 'mixins.scss';
+
+// VARS
+$fontColorMain: #101010;
+$fontColorAlt: #F5723C;
+
+.about {
+    padding-right: 200px;
+    padding-top: 170px;
+    padding-bottom: 140px;
+
+    background-color: #ffffff;
+
+    &-wrapper {
+        display: flex;
+    }
+
+    &__header {
+        flex-basis: 35%;
+        h1 {
+            @include fontGilroyMedium();
+            font-size: 66px;
+            line-height: 70px;
+            color: $fontColorMain;
+            letter-spacing: -1px;
+
+            margin: 0;
+            margin-left: 10px;
+        }
+
+        &-deco {
+            margin-top: 100px;
+            img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__content {
+        padding-top: 70px;
+
+        p {
+            margin: 0;
+            margin-bottom: 40px;
+
+            @include fontGilroyMedium();
+            font-size: 24px;
+            line-height: 38px;
+            color: $fontColorMain;
+
+            span {
+                @include fontGilroyBold();
+            }
+        }
+    }
+}

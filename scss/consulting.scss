@@ -1,0 +1,288 @@
+@import 'mixins.scss';
+
+// VARS
+$fontColorMain: #101010;
+$fontColorAlt: #F5723C;
+
+.consulting {
+
+
+    &-wrapper {
+        display: flex;
+
+        min-height: 679px;
+    }
+
+    &__header {
+        flex-basis: 40.6%;
+
+        background-color: #f3f3f3;
+
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        padding-top: 40px;
+        padding-right: 85px;
+
+        overflow: hidden;
+
+        h1 {
+            display: inline-block;
+
+            @include fontGilroyMedium();
+            font-size: 65px;
+            line-height: 65px;
+            color: $fontColorMain;
+            letter-spacing: -1px;
+
+            span {
+                color: $fontColorAlt;
+            }
+
+            p {
+                margin: 0;
+                margin-top: 20px;
+                margin-left: 5px;
+
+                font-size: 22px;
+                line-height: 30px;
+            }
+        }
+
+        &-circle-top {
+            position: absolute;
+            left: -79px;
+            top: -130px;
+
+            box-sizing: border-box;
+            width: 259px;
+            height: 259px;
+
+            border: 1px solid $fontColorMain;
+            border-radius: 50%;
+
+            background-color: transparent;
+            opacity: 0.2;
+        }
+
+        &-circle-bottom {
+            position: absolute;
+            right: -69px;
+            bottom: -35px;
+
+            box-sizing: border-box;
+            width: 169px;
+            height: 169px;
+
+            border: 1px solid $fontColorMain;
+            border-radius: 50%;
+
+            background-color: transparent;
+            opacity: 0.2;
+        }
+    }
+
+
+    &__form {
+        flex-basis: 59.4%;
+
+        background-color: #202020;
+
+        box-sizing: border-box;
+        padding-right: 200px;
+        padding-left: 88px;
+        padding-top: 105px;
+
+        form {
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                max-width: 560px;
+
+                position: relative;
+                box-sizing: border-box;
+                padding-top: 20px;
+                margin-bottom: 35px;
+
+                label {
+                    @include fontGilroyMedium();
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: #ffffff;
+
+                    transition: all 0.5s ease;
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                input {
+                    padding-top: 10px;
+                    padding-bottom: 15px;
+
+                    @include fontGilroyMedium();
+                    font-size: 20px;
+                    line-height: 23px;
+                    color: #797979;
+                    transition: all 0.5s ease;
+
+                    border: none;
+                    background-color: #202020;
+
+                    &:focus {
+                        color: $fontColorAlt;
+                        transition: all 0.5s ease;
+                    }
+
+                    &:focus ~ .form-group__highlight {
+                        color: $fontColorAlt;
+                        transition: all 0.5s ease;
+                    }
+
+                    &:focus ~ .form-group__underline::before {
+                        width: 100%;
+                        transition: all 0.5s ease;
+                    }
+
+                    &:focus ~ label {
+                        color: #797979;
+                        transition: all 0.5s ease;
+                    }
+                }
+
+                &__underline {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 2px;
+                    background-color: #797979;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        height: 2px;
+                        width: 0%;
+                        background-color: $fontColorAlt;
+
+                        transition: all 0.5s ease;
+                    }
+                }
+
+                &__highlight {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    @include fontGilroyMedium();
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #ffffff;
+
+                    transition: all 0.5s ease;
+                }
+            }
+
+            .from-group--confidential {
+                margin-top: 85px;
+
+                position: relative;
+                right: 558px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -50px;
+                    left: -40px;
+
+                    width: 420px;
+                    height: 1px;
+
+                    background-color: $fontColorMain;
+                    opacity: 0.3;
+                }
+
+                label {
+                    @include fontGilroyRegular();
+                    font-size: 17px;
+                    line-height: 20px;
+                    color: $fontColorMain;
+
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+
+                input {
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &:checked ~ .form-group__checkbox-indicator::before {
+                        opacity: 1;
+                        transition: all 0.5s ease;
+                    }
+
+                    &:focus ~ label {
+                        color: $fontColorMain;
+                        transition: all 0.5s ease;
+                    }
+                }
+
+                .form-group__checkbox-indicator {
+                    position: absolute;
+                    top: 5px;
+                    left: -40px;
+
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #202020;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        width: 100%;
+                        height: 100%;
+
+                        background: url(../img/consulting/check.png) center no-repeat;
+
+                        opacity: 0;
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+
+            .form__button {
+                width: 560px;
+                min-height: 270px;
+
+                box-sizing: border-box;
+
+                border: none;
+                background-color: #F5723C;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    path {
+                        fill: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
