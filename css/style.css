@@ -1238,7 +1238,49 @@
   .footer-contacts {
     position: absolute;
     top: 160px;
-    right: 30px; }
+    right: 60px; }
+    .footer-contacts__phone::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -75px;
+      transform: translateY(-25px);
+      width: 50px;
+      height: 50px;
+      background-color: #101010; }
+    .footer-contacts__phone::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -75px;
+      transform: translateY(-25px);
+      width: 50px;
+      height: 50px;
+      background: url(../img/footer/phone_icon.png) center no-repeat; }
+    .footer-contacts__phone a {
+      display: block;
+      color: #101010;
+      font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 22px;
+      line-height: 22px;
+      text-decoration: none; }
+    .footer-contacts__phone span {
+      color: #6C7072;
+      font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 14px;
+      line-height: 16px; }
+    .footer-contacts__studio {
+      font-family: 'Gilroy Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 18px;
+      line-height: 25px;
+      color: #101010;
+      position: absolute;
+      top: 75px;
+      left: -70px; }
+      .footer-contacts__studio span {
+        display: block; }
+      .footer-contacts__studio a {
+        color: #F5723C; }
 
 .container {
   max-width: 1160px;
