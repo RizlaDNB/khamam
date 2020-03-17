@@ -67,7 +67,7 @@ input[type="radio"].visually-hidden {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 5;
+    z-index: 4;
     
     width: 200px;
     height: 100%;
@@ -115,6 +115,98 @@ input[type="radio"].visually-hidden {
     }
     p {}
     &-list {
-        &__item {}
+        list-style: none;
+
+        margin: 0;
+        padding: 0;
+
+        &__item {
+            @include fontGilroyBold();
+            font-size: 13px;
+            color: $fontColorMain;
+
+            position: relative;
+            width: 50px;
+            height: 50px;
+
+            box-sizing: border-box;
+
+            margin-bottom: 20px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                opacity: 0.99;
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%) rotate(45deg);
+
+                width: 50px;
+                height: 50px;
+                background-color: transparent;
+
+                transition: all 0.5s ease;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                opacity: 0.99;
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%) rotate(45deg);
+
+                width: 50px;
+                height: 50px;
+                border: 1px solid $fontColorAlt;
+
+                opacity: 0;
+
+                transition: all 0.1s ease;
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 1;
+
+                    transition: all 0.1s ease;
+                }
+            }
+
+            a {
+                position: absolute;
+                z-index: 2;
+                left: 0;
+                top: 0;
+
+                width: 100%;
+                height: 100%;
+
+                text-decoration: none;
+                color: $fontColorMain;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}
+
+.selected-nav-item {
+    &::before {
+        background-color: $fontColorAlt;
+
+        transition: all 0.5s ease;
+    }
+
+    a {
+        color: #ffffff;
+
+        transition: all 0.5s ease;
     }
 }

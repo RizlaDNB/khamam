@@ -153,8 +153,23 @@ $fontColorAlt: #F5723C;
                 }
             }
             &__content {
+                box-sizing: border-box;
+
                 max-width: 48%;
-                border-top: 4px solid $fontColorAlt;
+
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 18px;
+                    left: 0;
+
+                    width: 99%;
+                    height: 4px;
+
+                    background-color: $fontColorAlt;
+                }
 
                 h2 {
                     margin-top: 65px;
@@ -187,8 +202,26 @@ $fontColorAlt: #F5723C;
                 display: flex;
                 justify-content: flex-end;
 
-                svg {
-                    margin-right: 100px;
+                margin-right: 100px;
+
+                a {
+                    &:hover {
+                        svg {
+                            path {
+                                fill: $fontColorAlt;
+        
+                                transition: all 0.5s ease;
+                            }
+                        }
+                    }
+    
+                    svg {
+                        path {
+                            fill: transparent;
+    
+                            transition: all 0.5s ease;
+                        }
+                    }
                 }
             }
         }

@@ -37,11 +37,13 @@
         <button class="nav-button"></button>
         <p>Главная</p>
         <ul class="nav-list">
-            <li class="nav-list__item selected-nav-item"><a href="#">01</a></li>
-            <li class="nav-list__item"><a href="#">02</a></li>
-            <li class="nav-list__item"><a href="#">03</a></li>
-            <li class="nav-list__item"><a href="#">04</a></li>
-            <li class="nav-list__item"><a href="#">05</a></li>
+            <li class="nav-list__item selected-nav-item"><a class="scroll" href="#header">01</a></li>
+            <li class="nav-list__item"><a class="scroll" href="#services">02</a></li>
+            <li class="nav-list__item"><a class="scroll" href="#guarantee">03</a></li>
+            <li class="nav-list__item"><a class="scroll" href="#partners">04</a></li>
+            <li class="nav-list__item"><a class="scroll" href="#faq">05</a></li>
+            <li class="nav-list__item"><a class="scroll" href="#about">06</a></li>
+            <li class="nav-list__item"><a class="scroll" href="#footer">07</a></li>
         </ul>
     </nav>
 
@@ -49,7 +51,7 @@
 
     <!-- HEADER -->
     <header class="header">
-        
+        <div id="header" class="tracked"></div>
         <div class="container">
 
             <div class="header-top">
@@ -64,11 +66,22 @@
             </div>
 
             <div class="header-middle">
-                <h1 class="header-middle__title">Строим <a href="#">хамамы</a> и <a href="#">сауны</a> премиального качества. Соблюдаем сроки и строго следуем дизайн-проекту, а также гарантируем качество.</h1>
+                <h1 class="header-middle__title">Строим
+                    <span class="hover-link--hammam">хамамы</span>
+                    <svg class="hover-link__underlay--hammam" width="266" height="118" viewBox="0 0 266 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M266 49.8433C260.541 -4.01474 157.892 11.7137 157.892 11.7137C157.892 11.7137 10.2656 -32.1353 0 49.8433C0 88.0117 37.0534 118 108.948 118C180.843 118 266 88.0117 266 49.8433Z" fill="white"/>
+                    </svg>
+                    и
+                    <span class="hover-link--sauna">сауны</span>
+                    <svg class="hover-link__underlay--sauna" width="240" height="127" viewBox="0 0 240 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 71.5C6.05539 26.0016 59.1527 31.003 102 12C127.93 0.500046 230.354 -18.4471 239.5 54.5C239.5 100.5 206.986 127 142.93 127C53 127 -3 107.5 1 71.5Z" fill="white"/>
+                    </svg>
+                    премиального качества. Соблюдаем сроки и строго следуем дизайн-проекту, а также гарантируем качество.
+                </h1>
             </div>
 
             <div class="header-bottom">
-                <a href="#">
+                <a class="scroll" href="#facts">
                     <span>Узнать больше</span>
                     <div class="header-bottom__arrow">
                         <svg width="105" height="127" viewBox="0 0 105 127" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,12 +93,19 @@
 
         </div>
 
+        <div class="hover-img--hammam">
+            <img src="img/hover/hammam.jpg" alt="">
+        </div>
+        <div class="hover-img--sauna">
+            <img src="img/hover/sauna.jpg" alt="">
+        </div>
+
     </header>
 
 
 
     <!-- Presentation -->
-    <section class="presentation">
+    <section class="presentation" id="presentation">
 
         <div class="presentation-content">
             <div class="presentation-content__slide-name"></div>
@@ -109,7 +129,7 @@
     <!-- FEATURES -->
     <section class="features">
 
-        <section class="features__facts">
+        <section class="features__facts" id="facts">
 
             <div class="container">
 
@@ -157,7 +177,7 @@
                     </div>
 
                     <div class="time__nav-arrow">
-                        <a href="#">
+                        <a href="#services">
                             <svg width="96" height="116" viewBox="0 0 96 116" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M93.7063 68.8104L94.4158 68.1025L93.7063 67.3946L85.4296 59.1367L84.7233 58.432L84.017 59.1367L54.8523 88.235V2V1H53.8523H42.1477H41.1477V2V88.235L11.983 59.1367L11.2767 58.432L10.5704 59.1367L2.2937 67.3946L1.58417 68.1025L2.2937 68.8104L47.2937 113.708L48 114.413L48.7063 113.708L93.7063 68.8104Z" stroke="#F5723C" stroke-width="2"/>
                             </svg>
@@ -171,7 +191,7 @@
         </section>
 
         <section class="features__services">
-
+            <div id="services" class="tracked"></div>
             <div class="services">
 
                 <div class="container">
@@ -269,7 +289,7 @@
 
                 <div class="project__header">
                     <h1>Подключаемся<br>к проекту <span>на<br>любом этапе</span></h1>
-                    <a href="#">
+                    <a href="#guarantee">
                         <svg width="96" height="116" viewBox="0 0 96 116" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M93.7063 68.8104L94.4158 68.1025L93.7063 67.3946L85.4296 59.1367L84.7233 58.432L84.017 59.1367L54.8523 88.235V2V1H53.8523H42.1477H41.1477V2V88.235L11.983 59.1367L11.2767 58.432L10.5704 59.1367L2.2937 67.3946L1.58417 68.1025L2.2937 68.8104L47.2937 113.708L48 114.413L48.7063 113.708L93.7063 68.8104Z" stroke="#F5723C" stroke-width="2"/>
                         </svg>
@@ -326,7 +346,7 @@
 
     <!-- GUARANTEE -->
     <section class="guarantee">
-        
+        <div id="guarantee" class="tracked"></div>
         <div class="container">
 
             <section class="guarantees">
@@ -449,7 +469,7 @@
 
     <!-- PARTNERS -->
     <section class="partners">
-
+        <div id="partners" class="tracked"></div>
         <div class="container">
 
             <div class="partners-wrapper">
@@ -459,7 +479,7 @@
     
                     <p>Мы работаем с мировыми брендами,<br>гарантирующими бесперебойную работу<br>и долговечность оборудования.</p>
     
-                    <a href="#">
+                    <a href="#faq">
                         <svg width="96" height="116" viewBox="0 0 96 116" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M93.7063 68.8104L94.4158 68.1025L93.7063 67.3946L85.4296 59.1367L84.7233 58.432L84.017 59.1367L54.8523 88.235V2V1H53.8523H42.1477H41.1477V2V88.235L11.983 59.1367L11.2767 58.432L10.5704 59.1367L2.2937 67.3946L1.58417 68.1025L2.2937 68.8104L47.2937 113.708L48 114.413L48.7063 113.708L93.7063 68.8104Z" stroke="#F5723C" stroke-width="2"/>
                         </svg>
@@ -521,7 +541,7 @@
 
     <!-- FAQ -->
     <section class="faq">
-
+        <div id="faq" class="tracked"></div>
         <div class="container">
 
             <div class="faq-wrapper">
@@ -802,7 +822,7 @@
 
     <!-- ABOUT -->
     <section class="about">
-
+        <div id="about" class="tracked"></div>
         <div class="container">
 
             <div class="about-wrapper">
@@ -836,7 +856,9 @@
 
 
     <!-- CONSULTING -->
-    <section class="consulting">
+    <section class="consulting" id="consulting">
+
+        <div class="tracked" id="footer"></div>
 
         <div class="consulting-wrapper">
 
@@ -965,8 +987,12 @@
 
 
 
-
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/scroll.min.js"></script>
+    <script src="js/navbar-waypoints.js"></script>
     <script src="js/scroll-progress-bar.js"></script>
+    <script src="js/header-link-hover.js"></script>
 
 </body>
 </html>

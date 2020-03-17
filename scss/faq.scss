@@ -5,7 +5,8 @@ $fontColorMain: #101010;
 $fontColorAlt: #F5723C;
 
 .faq {
-    background: url(../img/bg.marble_white.jpg) center no-repeat;
+    background: url(../img/bg.marble_white.jpg) no-repeat;
+    background-position: 0 62%;
     background-attachment: fixed;
 
     padding-right: 200px;

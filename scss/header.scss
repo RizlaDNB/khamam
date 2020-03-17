@@ -6,7 +6,8 @@ $fontColorAlt: #F5723C;
 
 
 .header {
-    background: url(../img/bg.marble_white.jpg) center no-repeat;
+    background: url(../img/bg.marble_white.jpg) no-repeat;
+    background-position: 0 68%;
     background-attachment: fixed;
 
     overflow: hidden;
@@ -73,14 +74,30 @@ $fontColorAlt: #F5723C;
         h1 {
             margin: 0;
 
+            position: relative;
+
             @include fontGilroyMedium();
             font-size: 50px;
             line-height: 73px;
             color: $fontColorMain;
             letter-spacing: -0.8px;
             
-            a {
+            span {
                 color: $fontColorAlt;
+                text-decoration: underline;
+
+                transition: all 0.5s ease;
+
+                cursor: pointer;
+
+                position: relative;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $fontColorMain;
+
+                    transition: all 0.5s ease;
+                }
             }
         }
     }
@@ -88,9 +105,21 @@ $fontColorAlt: #F5723C;
     &-bottom {
         margin-left: 10px;
 
+        display: inline-block;
+
         a {
             display: flex;
             text-decoration: none;
+
+            &:hover {
+                svg {
+                    path {
+                        fill: $fontColorAlt;
+
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
     
             span {
                 margin-top: 27px;
@@ -114,6 +143,148 @@ $fontColorAlt: #F5723C;
                     background-color: $fontColorAlt;
                 }
             }
+
+            svg {
+                path {
+                    fill: transparent;
+
+                    transition: all 0.5s ease;
+                }
+            }
         }
+    }
+}
+
+
+.hover-link--zindex {
+    z-index: 8;
+}
+
+
+
+.hover-link__underlay--hammam {
+    position: absolute;
+    top: -20px;
+    left: 293px;
+    z-index: 0;
+
+    width: 0;
+    height: 118px;
+
+    transition: all 0.5s ease;
+}
+
+.underlay-hammam--active {
+    left: 160px;
+    width: 266px;
+
+    z-index: 7;
+
+    transition: all 0.5s ease;
+}
+
+.hover-link__underlay--sauna {
+    position: absolute;
+    top: -30px;
+    left: 505px;
+    z-index: 1;
+
+    width: 0px;
+    height: 127px;
+
+    transition: all 0.5s ease;
+}
+
+.underlay-sauna--active {
+    left: 385px;
+    width: 240px;
+
+    z-index: 7;
+
+    transition: all 0.5s ease;
+}
+
+
+
+.hover-img--hammam {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    max-height: 100vh;
+    width: 100vw;
+
+    opacity: 0;
+
+    transition: all 0.5s ease;
+
+    img {
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+.hover-img--sauna {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    max-height: 100vh;
+    width: 100vw;
+
+    opacity: 0;
+
+    transition: all 0.5s ease;
+
+    img {
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+.hover-img--active {
+    z-index: 6;
+    opacity: 1;
+
+    transition: all 0.5s ease;
+}
+
+
+
+.hover__body--pleft {
+    padding-left: 0;
+}
+
+.header--pleft {
+    padding-left: 200px;
+}
+
+
+.header-phone--hover {
+    z-index: 8;
+
+    &::before {
+        background: url(../img/footer/phone_icon.png) center no-repeat;
+        border: 1px solid #ffffff;
+    }
+
+    a {
+        color: #ffffff;
+    }
+
+    span {
+        color: #ffffff;
     }
 }
