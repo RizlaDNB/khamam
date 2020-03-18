@@ -1,7 +1,7 @@
 var images = document.images,
     imagesTotalCount = images.length,
     imagesLoadedCount = 0,
-    percentDisplay = document.getElementById('load-percentage'),
+    percentProgress = document.getElementById('load-percentage'),
     preLoader = document.querySelector('.preloader-wrapper');
 
 
@@ -16,13 +16,14 @@ var images = document.images,
     function imagesLoaded() {
         imagesLoadedCount++;
 
-        percentDisplay.innerHTML = (( (100 / imagesTotalCount) * imagesLoadedCount ) <<0) + '%';
-
+        percentProgress = (( (100 / imagesTotalCount) * imagesLoadedCount ) <<0);
+        document.getElementById('preloaderProgressBar').style.width = percentProgress + "%";
+        
         if (imagesLoadedCount >= imagesTotalCount) {
             setTimeout(function() {
                 if (!preLoader.classList.contains('loading-done')) {
                     preLoader.classList.add('loading-done');
                 }
-            }, 1800);
+            }, 1500);
         }
     }

@@ -288,3 +288,20 @@ $fontColorAlt: #F5723C;
         color: #ffffff;
     }
 }
+
+
+.header-phone--navbar {
+    z-index: 8;
+
+    &::before {
+        background: url(../img/footer/phone_icon.png) center no-repeat;
+
+        transition: all 0.5s ease;
+    }
+
+    a {
+        color: #ffffff;
+
+        transition: all 0.5s ease;
+    }
+}

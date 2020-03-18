@@ -24,10 +24,13 @@
     
     <!-- PRELOADER -->
     <div class="preloader-wrapper">
+
         <div class="preloader">
-            <span id="load-percentage">0%</span>
-            <p>временно</p>
+            <img src="img/preloader/vitruvian.png" alt="Natura Techno">
         </div>
+
+        <div class="preloader__deco-square"></div>
+        <div class="preloader__progress-bar" id="preloaderProgressBar"></div>
     </div>
 
     <div class="scroll-indicator">
@@ -46,6 +49,10 @@
             <li class="nav-list__item"><a class="scroll" href="#about">06</a></li>
             <li class="nav-list__item"><a class="scroll" href="#footer">07</a></li>
         </ul>
+
+        <div class="nav-background">
+            <img src="img/bg_marble_black.jpg" alt="">
+        </div>
     </nav>
 
 
@@ -178,7 +185,7 @@
                     </div>
 
                     <div class="time__nav-arrow">
-                        <a href="#services">
+                        <a class="scroll" href="#services">
                             <svg width="96" height="116" viewBox="0 0 96 116" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M93.7063 68.8104L94.4158 68.1025L93.7063 67.3946L85.4296 59.1367L84.7233 58.432L84.017 59.1367L54.8523 88.235V2V1H53.8523H42.1477H41.1477V2V88.235L11.983 59.1367L11.2767 58.432L10.5704 59.1367L2.2937 67.3946L1.58417 68.1025L2.2937 68.8104L47.2937 113.708L48 114.413L48.7063 113.708L93.7063 68.8104Z" stroke="#F5723C" stroke-width="2"/>
                             </svg>
@@ -191,8 +198,8 @@
 
         </section>
 
-        <section class="features__services">
-            <div id="services" class="tracked"></div>
+        <section class="features__services tracked" id="services">
+
             <div class="services">
 
                 <div class="container">
@@ -245,8 +252,7 @@
 
                 <div class="services__deco-triangle">
                     <svg width="352" height="352">
-                        <polygon points="0,352 352,352 0,0"
-                                    fill="none" stroke="#F5723C" stroke-width="1" />
+                        <polygon points="0,352 352,352 0,0" fill="none" stroke="#F5723C" stroke-width="1" />
                     </svg>
                     <div></div>
                 </div>
@@ -290,7 +296,7 @@
 
                 <div class="project__header">
                     <h1>Подключаемся<br>к проекту <span>на<br>любом этапе</span></h1>
-                    <a href="#guarantee">
+                    <a class="scroll" href="#guarantee">
                         <svg width="96" height="116" viewBox="0 0 96 116" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M93.7063 68.8104L94.4158 68.1025L93.7063 67.3946L85.4296 59.1367L84.7233 58.432L84.017 59.1367L54.8523 88.235V2V1H53.8523H42.1477H41.1477V2V88.235L11.983 59.1367L11.2767 58.432L10.5704 59.1367L2.2937 67.3946L1.58417 68.1025L2.2937 68.8104L47.2937 113.708L48 114.413L48.7063 113.708L93.7063 68.8104Z" stroke="#F5723C" stroke-width="2"/>
                         </svg>
@@ -480,7 +486,7 @@
     
                     <p>Мы работаем с мировыми брендами,<br>гарантирующими бесперебойную работу<br>и долговечность оборудования.</p>
     
-                    <a href="#faq">
+                    <a class="scroll" href="#faq">
                         <svg width="96" height="116" viewBox="0 0 96 116" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M93.7063 68.8104L94.4158 68.1025L93.7063 67.3946L85.4296 59.1367L84.7233 58.432L84.017 59.1367L54.8523 88.235V2V1H53.8523H42.1477H41.1477V2V88.235L11.983 59.1367L11.2767 58.432L10.5704 59.1367L2.2937 67.3946L1.58417 68.1025L2.2937 68.8104L47.2937 113.708L48 114.413L48.7063 113.708L93.7063 68.8104Z" stroke="#F5723C" stroke-width="2"/>
                         </svg>
@@ -995,6 +1001,7 @@
     <script src="js/navbar-waypoints.js"></script>
     <script src="js/scroll-progress-bar.js"></script>
     <script src="js/header-link-hover.js"></script>
+    <script src="js/navbar.js"></script>
 
 </body>
 </html>
