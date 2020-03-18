@@ -13,9 +13,10 @@ $fontColorAlt: #F5723C;
     overflow: hidden;
     position: relative;
 
+    height: 100vh;
+
     padding-right: 200px;
     padding-top: 50px;
-    padding-bottom: 120px;
 
     &-top {
         display: flex;
