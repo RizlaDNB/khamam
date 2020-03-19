@@ -16,7 +16,7 @@ $fontColorAlt: #F5723C;
     }
 
     &__header {
-        flex-basis: 35%;
+        flex-basis: 36%;
         h1 {
             @include fontGilroyMedium();
             font-size: 66px;
@@ -38,6 +38,20 @@ $fontColorAlt: #F5723C;
 
     &__content {
         padding-top: 70px;
+
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+
+            width: 105%;
+            height: 4px;
+
+            background-color: $fontColorAlt;
+        }
 
         p {
             margin: 0;

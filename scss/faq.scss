@@ -42,7 +42,6 @@ $fontColorAlt: #F5723C;
 
             &__item {
                 display: block;
-                box-sizing: border-box;
 
                 background-color: #ffffff;
                 box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.07);
@@ -58,7 +57,6 @@ $fontColorAlt: #F5723C;
                 overflow: hidden;
 
                 &-header {
-                    box-sizing: border-box;
                     margin: 0;
                     padding-top: 20px;
                     padding-bottom: 20px;
@@ -89,8 +87,6 @@ $fontColorAlt: #F5723C;
                 }
 
                 &-content {
-                    box-sizing: border-box;
-
                     max-height: 0;
 
                     overflow: hidden;

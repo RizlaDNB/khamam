@@ -39,7 +39,9 @@
 
     <nav class="nav">
         <button class="nav-button"></button>
-        <p>Главная</p>
+        <div class="nav-caption">
+            <p class="nav-caption__text">Главная</p>
+        </div>
         <ul class="nav-list">
             <li class="nav-list__item selected-nav-item"><a class="scroll" href="#header">01</a></li>
             <li class="nav-list__item"><a class="scroll" href="#services">02</a></li>
@@ -53,13 +55,18 @@
         <div class="nav-background">
             <!-- <img src="img/bg_marble_black.jpg" alt=""> -->
         </div>
+
+        <div class="nav-phone">
+            <a href="tel:+74950666661">+7 495 066-66-61</a>
+            <span>Viber/WhatsApp</span>
+        </div>
     </nav>
 
 
 
     <!-- HEADER -->
     <header class="header">
-        <div id="header" class="tracked"></div>
+
         <div class="container">
 
             <div class="header-top">
@@ -73,7 +80,7 @@
                 <span>Viber/WhatsApp</span>
             </div>
 
-            <div class="header-middle">
+            <div class="header-middle tracked" id="header" data-caption="Главная">
                 <h1 class="header-middle__title">Строим
                     <span class="hover-link--hammam">хамамы</span>
                     <svg class="hover-link__underlay--hammam" width="266" height="118" viewBox="0 0 266 118" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,27 +149,37 @@
             <div class="container">
 
                 <div class="facts">
-                    <div class="facts__header">
-                        <h1>Факты <span>о<br>нас</span></h1>
-                    </div>
 
-                    <div class="facts__card card--objects">
-                        <div class="card__image">
-                            <img src="img/facts/100.png" alt="100+">
+                    <div class="facts-wrapper">
+
+                        <div class="facts__header">
+                            <h1>Факты <span>о<br>нас</span></h1>
                         </div>
-                        <span class="card__subtitle">построенных объектов</span>
+    
+                        <div class="facts-cards">
+    
+                            <div class="facts__card card--objects">
+                                <div class="card__image">
+                                    <img src="img/facts/100.png" alt="100+">
+                                </div>
+                                <span class="card__subtitle">построенных объектов</span>
+                            </div>
+        
+                            <div class="facts__card card--market">
+                                <h2 class="card__title">7 лет</h2>
+                                <span class="card__subtitle">на рынке</span>
+                            </div>
+                            <div class="facts__card card--build">
+                                <h2 class="card__title">14 дней</h2>
+                                <span class="card__subtitle">на строительство</span>
+                            </div>
+        
+                            <div class="facts__deco-ring"></div>
+    
+                        </div>
+
                     </div>
 
-                    <div class="facts__card card--market">
-                        <h2 class="card__title">7 лет</h2>
-                        <span class="card__subtitle">на рынке</span>
-                    </div>
-                    <div class="facts__card card--build">
-                        <h2 class="card__title">14 дней</h2>
-                        <span class="card__subtitle">на строительство</span>
-                    </div>
-
-                    <div class="facts__deco-ring"></div>
                 </div>
 
             </div>
@@ -198,15 +215,15 @@
 
         </section>
 
-        <section class="features__services tracked" id="services">
+        <section class="features__services tracked" id="services" data-caption="Наши услуги">
 
             <div class="services">
 
                 <div class="container">
-
                     <div class="services__header">
                         <h1>Наши<br><span>услуги</span></h1>
                     </div>
+
                     <div class="services__deco-pattern">
                         <img src="img/pattern-slider.svg" alt="">
                     </div>
@@ -352,8 +369,8 @@
 
 
     <!-- GUARANTEE -->
-    <section class="guarantee">
-        <div id="guarantee" class="tracked"></div>
+    <section class="guarantee tracked" id="guarantee" data-caption="Гарантии">
+
         <div class="container">
 
             <section class="guarantees">
@@ -475,8 +492,8 @@
 
 
     <!-- PARTNERS -->
-    <section class="partners">
-        <div id="partners" class="tracked"></div>
+    <section class="partners tracked" id="partners" data-caption="Наши партнеры">
+
         <div class="container">
 
             <div class="partners-wrapper">
@@ -547,8 +564,8 @@
 
 
     <!-- FAQ -->
-    <section class="faq">
-        <div id="faq" class="tracked"></div>
+    <section class="faq tracked" id="faq" data-caption="Частые вопросы">
+
         <div class="container">
 
             <div class="faq-wrapper">
@@ -828,8 +845,8 @@
 
 
     <!-- ABOUT -->
-    <section class="about">
-        <div id="about" class="tracked"></div>
+    <section class="about tracked" id="about" data-caption="О нас">
+
         <div class="container">
 
             <div class="about-wrapper">
@@ -865,7 +882,7 @@
     <!-- CONSULTING -->
     <section class="consulting" id="consulting">
 
-        <div class="tracked" id="footer"></div>
+        <div class="tracked" id="footer" data-caption="Контакты"></div>
 
         <div class="consulting-wrapper">
 
@@ -995,14 +1012,14 @@
 
 
     <script src="js/preloader.js"></script>
+    <script src="js/scroll-progress-bar.js"></script>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/scroll.min.js"></script>
     <script src="js/navbar-waypoints.js"></script>
-    <script src="js/scroll-progress-bar.js"></script>
     <script src="js/header-link-hover.js"></script>
     <script src="js/navbar.js"></script>
-    <script src="js/smoothscroll.min.js"></script>
+    <!-- <script src="js/smoothscroll.min.js"></script> -->
 
 </body>
 </html>

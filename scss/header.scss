@@ -34,8 +34,8 @@ $fontColorAlt: #F5723C;
 
     &-phone {
         position: absolute;
-        right: 60px;
-        top: 70px;
+        right: 50px;
+        top: 75px;
 
         &::before {
             content: '';
@@ -78,10 +78,10 @@ $fontColorAlt: #F5723C;
             position: relative;
 
             @include fontGilroyMedium();
-            font-size: 50px;
+            font-size: 48px;
             line-height: 73px;
             color: $fontColorMain;
-            letter-spacing: -0.8px;
+            letter-spacing: -1px;
             
             span {
                 color: $fontColorAlt;
@@ -104,7 +104,6 @@ $fontColorAlt: #F5723C;
     }
 
     &-bottom {
-        margin-left: 10px;
 
         display: inline-block;
 
@@ -287,22 +286,5 @@ $fontColorAlt: #F5723C;
 
     span {
         color: #ffffff;
-    }
-}
-
-
-.header-phone--navbar {
-    z-index: 8;
-
-    &::before {
-        background: url(../img/footer/phone_icon.png) center no-repeat;
-
-        transition: all 0.5s ease;
-    }
-
-    a {
-        color: #ffffff;
-
-        transition: all 0.5s ease;
     }
 }

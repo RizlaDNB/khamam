@@ -21,7 +21,6 @@ $fontColorAlt: #F5723C;
         position: relative;
         display: flex;
         justify-content: flex-end;
-        box-sizing: border-box;
         padding-top: 40px;
         padding-right: 85px;
 
@@ -55,7 +54,6 @@ $fontColorAlt: #F5723C;
             left: -79px;
             top: -130px;
 
-            box-sizing: border-box;
             width: 259px;
             height: 259px;
 
@@ -71,7 +69,6 @@ $fontColorAlt: #F5723C;
             right: -69px;
             bottom: -35px;
 
-            box-sizing: border-box;
             width: 169px;
             height: 169px;
 
@@ -89,7 +86,6 @@ $fontColorAlt: #F5723C;
 
         background-color: #202020;
 
-        box-sizing: border-box;
         padding-right: 200px;
         padding-left: 88px;
         padding-top: 105px;
@@ -104,7 +100,7 @@ $fontColorAlt: #F5723C;
                 max-width: 560px;
 
                 position: relative;
-                box-sizing: border-box;
+
                 padding-top: 20px;
                 margin-bottom: 35px;
 
@@ -274,8 +270,6 @@ $fontColorAlt: #F5723C;
 
                 width: 560px;
                 min-height: 225px;
-
-                box-sizing: border-box;
 
                 border: none;
                 background-color: #F5723C;

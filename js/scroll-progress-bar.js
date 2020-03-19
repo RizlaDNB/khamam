@@ -1,8 +1,8 @@
-window.onscroll = function() {scrollIndicator()};
+window.onscroll = function() {scrollProgress()};
 
-function scrollIndicator() {
+function scrollProgress() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
+  var winHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / winHeight) * 100;
   document.getElementById('progressBar').style.height = scrolled + "%";
 } 

@@ -34,6 +34,7 @@ body {
 
     padding-left: 200px;
 
+    overflow-x: hidden;
     // cursor: url("../img/cursor/cursor.png"), default;
 }
 
@@ -41,11 +42,11 @@ body {
     overflow: hidden;
 }
 
-// *, *:before, *:after {
-//     -webkit-box-sizing: border-box;
-//     -moz-box-sizing: border-box;
-//     box-sizing: border-box;
-// }
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -80,16 +81,17 @@ input[type="radio"].visually-hidden {
 
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    // align-items: flex-start;
+    // justify-content: space-between;
+    align-items: flex-start;
 
-    box-sizing: border-box;
     padding-top: 65px;
     padding-left: 70px;
 
     transition: all 0.5s ease;
     
     &-button {
+        display: block;
+
         position: relative;
 
         z-index: 1;
@@ -126,9 +128,26 @@ input[type="radio"].visually-hidden {
         }
     }
 
-    p {}
+    &-caption {
+        margin-top: 100px;
+        margin-bottom: 40px;
+
+        p {
+            margin: 0;
+            transform: rotate(-90deg);
+
+            @include fontGilroyBold();
+            font-size: 14px;
+            line-height: 27px;
+            color: $fontColorMain;
+        }
+    }
+
 
     &-list {
+        display: flex;
+        flex-direction: column;
+
         list-style: none;
 
         margin: 0;
@@ -236,6 +255,47 @@ input[type="radio"].visually-hidden {
     //         object-fit: cover;
     //     }
     }
+
+    &-phone {
+        position: absolute;
+        right: -850px;
+        top: 75px;
+
+        opacity: 0;
+
+        transition: all 0.5s ease;
+
+        &::before {
+            content: '';
+            position: absolute;
+
+            top: 50%;
+            left: -75px;
+            transform: translateY(-25px);
+
+            width: 50px;
+            height: 50px;
+
+            background: url(../img/footer/phone_icon.png) center no-repeat;
+            border: 1px solid #F5723C;
+        }
+
+        a {
+            display: block;
+            color: #ffffff;
+            @include fontGilroyMedium();
+            font-size: 22px;
+            line-height: 22px;
+            text-decoration: none;
+        }
+
+        span {
+            color: #6C7072;
+            @include fontGilroyMedium();
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
 }
 
 .nav--open {
@@ -293,4 +353,11 @@ input[type="radio"].visually-hidden {
 
         transition: all 0.5s ease;
     }
+}
+
+.nav-phone--active {
+    opacity: 1;
+    right: 50px;
+
+    transition: all 0.5s ease;
 }
