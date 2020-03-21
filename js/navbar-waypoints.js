@@ -1,5 +1,4 @@
-var navElement = $('.nav-list__item'),
-    navCaption = $('nav-caption__text');
+var navElement = $('.nav-list__item');
 
     $('.tracked').waypoint( function() {
         var hash = $(this.element).attr('id');
@@ -13,6 +12,6 @@ var navElement = $('.nav-list__item'),
             }
         });
 
-        console.log(blockName);
+        $('.nav-caption__text').text(blockName);
 
     });
