@@ -67,4 +67,8 @@ $fontColorAlt: #F5723C;
             }
         }
     }
+
+    @media (max-width: 1550px) {
+        padding-right: 0px;
+    }
 }

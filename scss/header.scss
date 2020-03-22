@@ -43,7 +43,7 @@ $fontColorAlt: #F5723C;
 
             top: 50%;
             left: -75px;
-            transform: translateY(-25px);
+            transform: translateY(-50%);
 
             width: 50px;
             height: 50px;
@@ -153,6 +153,48 @@ $fontColorAlt: #F5723C;
             }
         }
     }
+
+    @media (max-width: 1550px) {
+        padding-right: 0;
+
+        &-middle {
+            margin-bottom: 100px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        &-top {
+            justify-content: flex-start;
+
+            margin-bottom: 140px;
+        }
+
+        &-phone {
+            &::before {
+                width: 40px;
+                height: 40px;
+
+                left: -50px;
+            }
+
+            a {
+                font-size: 18px;
+                line-height: 18px;
+            }
+
+            span {
+                font-size: 10px;
+                line-height: 12px;
+            }
+        }
+
+        &-middle {
+            h1 {
+                font-size: 40px;
+                line-height: 60px;
+            }
+        }
+    }
 }
 
 
@@ -168,19 +210,31 @@ $fontColorAlt: #F5723C;
     left: 293px;
     z-index: 0;
 
-    width: 0;
+    width: 0px;
     height: 118px;
 
     transition: all 0.5s ease;
+
+    @media (max-width: 1200px) {
+        top: -15px;
+        left: 190px;
+
+        height: 96px;
+    }
 }
 
 .underlay-hammam--active {
-    left: 160px;
+    left: 140px;
     width: 266px;
 
     z-index: 7;
 
     transition: all 0.5s ease;
+
+    @media (max-width: 1200px) {
+        left: 130px;
+        width: 206px;
+    }
 }
 
 .hover-link__underlay--sauna {
@@ -189,19 +243,30 @@ $fontColorAlt: #F5723C;
     left: 505px;
     z-index: 1;
 
-    width: 0px;
-    height: 127px;
+    width: 0px; // 240
+    height: 127px; //127
 
     transition: all 0.5s ease;
+
+    @media (max-width: 1200px) {
+        left: 410px;
+        top: -20px;
+
+        height: 97px;
+    }
 }
 
 .underlay-sauna--active {
-    left: 385px;
+    left: 365px;
     width: 240px;
 
     z-index: 7;
 
     transition: all 0.5s ease;
+
+    @media (max-width: 1200px) {
+        left: 290px;
+    }
 }
 
 
@@ -214,7 +279,7 @@ $fontColorAlt: #F5723C;
     right: 0;
     bottom: 0;
 
-    max-height: 100vh;
+    height: 100%;
     width: 100vw;
 
     opacity: 0;

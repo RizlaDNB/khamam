@@ -30,6 +30,33 @@ $fontColorAlt: #F5723C;
             left: 180px;
 
             background-color: #fefefe;
+
+            .slide-progress {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 0%;
+                height: 4px;
+
+                background-color: #F5723C;
+
+                animation-name: slideProgressTest;
+                animation-duration: 4s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+
+            @media (max-width: 1550px) {
+                width: 250px;
+                height: 71px;
+
+                bottom: 92px;
+            }
+
+            @media (max-width: 1200px) {
+                left: 100px;
+            }
         }
 
         &__pattern {
@@ -48,6 +75,15 @@ $fontColorAlt: #F5723C;
             bottom: -160px;
             right: -15px;
 
+            @media (max-width: 1550px) {
+                width: 330px;
+                height: 300px;
+
+                img {
+                    height: 224px;
+                    width: 226px;
+                }
+            }
         }
     }
 
@@ -68,10 +104,22 @@ $fontColorAlt: #F5723C;
         overflow: hidden;
 
         img {
-            max-width: 1780px;
-            height: 700px;
+            // max-width: 1780px;
+            // height: 700px;
             object-fit: cover;
             object-position: center;
         }
+    }
+}
+
+
+
+
+@keyframes slideProgressTest {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
     }
 }

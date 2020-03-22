@@ -22,6 +22,7 @@ $fontColorAlt: #F5723C;
         display: flex;
         justify-content: flex-end;
         padding-top: 40px;
+        padding-left: 0px;
         padding-right: 85px;
 
         overflow: hidden;
@@ -79,7 +80,6 @@ $fontColorAlt: #F5723C;
             opacity: 0.2;
         }
     }
-
 
     &__form {
         flex-basis: 59.4%;
@@ -318,6 +318,45 @@ $fontColorAlt: #F5723C;
                     path {
                         fill: #ffffff;
                     }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1550px) {
+        &__header {
+            justify-content: flex-start;
+
+            padding-left: 15px;
+            padding-right: 15px;
+
+            h1 {
+                font-size: 45px;
+                line-height: 45px;
+
+                p {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+        }
+
+        &__form {
+            padding-top: 70px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            form {
+                .from-group--confidential {
+                    right: 368px;
+
+                    &::before {
+                        width: 375px;
+                    }
+                }
+
+                .form__button {
+                    left: 15px;
                 }
             }
         }

@@ -122,6 +122,26 @@ input[type="radio"].visually-hidden {
 
             transition: all 0.5s ease;
         }
+
+        &-caption {
+            display: block;
+
+            position: absolute;
+            z-index: 2;
+            top: 300px;
+            left: 46px;
+
+            opacity: 0;
+
+            transform: rotate(-90deg);
+
+            @include fontGilroyBold();
+            font-size: 14px;
+            color: #ffffff;
+            text-transform: uppercase;
+
+            pointer-events: none;
+        }
     }
 
     &-caption {
@@ -319,6 +339,8 @@ input[type="radio"].visually-hidden {
 
         opacity: 0;
 
+        pointer-events: none;
+
         &::before {
             content: '';
             position: absolute;
@@ -379,6 +401,17 @@ input[type="radio"].visually-hidden {
         }
     }
 
+    .nav-button-caption {
+        top: 200px;
+
+        opacity: 1;
+
+        pointer-events: all;
+
+        transition: all 0.5s ease;
+
+        transition-delay: 0.8s;
+    }
     
     .nav-list__item {
         padding-left: 0px;
@@ -414,6 +447,8 @@ input[type="radio"].visually-hidden {
     right: 50px;
 
     transition: all 0.5s ease;
+
+    pointer-events: all;
 }
 
 .nav-list--active {

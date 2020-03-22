@@ -129,7 +129,7 @@
       position: absolute;
       top: 50%;
       left: -75px;
-      transform: translateY(-25px);
+      transform: translateY(-50%);
       width: 50px;
       height: 50px;
       background: url(../img/phone_icon.png) center no-repeat;
@@ -193,6 +193,28 @@
       .header-bottom a svg path {
         fill: transparent;
         transition: all 0.5s ease; }
+  @media (max-width: 1550px) {
+    .header {
+      padding-right: 0; }
+      .header-middle {
+        margin-bottom: 100px; } }
+  @media (max-width: 1200px) {
+    .header-top {
+      justify-content: flex-start;
+      margin-bottom: 140px; }
+    .header-phone::before {
+      width: 40px;
+      height: 40px;
+      left: -50px; }
+    .header-phone a {
+      font-size: 18px;
+      line-height: 18px; }
+    .header-phone span {
+      font-size: 10px;
+      line-height: 12px; }
+    .header-middle h1 {
+      font-size: 40px;
+      line-height: 60px; } }
 
 .hover-link--zindex {
   z-index: 8; }
@@ -202,15 +224,24 @@
   top: -20px;
   left: 293px;
   z-index: 0;
-  width: 0;
+  width: 0px;
   height: 118px;
   transition: all 0.5s ease; }
+  @media (max-width: 1200px) {
+    .hover-link__underlay--hammam {
+      top: -15px;
+      left: 190px;
+      height: 96px; } }
 
 .underlay-hammam--active {
-  left: 160px;
+  left: 140px;
   width: 266px;
   z-index: 7;
   transition: all 0.5s ease; }
+  @media (max-width: 1200px) {
+    .underlay-hammam--active {
+      left: 130px;
+      width: 206px; } }
 
 .hover-link__underlay--sauna {
   position: absolute;
@@ -220,12 +251,20 @@
   width: 0px;
   height: 127px;
   transition: all 0.5s ease; }
+  @media (max-width: 1200px) {
+    .hover-link__underlay--sauna {
+      left: 410px;
+      top: -20px;
+      height: 97px; } }
 
 .underlay-sauna--active {
-  left: 385px;
+  left: 365px;
   width: 240px;
   z-index: 7;
   transition: all 0.5s ease; }
+  @media (max-width: 1200px) {
+    .underlay-sauna--active {
+      left: 290px; } }
 
 .hover-img--hammam {
   position: absolute;
@@ -234,7 +273,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  max-height: 100vh;
+  height: 100%;
   width: 100vw;
   opacity: 0;
   transition: all 0.5s ease; }
@@ -300,6 +339,25 @@
       bottom: 72px;
       left: 180px;
       background-color: #fefefe; }
+      .presentation-content__slide-name .slide-progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        background-color: #F5723C;
+        animation-name: slideProgressTest;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite; }
+      @media (max-width: 1550px) {
+        .presentation-content__slide-name {
+          width: 250px;
+          height: 71px;
+          bottom: 92px; } }
+      @media (max-width: 1200px) {
+        .presentation-content__slide-name {
+          left: 100px; } }
     .presentation-content__pattern {
       width: 380px;
       height: 350px;
@@ -311,6 +369,13 @@
       z-index: 2;
       bottom: -160px;
       right: -15px; }
+      @media (max-width: 1550px) {
+        .presentation-content__pattern {
+          width: 330px;
+          height: 300px; }
+          .presentation-content__pattern img {
+            height: 224px;
+            width: 226px; } }
   .presentation-slider {
     max-width: 100%;
     height: auto; }
@@ -320,10 +385,14 @@
   height: 700px;
   overflow: hidden; }
   .slide__image img {
-    max-width: 1780px;
-    height: 700px;
     object-fit: cover;
     object-position: center; }
+
+@keyframes slideProgressTest {
+  from {
+    width: 0%; }
+  to {
+    width: 100%; } }
 
 .features {
   background: url(../img/bg.marble_white.jpg) bottom no-repeat;
@@ -410,6 +479,17 @@
         height: 150px;
         border: 1px solid #F5723C;
         border-radius: 50%; }
+    @media (max-width: 1550px) {
+      .features__facts {
+        padding-right: 0px; }
+        .features__facts .facts .card--objects {
+          left: 195px; }
+        .features__facts .facts .card--market {
+          left: 95px; }
+        .features__facts .facts .card--build {
+          left: -45px; }
+        .features__facts .facts__deco-ring {
+          left: -123px; } }
   .features__time {
     padding-top: 50px;
     padding-right: 200px; }
@@ -453,6 +533,8 @@
           color: #101010;
           letter-spacing: -1px; }
       .features__time .time__nav-arrow {
+        position: relative;
+        z-index: 2;
         flex-basis: 100%;
         margin-top: 70px;
         display: flex;
@@ -464,6 +546,9 @@
         .features__time .time__nav-arrow a svg path {
           fill: transparent;
           transition: all 0.5s ease; }
+    @media (max-width: 1550px) {
+      .features__time {
+        padding-right: 0px; } }
   .features__services {
     min-height: 1270px; }
     .features__services .services {
@@ -484,6 +569,11 @@
           letter-spacing: -1px; }
           .features__services .services__header h1 span {
             color: #F5723C; }
+        @media (max-width: 1550px) {
+          .features__services .services__header {
+            transform: rotate(0deg);
+            top: 0;
+            left: 0; } }
       .features__services .services__item {
         position: relative;
         filter: grayscale(100%);
@@ -565,6 +655,9 @@
           position: absolute;
           top: 220px;
           right: 70px; }
+        @media (max-width: 1550px) {
+          .features__services .services .service--hammam {
+            top: 170px; } }
       .features__services .services .service--sauna {
         width: 1080px;
         min-height: 600px;
@@ -584,6 +677,9 @@
           position: absolute;
           top: 430px;
           right: 110px; }
+        @media (max-width: 1550px) {
+          .features__services .services .service--sauna {
+            top: 665px; } }
       .features__services .services__deco-pattern {
         position: absolute;
         top: -40px;
@@ -612,6 +708,12 @@
           border-radius: 50%;
           background-color: #ffffff;
           box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.07); }
+        @media (max-width: 1550px) {
+          .features__services .services__deco-triangle {
+            top: 915px; } }
+    @media (max-width: 1550px) {
+      .features__services {
+        min-height: 1350px; } }
   .features__projects {
     padding-top: 100px;
     padding-bottom: 145px;
@@ -671,6 +773,9 @@
             background: url(../img/projects/check.png) center no-repeat; }
           .features__projects .projects__content p span {
             font-family: 'Gilroy Bold','Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    @media (max-width: 1550px) {
+      .features__projects {
+        padding-right: 0px; } }
 
 .project {
   box-sizing: border-box;
@@ -792,6 +897,9 @@
         .project__items .project-link a:hover svg {
           margin-left: 60px;
           transition: all 0.5s ease; }
+  @media (max-width: 1550px) {
+    .project {
+      padding-right: 0px; } }
 
 .guarantee {
   background: url(../img/bg.marble_white.jpg) no-repeat;
@@ -981,6 +1089,9 @@
           background: url(../img/projects/check.png) center no-repeat; }
         .guarantee .maintenance__content p:nth-child(4) {
           margin-bottom: 45px; }
+  @media (max-width: 1550px) {
+    .guarantee {
+      padding-right: 0px; } }
 
 .partners {
   background: url(../img/bg_marble_black.jpg) bottom no-repeat;
@@ -1038,6 +1149,9 @@
       .partners__cards .partner-card--offset {
         position: relative;
         left: -280px; }
+  @media (max-width: 1550px) {
+    .partners {
+      padding-right: 0px; } }
 
 .faq {
   background: url(../img/bg.marble_white.jpg) no-repeat;
@@ -1136,6 +1250,9 @@
       .faq__content .question-list__item-input:checked ~ .question-list__item-background {
         opacity: 1;
         transition: all 0.5s ease; }
+  @media (max-width: 1550px) {
+    .faq {
+      padding-right: 0px; } }
 
 .about {
   padding-right: 200px;
@@ -1178,6 +1295,9 @@
       color: #101010; }
       .about__content p span {
         font-family: 'Gilroy Bold','Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  @media (max-width: 1550px) {
+    .about {
+      padding-right: 0px; } }
 
 .consulting-wrapper {
   display: flex;
@@ -1190,6 +1310,7 @@
   display: flex;
   justify-content: flex-end;
   padding-top: 40px;
+  padding-left: 0px;
   padding-right: 85px;
   overflow: hidden; }
   .consulting__header h1 {
@@ -1382,6 +1503,28 @@
       .consulting__form form .form__button svg path {
         fill: #ffffff; }
 
+@media (max-width: 1550px) {
+  .consulting__header {
+    justify-content: flex-start;
+    padding-left: 15px;
+    padding-right: 15px; }
+    .consulting__header h1 {
+      font-size: 45px;
+      line-height: 45px; }
+      .consulting__header h1 p {
+        font-size: 16px;
+        line-height: 22px; }
+  .consulting__form {
+    padding-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    .consulting__form form .from-group--confidential {
+      right: 368px; }
+      .consulting__form form .from-group--confidential::before {
+        width: 375px; }
+    .consulting__form form .form__button {
+      left: 15px; } }
+
 .footer {
   background: url(../img/bg.marble_white.jpg) bottom no-repeat;
   background-attachment: fixed;
@@ -1536,6 +1679,19 @@ input[type="radio"].visually-hidden {
     .nav-button::after {
       bottom: 15px;
       transition: all 0.5s ease; }
+    .nav-button-caption {
+      display: block;
+      position: absolute;
+      z-index: 2;
+      top: 300px;
+      left: 46px;
+      opacity: 0;
+      transform: rotate(-90deg);
+      font-family: 'Gilroy Bold','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 14px;
+      color: #ffffff;
+      text-transform: uppercase;
+      pointer-events: none; }
   .nav-caption {
     display: block;
     position: relative;
@@ -1646,7 +1802,8 @@ input[type="radio"].visually-hidden {
     position: absolute;
     right: -850px;
     top: 75px;
-    opacity: 0; }
+    opacity: 0;
+    pointer-events: none; }
     .nav-phone::before {
       content: '';
       position: absolute;
@@ -1686,6 +1843,12 @@ input[type="radio"].visually-hidden {
     transform: rotate(45deg);
     background-color: #ffffff;
     transition: all 0.5s ease; }
+  .nav--open .nav-button-caption {
+    top: 200px;
+    opacity: 1;
+    pointer-events: all;
+    transition: all 0.5s ease;
+    transition-delay: 0.8s; }
   .nav--open .nav-list__item {
     padding-left: 0px; }
     .nav--open .nav-list__item a span {
@@ -1700,7 +1863,8 @@ input[type="radio"].visually-hidden {
 .nav-phone--active {
   opacity: 1;
   right: 50px;
-  transition: all 0.5s ease; }
+  transition: all 0.5s ease;
+  pointer-events: all; }
 
 .nav-list--active {
   padding-left: 400px;

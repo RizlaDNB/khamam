@@ -138,6 +138,28 @@ $fontColorAlt: #F5723C;
                 border-radius: 50%;
             }
         }
+
+        @media (max-width: 1550px) {
+            padding-right: 0px;
+
+            .facts {
+                .card--objects {
+                    left: 195px;
+                }
+
+                .card--market {
+                    left: 95px;
+                }
+
+                .card--build {
+                    left: -45px;
+                }
+
+                &__deco-ring {
+                    left: -123px;
+                }
+            }
+        }
     }
 
     &__time {
@@ -201,6 +223,9 @@ $fontColorAlt: #F5723C;
             }
 
             &__nav-arrow {
+                position: relative;
+                z-index: 2;
+
                 flex-basis: 100%;
 
                 margin-top: 70px;
@@ -230,6 +255,10 @@ $fontColorAlt: #F5723C;
                     }
                 }
             }
+        }
+
+        @media (max-width: 1550px) {
+            padding-right: 0px;
         }
     }
 
@@ -261,6 +290,12 @@ $fontColorAlt: #F5723C;
                     span {
                         color: $fontColorAlt;
                     }
+                }
+
+                @media (max-width: 1550px) {
+                    transform: rotate(0deg);
+                    top: 0;
+                    left: 0;
                 }
             }
 
@@ -397,6 +432,10 @@ $fontColorAlt: #F5723C;
                         right: 70px;
                     }
                 }
+
+                @media (max-width: 1550px) {
+                    top: 170px;
+                }
             }
 
             .service--sauna {
@@ -426,6 +465,10 @@ $fontColorAlt: #F5723C;
                         top: 430px;
                         right: 110px;
                     }
+                }
+
+                @media (max-width: 1550px) {
+                    top: 665px;
                 }
             }
 
@@ -469,7 +512,15 @@ $fontColorAlt: #F5723C;
                     background-color: #ffffff;
                     box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.07);
                 }
+
+                @media (max-width: 1550px) {
+                    top: 915px;
+                }
             }
+        }
+
+        @media (max-width: 1550px) {
+            min-height: 1350px;
         }
     }
     
@@ -561,6 +612,10 @@ $fontColorAlt: #F5723C;
                     }
                 }
             }
+        }
+
+        @media (max-width: 1550px) {
+            padding-right: 0px;
         }
     }
 }
