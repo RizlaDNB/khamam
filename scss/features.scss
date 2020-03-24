@@ -14,6 +14,12 @@ $fontColorAlt: #F5723C;
     &__facts {
         padding-right: 200px;
 
+        @media (max-width: 1550px) {
+            padding-right: 0px;
+
+            padding-top: 80px;
+        }
+
         .facts {
             position: relative;
         
@@ -28,6 +34,16 @@ $fontColorAlt: #F5723C;
                 top: 235px;
                 left: -90px;
                 transform: rotate(-90deg);
+
+                @media (max-width: 1550px) {
+                    top: 155px;
+                    left: 0px;
+                }
+
+                @media (max-width: 1200px) {
+                    top: 135px;
+                    left: -80px;
+                }
         
                 h1 {
         
@@ -38,6 +54,10 @@ $fontColorAlt: #F5723C;
                     font-size: 80px;
                     line-height: 75px;
                     color: $fontColorAlt;
+
+                    @media (max-width: 1200px) {
+                        font-size: 74px;
+                    }
         
                     span {
                         color: $fontColorMain;
@@ -80,6 +100,15 @@ $fontColorAlt: #F5723C;
                 height: 296px;
         
                 border: 2px solid #F5723C;
+
+                @media (max-width: 1550px) {
+                    left: 195px;
+                    top: 50px;
+                }
+
+                @media (max-width: 1200px) {
+                    left: 35px;
+                }
         
                 span {
                     color: $fontColorMain;
@@ -98,6 +127,15 @@ $fontColorAlt: #F5723C;
                 background: url(../img/marble_black_small.jpg) center no-repeat;
         
                 color: #ffffff;
+
+                @media (max-width: 1550px) {
+                    left: 95px;
+                    top: 291px;
+                }
+
+                @media (max-width: 1200px) {
+                    left: -65px;
+                }
         
                 h2 {
                     margin: 0;
@@ -115,6 +153,15 @@ $fontColorAlt: #F5723C;
         
                 background-color: #ffffff;
                 box-shadow: 20px 10px 65px rgba(0, 0, 0, 0.1);
+
+                @media (max-width: 1550px) {
+                    left: -45px;
+                    top: 496px;
+                }
+
+                @media (max-width: 1200px) {
+                    left: -205px;
+                }
         
                 h2 {
                     margin: 0;
@@ -136,29 +183,16 @@ $fontColorAlt: #F5723C;
                 height: 150px;
                 border: 1px solid $fontColorAlt;
                 border-radius: 50%;
-            }
-        }
 
-        @media (max-width: 1550px) {
-            padding-right: 0px;
-
-            .facts {
-                .card--objects {
-                    left: 195px;
-                }
-
-                .card--market {
-                    left: 95px;
-                }
-
-                .card--build {
-                    left: -45px;
-                }
-
-                &__deco-ring {
+                @media (max-width: 1550px) {
                     left: -123px;
+                    top: 690px;
                 }
-            }
+
+                @media (max-width: 1200px) {
+                    left: -283px;
+                }
+            } 
         }
     }
 
@@ -172,16 +206,19 @@ $fontColorAlt: #F5723C;
             flex-wrap: wrap;
 
             &__header {
-                max-width: 50%;
-
                 h1 {
                     margin: 0;
                     @include fontGilroyMedium();
                     font-size: 66px;
                     line-height: 70px;
                     color: $fontColorMain;
+
+                    @media (max-width: 1200px) {
+                        font-size: 60px;
+                    }
                 }
             }
+
             &__content {
                 max-width: 48%;
 
@@ -286,6 +323,10 @@ $fontColorAlt: #F5723C;
                     @include fontGilroyMedium();
                     color: $fontColorMain;
                     letter-spacing: -1px;
+
+                    @media (max-width: 1200px) {
+                        font-size: 74px;
+                    }
 
                     span {
                         color: $fontColorAlt;
@@ -409,6 +450,7 @@ $fontColorAlt: #F5723C;
                 width: 1140px;
                 min-height: 600px;
                 background: url(../img/services/hammam.jpg) center no-repeat;
+                background-size: cover;
 
                 position: absolute;
                 top: 90px;
@@ -434,7 +476,16 @@ $fontColorAlt: #F5723C;
                 }
 
                 @media (max-width: 1550px) {
-                    top: 170px;
+                    position: relative;
+
+                    top: 0;
+                    
+                    margin-top: 20px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    width: auto;
+                    max-width: 1080px;
                 }
             }
 
@@ -442,6 +493,8 @@ $fontColorAlt: #F5723C;
                 width: 1080px;
                 min-height: 600px;
                 background: url(../img/services/sauna.jpg) center no-repeat;
+                background-size: cover;
+
                 box-shadow: 0px 4px 90px rgba(0, 0, 0, 0.36);
 
                 position: absolute;
@@ -468,7 +521,16 @@ $fontColorAlt: #F5723C;
                 }
 
                 @media (max-width: 1550px) {
-                    top: 665px;
+                    position: relative;
+
+                    top: 0;
+                    
+                    margin-top: 20px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    width: auto;
+                    max-width: 1080px;
                 }
             }
 
@@ -521,6 +583,8 @@ $fontColorAlt: #F5723C;
 
         @media (max-width: 1550px) {
             min-height: 1350px;
+
+            padding-right: 15px;
         }
     }
     
@@ -544,6 +608,10 @@ $fontColorAlt: #F5723C;
                     font-size: 58px;
                     line-height: 60px;
                     color: $fontColorMain;
+
+                    @media (max-width: 1200px) {
+                        font-size: 52px;
+                    }
 
                     span {
                         color: $fontColorAlt;

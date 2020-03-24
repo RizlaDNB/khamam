@@ -13,14 +13,29 @@ $fontColorAlt: #F5723C;
     padding-top: 95px;
     padding-bottom: 140px;
 
+    @media (max-width: 1550px) {
+        padding-right: 0px;
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
     &-wrapper {
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 1200px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__header {
         flex-basis: 50%;
+
+        @media (max-width: 1200px) {
+            flex-basis: 100%;
+
+            margin-bottom: 15px;
+        }
 
         h1 {
             margin: 0;
@@ -31,6 +46,10 @@ $fontColorAlt: #F5723C;
             font-size: 65px;
             line-height: 65px;
             color: #ffffff;
+
+            @media (max-width: 1200px) {
+                font-size: 59px;
+            }
 
             span {
                 color: $fontColorAlt;
@@ -44,12 +63,20 @@ $fontColorAlt: #F5723C;
             font-size: 20px;
             line-height: 30px;
             color: #ffffff;
+
+            @media (max-width: 1200px) {
+                font-size: 18px;
+            }
         }
 
         a {
             display: inline-block;
 
             margin-top: 195px;
+
+            @media (max-width: 1200px) {
+                margin-top: 20px;
+            }
 
             svg {
                 path {
@@ -66,17 +93,26 @@ $fontColorAlt: #F5723C;
                     }
                 }
             }
-        }
+
+            
+        } 
     }
 
     &__cards {
         flex-basis: 50%;
-        flex-shrink: 0;
+        max-width: 560px;
+        width: 560px;
 
         display: flex;
         flex-wrap: wrap;
 
+        @media (max-width: 1200px) {
+            flex-basis: 100%;
+        }
+
         .partner-card {
+            flex-shrink: 0;
+
             width: 280px;
             height: 197px;
 
@@ -97,11 +133,11 @@ $fontColorAlt: #F5723C;
             &--offset {
                 position: relative;
                 left: -280px;
+
+                @media (max-width: 1200px) {
+                    left: 0;
+                }
             }
         }
-    }
-
-    @media (max-width: 1550px) {
-        padding-right: 0px;
     }
 }

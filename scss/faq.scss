@@ -16,6 +16,11 @@ $fontColorAlt: #F5723C;
     &-wrapper {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 1200px) {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
     }
 
     &__header {
@@ -27,9 +32,17 @@ $fontColorAlt: #F5723C;
             line-height: 70px;
             color: $fontColorMain;
 
+            @media (max-width: 1200px) {
+                font-size: 60px;
+            }
+
             span {
                 color: $fontColorAlt;
             }
+        }
+
+        @media (max-width: 1200px) {
+            flex-basis: 100%;
         }
     }
 
@@ -37,6 +50,10 @@ $fontColorAlt: #F5723C;
         flex-basis: 65%;
 
         margin-top: 25px;
+
+        @media (max-width: 1200px) {
+            flex-basis: 100%;
+        }
 
         .question-list {
 
@@ -74,6 +91,10 @@ $fontColorAlt: #F5723C;
                         line-height: 26px;
                         color: $fontColorMain;
                         font-weight: normal;
+
+                        @media (max-width: 1200px) {
+                            font-size: 18px;
+                        }
                     }
 
                     svg {
@@ -103,6 +124,10 @@ $fontColorAlt: #F5723C;
                         font-size: 16px;
                         line-height: 22px;
                         color: #000000;
+
+                        @media (max-width: 1200px) {
+                            font-size: 14px;
+                        }
                     }
                 }
 
@@ -168,5 +193,9 @@ $fontColorAlt: #F5723C;
 
     @media (max-width: 1550px) {
         padding-right: 0px;
+    }
+
+    @media (max-width: 1200px) {
+        padding-top: 80px;
     }
 }

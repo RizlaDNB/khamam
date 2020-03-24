@@ -23,6 +23,10 @@ $fontColorAlt: #F5723C;
                 @include fontGilroyMedium();
                 font-size: 65px;
                 line-height: 62px;
+
+                @media (max-width: 1200px) {
+                    font-size: 59px;
+                }
             }
         }
         &__items {
@@ -202,6 +206,10 @@ $fontColorAlt: #F5723C;
                 font-size: 56px;
                 line-height: 62px;
                 color: $fontColorMain;
+
+                @media (max-width: 1550px) {
+                    font-size: 50px;
+                }
             }
 
             &-deco {
@@ -225,6 +233,16 @@ $fontColorAlt: #F5723C;
                     width: 138px;
                     height: 130px;
                 }
+
+                @media (max-width: 1200px) {
+                    margin-top: 0;
+                    margin-left: 20px;
+                }
+            }
+
+            @media (max-width: 1200px) {
+                display: flex;
+                margin-right: 0px;
             }
         }
 
@@ -300,6 +318,10 @@ $fontColorAlt: #F5723C;
                     margin-bottom: 45px;
                 }
             }
+        }
+
+        @media (max-width: 1200px) {
+            flex-wrap: wrap;
         }
     }
 

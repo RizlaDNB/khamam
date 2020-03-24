@@ -13,10 +13,10 @@ $fontColorAlt: #F5723C;
     background-size: cover;
     background-attachment: fixed;
 
-    height: 1755px;
+    min-height: 1755px;
 
     padding-top: 90px;
-    padding-bottom: 180px;
+    // padding-bottom: 180px;
 
     &-wrapper {
         display: flex;
@@ -27,6 +27,8 @@ $fontColorAlt: #F5723C;
 
     &__header {
         margin-top: 50px;
+        margin-right: 10px;
+
         h1 {
             margin: 0;
 
@@ -34,6 +36,10 @@ $fontColorAlt: #F5723C;
             font-size: 58px;
             line-height: 60px;
             color: #ffffff;
+
+            @media (max-width: 1200px) {
+                font-size: 52px;
+            }
 
             span {
                 color: $fontColorAlt;
@@ -77,6 +83,7 @@ $fontColorAlt: #F5723C;
             padding-left: 55px;
             padding-top: 55px;
             padding-right: 115px;
+            padding-bottom: 25px;
             margin-bottom: 40px;
 
             position: relative;
@@ -113,6 +120,14 @@ $fontColorAlt: #F5723C;
                 font-size: 17px;
                 line-height: 24px;
             }
+
+            &:nth-child(4) {
+                margin-bottom: -90px;
+            }
+
+            @media (max-width: 1200px) {
+                padding-right: 45px;
+            }
         }
 
         .project-card--white {
@@ -135,11 +150,11 @@ $fontColorAlt: #F5723C;
         }
 
         .project-link {
-            position: absolute;
-            bottom: -310;
+            position: relative;
+            bottom: -135px;
             left: 0;
 
-            width: 560px;
+            max-width: 560px;
             min-height: 270px;
 
             background-color: #F5723C;
@@ -178,6 +193,10 @@ $fontColorAlt: #F5723C;
 
                         background-color: #ffffff;
                     }
+
+                    @media (max-width: 1200px) {
+                        font-size: 20px;
+                    }
                 }
 
                 svg {
@@ -190,6 +209,10 @@ $fontColorAlt: #F5723C;
                     path {
                         fill: #ffffff;
                         stroke: #ffffff;
+                    }
+
+                    @media (max-width: 1200px) {
+                        transform: rotate(-90deg) scale(0.7);
                     }
                 }
 

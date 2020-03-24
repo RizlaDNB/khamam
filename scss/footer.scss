@@ -14,9 +14,19 @@ $fontColorAlt: #F5723C;
 
     position: relative;
 
+    @media (max-width: 1200px) {
+        padding-right: 0px;
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
+
     &-wrapper {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 1200px) {
+            flex-wrap: wrap;
+        }
     }
 
     &-details {
@@ -63,6 +73,10 @@ $fontColorAlt: #F5723C;
             color: $fontColorMain;
             text-decoration: none;
         }
+
+        @media (max-width: 1200px) {
+            padding-left: 0px;
+        }
     }
 
     &-contacts {
@@ -71,7 +85,27 @@ $fontColorAlt: #F5723C;
         top: 160px;
         right: 60px;
 
+        @media (max-width: 1200px) {
+            flex-basis: 100%;
+
+            position: relative;
+            top: 0;
+            right: 0;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-top: 50px;
+        }
+
         &__phone {
+
+            @media (max-width: 1200px) {
+                flex-basis: 50%;
+
+                padding-left: 65px;
+            }
 
             &::before {
                 content: '';
@@ -79,12 +113,19 @@ $fontColorAlt: #F5723C;
 
                 top: 50%;
                 left: -75px;
-                transform: translateY(-25px);
+                transform: translateY(-50%);
 
                 width: 50px;
                 height: 50px;
 
                 background-color: $fontColorMain;
+
+                @media (max-width: 1200px) {
+                    width: 40px;
+                    height: 40px;
+    
+                    left: 10px;
+                }
             }
 
             &::after {
@@ -93,12 +134,19 @@ $fontColorAlt: #F5723C;
 
                 top: 50%;
                 left: -75px;
-                transform: translateY(-25px);
+                transform: translateY(-50%);
 
                 width: 50px;
                 height: 50px;
 
                 background: url(../img/footer/phone_icon.png) center no-repeat;
+
+                @media (max-width: 1200px) {
+                    width: 40px;
+                    height: 40px;
+    
+                    left: 10px;
+                }
             }
 
             a {
@@ -108,6 +156,10 @@ $fontColorAlt: #F5723C;
                 font-size: 22px;
                 line-height: 22px;
                 text-decoration: none;
+
+                @media (max-width: 1200px) {
+                    font-size: 20px;
+                }
             }
 
             span {
@@ -115,6 +167,10 @@ $fontColorAlt: #F5723C;
                 @include fontGilroyMedium();
                 font-size: 14px;
                 line-height: 16px;
+
+                @media (max-width: 1200px) {
+                    font-size: 12px;
+                }
             }
         }
 
@@ -136,6 +192,14 @@ $fontColorAlt: #F5723C;
             a {
                 color: $fontColorAlt;
             }
-        }
+
+            @media (max-width: 1200px) {
+                position: relative;
+                top: 0;
+                left: 0;
+
+                flex-basis: 50%;
+            }
+        } 
     }
 }

@@ -13,10 +13,19 @@ $fontColorAlt: #F5723C;
 
     &-wrapper {
         display: flex;
+
+        @media (max-width: 1200px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__header {
         flex-basis: 36%;
+
+        @media (max-width: 1200px) {
+            flex-basis: 100%;
+        }
+
         h1 {
             @include fontGilroyMedium();
             font-size: 66px;
@@ -26,12 +35,20 @@ $fontColorAlt: #F5723C;
 
             margin: 0;
             margin-left: 10px;
+
+            @media (max-width: 1200px) {
+                font-size: 60px;
+            }
         }
 
         &-deco {
             margin-top: 100px;
             img {
                 transform: rotate(180deg);
+            }
+
+            @media (max-width: 1200px) {
+                display: none;
             }
         }
     }
@@ -62,13 +79,28 @@ $fontColorAlt: #F5723C;
             line-height: 38px;
             color: $fontColorMain;
 
+            @media (max-width: 1200px) {
+                font-size: 20px;
+
+                margin-bottom: 30px;
+            }
+
             span {
                 @include fontGilroyBold();
             }
+        }
+
+        @media (max-width: 1200px) {
+            flex-basis: 100%;
         }
     }
 
     @media (max-width: 1550px) {
         padding-right: 0px;
+    }
+
+    @media (max-width: 1200px) {
+        padding-top: 80px;
+        padding-bottom: 40px;
     }
 }
