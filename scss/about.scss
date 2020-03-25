@@ -11,6 +11,19 @@ $fontColorAlt: #F5723C;
 
     background-color: #ffffff;
 
+    @media (max-width: 1550px) {
+        padding-right: 0px;
+    }
+
+    @media (max-width: 1200px) {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    @media (max-width: 992px) {
+        padding-top: 50px;
+    }
+
     &-wrapper {
         display: flex;
 
@@ -58,6 +71,14 @@ $fontColorAlt: #F5723C;
 
         position: relative;
 
+        @media (max-width: 1200px) {
+            flex-basis: 100%;
+        }
+
+        @media (max-width: 992px) {
+            padding-top: 50px;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -68,6 +89,10 @@ $fontColorAlt: #F5723C;
             height: 4px;
 
             background-color: $fontColorAlt;
+
+            @media (max-width: 992px) {
+                width: 100%;
+            }
         }
 
         p {
@@ -85,22 +110,15 @@ $fontColorAlt: #F5723C;
                 margin-bottom: 30px;
             }
 
+            @media (max-width: 992px) {
+                line-height: 30px;
+            }
+
             span {
                 @include fontGilroyBold();
             }
         }
-
-        @media (max-width: 1200px) {
-            flex-basis: 100%;
-        }
     }
 
-    @media (max-width: 1550px) {
-        padding-right: 0px;
-    }
-
-    @media (max-width: 1200px) {
-        padding-top: 80px;
-        padding-bottom: 40px;
-    }
+    
 }

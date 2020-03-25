@@ -16,7 +16,10 @@ $fontColorAlt: #F5723C;
     min-height: 1755px;
 
     padding-top: 90px;
-    // padding-bottom: 180px;
+
+    @media (max-width: 992px) {
+        padding-top: 40px;
+    }
 
     &-wrapper {
         display: flex;
@@ -28,6 +31,10 @@ $fontColorAlt: #F5723C;
     &__header {
         margin-top: 50px;
         margin-right: 10px;
+
+        @media (max-width: 992px) {
+            display: none;
+        }
 
         h1 {
             margin: 0;

@@ -36,10 +36,19 @@ $fontColorAlt: #F5723C;
             margin-bottom: 140px;
         }
 
+        @media (max-width: 992px) {
+            justify-content: center;
+        }
+
         &__logo {
             text-decoration: none;
+
             img {
                 width: 100%;
+
+                @media (max-width: 992px) {
+                    width: 90%;
+                }
             }
         }
     }
@@ -48,6 +57,10 @@ $fontColorAlt: #F5723C;
         position: absolute;
         right: 50px;
         top: 75px;
+
+        @media (max-width: 992px) {
+            display: none;
+        }
 
         &::before {
             content: '';
@@ -117,6 +130,10 @@ $fontColorAlt: #F5723C;
             @media (max-width: 1200px) {
                 font-size: 42px;
                 line-height: 60px;
+            }
+
+            @media (max-width: 992px) {
+                font-size: 40px;
             }
             
             span {
@@ -215,6 +232,13 @@ $fontColorAlt: #F5723C;
 
         height: 96px;
     }
+
+    @media (max-width: 992px) {
+        top: -15px;
+        left: 170px;
+
+        height: 90px;
+    }
 }
 
 .underlay-hammam--active {
@@ -226,8 +250,13 @@ $fontColorAlt: #F5723C;
     transition: all 0.5s ease;
 
     @media (max-width: 1200px) {
-        left: 130px;
+        left: 140px;
         width: 206px;
+    }
+
+    @media (max-width: 1200px) {
+        left: 135px;
+        width: 190px;
     }
 }
 
@@ -243,10 +272,17 @@ $fontColorAlt: #F5723C;
     transition: all 0.5s ease;
 
     @media (max-width: 1200px) {
-        left: 410px;
+        left: 430px;
         top: -20px;
 
         height: 97px;
+    }
+
+    @media (max-width: 992px) {
+        left: 410px;
+        top: -20px;
+
+        height: 90px;
     }
 }
 
@@ -257,6 +293,10 @@ $fontColorAlt: #F5723C;
     z-index: 7;
 
     transition: all 0.5s ease;
+
+    @media (max-width: 1200px) {
+        left: 310px;
+    }
 
     @media (max-width: 1200px) {
         left: 290px;

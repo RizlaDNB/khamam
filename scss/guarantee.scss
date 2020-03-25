@@ -13,9 +13,22 @@ $fontColorAlt: #F5723C;
     padding-right: 200px;
     padding-top: 180px;
 
+    @media (max-width: 1550px) {
+        padding-right: 0px;
+    }
+
+    @media (max-width: 992px) {
+        padding-top: 120px;
+    }
+
     .guarantees {
+
         &__header {
             margin-bottom: 55px;
+
+            @media (max-width: 992px) {
+                margin-bottom: 35px;
+            }
 
             h1 {
                 margin: 0;
@@ -29,6 +42,7 @@ $fontColorAlt: #F5723C;
                 }
             }
         }
+
         &__items {
             display: flex;
             justify-content: space-between;
@@ -51,6 +65,8 @@ $fontColorAlt: #F5723C;
                 box-shadow: 0px 4px 90px rgba(0, 0, 0, 0.1);
 
                 cursor: pointer;
+
+                @media (max-width: 992px) {}
 
                 &__header {
                     display: flex;
@@ -196,8 +212,20 @@ $fontColorAlt: #F5723C;
 
         display: flex;
 
+        @media (max-width: 992px) {
+            padding-top: 150px;
+            padding-bottom: 40px;
+        }
+
         &__header {
+            position: relative;
+
             margin-right: 40px;
+
+            @media (max-width: 1200px) {
+                display: flex;
+                margin-right: 0px;
+            }
 
             h1 {
                 margin: 0;
@@ -207,8 +235,11 @@ $fontColorAlt: #F5723C;
                 line-height: 62px;
                 color: $fontColorMain;
 
+                position: relative;
+                z-index: 2;
+
                 @media (max-width: 1550px) {
-                    font-size: 50px;
+                    font-size: 52px;
                 }
             }
 
@@ -225,6 +256,22 @@ $fontColorAlt: #F5723C;
                 background-color: #ffffff;
                 box-shadow: 0px 4px 90px rgba(0, 0, 0, 0.1);
 
+                @media (max-width: 1200px) {
+                    margin-top: 0;
+                    margin-left: 20px;
+                }
+
+                @media (max-width: 992px) {
+                    position: absolute;
+
+                    left: 0;
+                    top: -160px;
+
+                    margin: 0;
+
+                    transform: scale(0.8);
+                }
+
                 img {
                     position: absolute;
                     top: -45px;
@@ -232,17 +279,7 @@ $fontColorAlt: #F5723C;
 
                     width: 138px;
                     height: 130px;
-                }
-
-                @media (max-width: 1200px) {
-                    margin-top: 0;
-                    margin-left: 20px;
-                }
-            }
-
-            @media (max-width: 1200px) {
-                display: flex;
-                margin-right: 0px;
+                } 
             }
         }
 
@@ -252,6 +289,14 @@ $fontColorAlt: #F5723C;
             padding-top: 75px;
 
             position: relative;
+
+            @media (max-width: 992px) {
+                margin-left: 0px;
+
+                padding-top: 50px;
+
+                width: 100%;
+            }
 
             &::before {
                 content: '';
@@ -263,6 +308,10 @@ $fontColorAlt: #F5723C;
                 width: 105%;
 
                 background-color: $fontColorAlt;
+
+                @media (max-width: 992px) {
+                    width: 100%;
+                }
             }
 
             h2 {
@@ -274,6 +323,10 @@ $fontColorAlt: #F5723C;
                 line-height: 26px;
                 color: $fontColorMain;
                 letter-spacing: -1px;
+
+                @media (max-width: 992px) {
+                    margin-bottom: 25px;
+                }
             }
 
             p {
@@ -287,6 +340,10 @@ $fontColorAlt: #F5723C;
                 color: $fontColorMain;
 
                 position: relative;
+
+                @media (max-width: 992px) {
+                    margin-bottom: 20px;
+                }
 
                 &::before {
                     content: '';
@@ -316,6 +373,10 @@ $fontColorAlt: #F5723C;
 
                 &:nth-child(4) {
                     margin-bottom: 45px;
+
+                    @media (max-width: 992px) {
+                        margin-bottom: 35px;
+                    }
                 }
             }
         }
@@ -325,7 +386,5 @@ $fontColorAlt: #F5723C;
         }
     }
 
-    @media (max-width: 1550px) {
-        padding-right: 0px;
-    }
+    
 }

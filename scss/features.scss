@@ -25,6 +25,10 @@ $fontColorAlt: #F5723C;
         
             min-height: 958px;
 
+            @media (max-width: 992px) {
+                min-height: 750px;
+            }
+
             &-wrapper {
                 display: flex;
             }
@@ -44,6 +48,11 @@ $fontColorAlt: #F5723C;
                     top: 135px;
                     left: -80px;
                 }
+
+                @media (max-width: 992px) {
+                    top: 50px;
+                    left: -60px;
+                }
         
                 h1 {
         
@@ -57,6 +66,10 @@ $fontColorAlt: #F5723C;
 
                     @media (max-width: 1200px) {
                         font-size: 74px;
+                    }
+
+                    @media (max-width: 992px) {
+                        font-size: 65px;
                     }
         
                     span {
@@ -109,6 +122,12 @@ $fontColorAlt: #F5723C;
                 @media (max-width: 1200px) {
                     left: 35px;
                 }
+
+                @media (max-width: 992px) {
+                    transform: scale(0.8);
+
+                    left: -80px;
+                }
         
                 span {
                     color: $fontColorMain;
@@ -136,6 +155,13 @@ $fontColorAlt: #F5723C;
                 @media (max-width: 1200px) {
                     left: -65px;
                 }
+
+                @media (max-width: 992px) {
+                    transform: scale(0.8);
+
+                    top: 251px;
+                    left: -165px;
+                }
         
                 h2 {
                     margin: 0;
@@ -161,6 +187,13 @@ $fontColorAlt: #F5723C;
 
                 @media (max-width: 1200px) {
                     left: -205px;
+                }
+
+                @media (max-width: 992px) {
+                    transform: scale(0.8);
+
+                    top: 416px;
+                    left: -280px;
                 }
         
                 h2 {
@@ -192,6 +225,13 @@ $fontColorAlt: #F5723C;
                 @media (max-width: 1200px) {
                     left: -283px;
                 }
+
+                @media (max-width: 992px) {
+                    transform: scale(0.8);
+
+                    top: 580px;
+                    left: 0px;
+                }
             } 
         }
     }
@@ -216,6 +256,11 @@ $fontColorAlt: #F5723C;
                     @media (max-width: 1200px) {
                         font-size: 60px;
                     }
+
+                    @media (max-width: 992px) {
+                        font-size: 50px;
+                        line-height: 50px;
+                    }
                 }
             }
 
@@ -223,6 +268,10 @@ $fontColorAlt: #F5723C;
                 max-width: 48%;
 
                 position: relative;
+
+                @media (max-width: 992px) {
+                    min-width: 100%;
+                }
 
                 &::before {
                     content: '';
@@ -272,7 +321,15 @@ $fontColorAlt: #F5723C;
 
                 margin-right: 100px;
 
+                @media (max-width: 992px) {
+                    margin-right: 15px;
+                }
+
                 a {
+                    @media (max-width: 992px) {
+                        transform: scale(0.9);
+                    }
+
                     &:hover {
                         svg {
                             path {
@@ -302,6 +359,12 @@ $fontColorAlt: #F5723C;
     &__services {
         min-height: 1270px;
 
+        @media (max-width: 1550px) {
+            min-height: 1350px;
+
+            padding-right: 15px;
+        }
+
         .services {
             position: relative;
 
@@ -326,6 +389,11 @@ $fontColorAlt: #F5723C;
 
                     @media (max-width: 1200px) {
                         font-size: 74px;
+                    }
+
+                    @media (max-width: 992px) {
+                        font-size: 65px;
+                        line-height: 65px;
                     }
 
                     span {
@@ -461,17 +529,29 @@ $fontColorAlt: #F5723C;
                     .service__header {
                         margin-top: 70px;
                         margin-left: 115px;
+
+                        @media (max-width: 992px) {
+                            margin-left: 50px;
+                        }
                     }
 
                     .service__number {
                         margin-top: 25px;
                         margin-left: 115px;
+
+                        @media (max-width: 992px) {
+                            margin-left: 50px;
+                        }
                     }
 
                     .service__link {
                         position: absolute;
                         top: 220px;
                         right: 70px;
+
+                        @media (max-width: 992px) {
+                            right: 50px;
+                        }
                     }
                 }
 
@@ -502,24 +582,6 @@ $fontColorAlt: #F5723C;
                 top: 585px;
                 z-index: 3;
 
-                a {
-                    .service__header {
-                        margin-top: 90px;
-                        margin-left: 175px;
-                    }
-
-                    .service__number {
-                        margin-top: 255px;
-                        margin-left: 175px;
-                    }
-
-                    .service__link {
-                        position: absolute;
-                        top: 430px;
-                        right: 110px;
-                    }
-                }
-
                 @media (max-width: 1550px) {
                     position: relative;
 
@@ -532,9 +594,37 @@ $fontColorAlt: #F5723C;
                     width: auto;
                     max-width: 1080px;
                 }
+
+                a {
+                    .service__header {
+                        margin-top: 90px;
+                        margin-left: 175px;
+
+                        @media (max-width: 992px) {
+                            margin-left: 50px;
+                        }
+                    }
+
+                    .service__number {
+                        margin-top: 255px;
+                        margin-left: 175px;
+
+                        @media (max-width: 992px) {
+                            margin-left: 50px;
+                        }
+                    }
+
+                    .service__link {
+                        position: absolute;
+                        top: 430px;
+                        right: 110px;
+
+                        @media (max-width: 992px) {
+                            right: 50px;
+                        }
+                    }
+                }
             }
-
-
 
             &__deco-pattern {
                 position: absolute;
@@ -550,16 +640,30 @@ $fontColorAlt: #F5723C;
                 justify-content: center;
                 align-items: center;
 
+                @media (max-width: 992px) {
+                    width: 280px;
+                    height: 250px;
+                }
+
                 img {
                     transform: rotate(180deg);
+
+                    @media (max-width: 992px) {
+                        width: 196px;
+                        height: 194px;
+                    }
                 }
             }
+
             &__deco-triangle {
                 position: absolute;
                 top: 835px;
                 left: 1019px;
                 z-index: 0;
 
+                @media (max-width: 1550px) {
+                    display: none;
+                }
 
                 div {
                     position: absolute;
@@ -574,17 +678,7 @@ $fontColorAlt: #F5723C;
                     background-color: #ffffff;
                     box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.07);
                 }
-
-                @media (max-width: 1550px) {
-                    top: 915px;
-                }
             }
-        }
-
-        @media (max-width: 1550px) {
-            min-height: 1350px;
-
-            padding-right: 15px;
         }
     }
     
@@ -594,12 +688,31 @@ $fontColorAlt: #F5723C;
 
         padding-right: 200px;
 
+        @media (max-width: 1550px) {
+            padding-right: 0px;
+        }
+
+        @media (max-width: 992px) {
+            padding-top: 60px;
+            padding-bottom: 40px;
+
+            background-color: #ffffff;
+        }
+
         .projects {
             display: flex;
             justify-content: space-between;
 
+            @media (max-width: 992px) {
+                flex-wrap: wrap;
+            }
+
             &__header {
                 max-width: 50%;
+
+                @media (max-width: 992px) {
+                    min-width: 100%;
+                }
 
                 h1 {
                     margin: 0;
@@ -618,11 +731,19 @@ $fontColorAlt: #F5723C;
                     }
                 }
             }
+
             &__content {
                 max-width: 50%;
 
                 padding-top: 65px;
+
                 position: relative;
+
+                @media (max-width: 992px) {
+                    min-width: 100%;
+
+                    padding-top: 45px;
+                }
 
                 &::before {
                     content: '';
@@ -633,6 +754,12 @@ $fontColorAlt: #F5723C;
                     width: 86%;
                     height: 4px;
                     background-color: $fontColorAlt;
+
+                    @media (max-width: 992px) {
+                        width: 100%;
+
+                        left: 0;
+                    }
                 }
 
                 p {
@@ -649,6 +776,10 @@ $fontColorAlt: #F5723C;
 
                     position: relative;
 
+                    @media (max-width: 992px) {
+                        padding-left: 50px;
+                    }
+
                     &::before {
                         content: '';
                         position: absolute;
@@ -660,6 +791,10 @@ $fontColorAlt: #F5723C;
                         height: 35px;
 
                         background-color: $fontColorAlt;
+
+                        @media (max-width: 992px) {
+                            left: 0;
+                        }
                     }
 
                     &::after {
@@ -673,6 +808,10 @@ $fontColorAlt: #F5723C;
                         height: 35px;
 
                         background: url(../img/projects/check.png) center no-repeat;
+
+                        @media (max-width: 992px) {
+                            left: 0;
+                        }
                     }
 
                     span {
@@ -680,10 +819,6 @@ $fontColorAlt: #F5723C;
                     }
                 }
             }
-        }
-
-        @media (max-width: 1550px) {
-            padding-right: 0px;
-        }
+        } 
     }
 }

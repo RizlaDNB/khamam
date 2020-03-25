@@ -31,6 +31,17 @@ $fontColorAlt: #F5723C;
 
             background-color: #fefefe;
 
+            @media (max-width: 1550px) {
+                width: 250px;
+                height: 71px;
+
+                bottom: 92px;
+            }
+
+            @media (max-width: 1200px) {
+                left: 100px;
+            }
+
             .slide-progress {
                 position: absolute;
                 top: 0;
@@ -45,17 +56,6 @@ $fontColorAlt: #F5723C;
                 animation-duration: 4s;
                 animation-timing-function: linear;
                 animation-iteration-count: infinite;
-            }
-
-            @media (max-width: 1550px) {
-                width: 250px;
-                height: 71px;
-
-                bottom: 92px;
-            }
-
-            @media (max-width: 1200px) {
-                left: 100px;
             }
         }
 
@@ -78,10 +78,24 @@ $fontColorAlt: #F5723C;
             @media (max-width: 1550px) {
                 width: 330px;
                 height: 300px;
+            }
 
-                img {
-                    height: 224px;
+            @media (max-width: 992px) {
+                width: 280px;
+                height: 250px;
+
+                bottom: -125px;
+            }
+
+            img {
+                @media (max-width: 1550px) {
                     width: 226px;
+                    height: 224px;
+                }
+
+                @media (max-width: 992px) {
+                    width: 196px;
+                    height: 194px;
                 }
             }
         }

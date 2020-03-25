@@ -31,6 +31,17 @@ $fontColorAlt: #F5723C;
 
         overflow: hidden;
 
+        @media (max-width: 1550px) {
+            justify-content: flex-start;
+
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @media (max-width: 1200px) {
+            flex-basis: 100%;
+        }
+
         h1 {
             display: inline-block;
 
@@ -39,6 +50,15 @@ $fontColorAlt: #F5723C;
             line-height: 65px;
             color: $fontColorMain;
             letter-spacing: -1px;
+
+            @media (max-width: 1550px) {
+                font-size: 55px;
+                line-height: 55px;
+            }
+
+            @media (max-width: 992px) {
+                margin-top: 0px;
+            }
 
             span {
                 color: $fontColorAlt;
@@ -53,14 +73,9 @@ $fontColorAlt: #F5723C;
                 line-height: 30px;
 
                 @media (max-width: 1550px) {
-                    font-size: 16px;
+                    font-size: 20px;
                     line-height: 22px;
                 }
-            }
-
-            @media (max-width: 1550px) {
-                font-size: 45px;
-                line-height: 45px;
             }
         }
 
@@ -93,17 +108,6 @@ $fontColorAlt: #F5723C;
             background-color: transparent;
             opacity: 0.2;
         }
-
-        @media (max-width: 1550px) {
-            justify-content: flex-start;
-
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        @media (max-width: 1200px) {
-            flex-basis: 100%;
-        }
     }
 
     &__form {
@@ -117,6 +121,16 @@ $fontColorAlt: #F5723C;
 
         position: relative;
 
+        @media (max-width: 1550px) {
+            padding-top: 70px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @media (max-width: 1200px) {
+            flex-basis: 100%;
+        }
+
         form {
 
             .form-group {
@@ -128,6 +142,10 @@ $fontColorAlt: #F5723C;
 
                 padding-top: 20px;
                 margin-bottom: 35px;
+
+                @media (max-width: 1200px) {
+                    max-width: 100%;
+                }
 
                 label {
                     @include fontGilroyMedium();
@@ -212,9 +230,7 @@ $fontColorAlt: #F5723C;
                     transition: all 0.5s ease;
                 }
 
-                @media (max-width: 1200px) {
-                    max-width: 100%;
-                }
+                
             }
 
             .from-group--confidential {
@@ -222,6 +238,18 @@ $fontColorAlt: #F5723C;
 
                 position: relative;
                 right: 558px;
+
+                @media (max-width: 1550px) {
+                    right: 368px;
+                }
+
+                @media (max-width: 1200px) {
+                    right: 0;
+
+                    margin-top: 0;
+                    margin-bottom: 80px;
+                    margin-left: 40px;
+                }
 
                 &::before {
                     content: '';
@@ -234,6 +262,14 @@ $fontColorAlt: #F5723C;
 
                     background-color: $fontColorMain;
                     opacity: 0.3;
+
+                    @media (max-width: 1550px) {
+                        width: 375px;
+                    }
+
+                    @media (max-width: 1200px) {
+                        display: none;
+                    }
                 }
 
                 label {
@@ -241,6 +277,10 @@ $fontColorAlt: #F5723C;
                     font-size: 17px;
                     line-height: 20px;
                     color: $fontColorMain;
+
+                    @media (max-width: 1200px) {
+                        color: #ffffff;
+                    }
 
                     span {
                         text-decoration: underline;
@@ -260,6 +300,10 @@ $fontColorAlt: #F5723C;
                     &:focus ~ label {
                         color: $fontColorMain;
                         transition: all 0.5s ease;
+
+                        @media (max-width: 1200px) {
+                            color: #ffffff;
+                        }
                     }
                 }
 
@@ -272,6 +316,11 @@ $fontColorAlt: #F5723C;
                     width: 20px;
                     height: 20px;
                     background-color: #202020;
+
+                    @media (max-width: 1200px) {
+                        background-color: #202020;
+                        border: 1px solid #ffffff;
+                    }
 
                     &::before {
                         content: '';
@@ -287,42 +336,6 @@ $fontColorAlt: #F5723C;
 
                         opacity: 0;
                         transition: all 0.5s ease;
-                    }
-                }
-
-                @media (max-width: 1550px) {
-                    right: 368px;
-            
-                    &::before {
-                        width: 375px;
-                    }
-                }
-
-                @media (max-width: 1200px) {
-                    right: 0;
-
-                    margin-top: 0;
-                    margin-bottom: 80px;
-                    margin-left: 40px;
-
-
-                    &::before {
-                        display: none;
-                    }
-
-                    label {
-                        color: #ffffff;
-                    }
-
-                    input {
-                        &:focus ~ label {
-                            color: #ffffff;
-                        }
-                    }
-
-                    .form-group__checkbox-indicator {
-                        background-color: #202020;
-                        border: 1px solid #ffffff;
                     }
                 }
             }
@@ -344,6 +357,21 @@ $fontColorAlt: #F5723C;
                 align-items: center;
 
                 cursor: pointer;
+
+                @media (max-width: 1550px) {
+                    left: 15px;
+                }
+
+                @media (max-width: 1200px) {
+                    position: relative;
+
+                    left: 0;
+                    bottom: 0;
+
+                    margin-bottom: 40px;
+
+                    width: 100%;
+                }
 
                 &:hover {
                     span {
@@ -384,32 +412,7 @@ $fontColorAlt: #F5723C;
                         fill: #ffffff;
                     }
                 }
-
-                @media (max-width: 1550px) {
-                    left: 15px;
-                }
-
-                @media (max-width: 1200px) {
-                    position: relative;
-
-                    left: 0;
-                    bottom: 0;
-
-                    margin-bottom: 40px;
-
-                    width: 100%;
-                }
             }
-        }
-
-        @media (max-width: 1550px) {
-            padding-top: 70px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        @media (max-width: 1200px) {
-            flex-basis: 100%;
         }
     }
 }
