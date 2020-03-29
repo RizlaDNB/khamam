@@ -12,6 +12,7 @@
 @import 'about.scss';
 @import 'consulting.scss';
 @import 'footer.scss';
+@import 'burger-menu.scss';
 @import 'mixins.scss';
 
 
@@ -38,6 +39,10 @@ body {
 
     @media (max-width: 1200px) {
         padding-left: 140px;
+    }
+
+    @media (max-width: 768px) {
+        padding-left: 0px;
     }
 }
 
@@ -90,6 +95,10 @@ input[type="radio"].visually-hidden {
         width: 140px;
 
         padding-top: 45px;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
     }
     
     &-button {
@@ -291,6 +300,10 @@ input[type="radio"].visually-hidden {
                 transition: all 0.1s ease;
 
                 white-space: nowrap;
+
+                @media (max-width: 992px) {
+                    font-size: 50px;
+                }
             }
         }
 
@@ -484,6 +497,10 @@ input[type="radio"].visually-hidden {
 
     @media (max-width: 1200px) {
         padding-left: 200px;
+    }
+
+    @media (max-width: 992px) {
+        padding-left: 100px;
     }
 
     li {

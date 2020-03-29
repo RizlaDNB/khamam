@@ -60,6 +60,11 @@ $fontColorAlt: #F5723C;
                 margin-top: 0px;
             }
 
+            @media (max-width: 768px) {
+                font-size: 45px;
+                line-height: 46px;
+            }
+
             span {
                 color: $fontColorAlt;
             }
@@ -72,9 +77,8 @@ $fontColorAlt: #F5723C;
                 font-size: 22px;
                 line-height: 30px;
 
-                @media (max-width: 1550px) {
-                    font-size: 20px;
-                    line-height: 22px;
+                @media (max-width: 768px) {
+                    margin-left: 0px;
                 }
             }
         }
@@ -145,6 +149,7 @@ $fontColorAlt: #F5723C;
 
                 @media (max-width: 1200px) {
                     max-width: 100%;
+                    width: 100%;
                 }
 
                 label {
@@ -282,6 +287,11 @@ $fontColorAlt: #F5723C;
                         color: #ffffff;
                     }
 
+                    @media (max-width: 576px) {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+
                     span {
                         text-decoration: underline;
                     }
@@ -370,7 +380,14 @@ $fontColorAlt: #F5723C;
 
                     margin-bottom: 40px;
 
-                    width: 100%;
+                    min-width: 100%;
+                }
+
+                @media (max-width: 576px) {
+                    min-height: 150px;
+
+                    padding-left: 10px;
+                    padding-right: 10px;
                 }
 
                 &:hover {
@@ -393,6 +410,14 @@ $fontColorAlt: #F5723C;
 
                     transition: all 0.5s ease;
 
+                    @media (max-width: 576px) {
+                        text-decoration: underline;
+
+                        text-align: left;
+
+                        margin-right: 0px;
+                    }
+
                     &::before {
                         content: '';
                         position: absolute;
@@ -403,6 +428,10 @@ $fontColorAlt: #F5723C;
                         height: 2px;
 
                         background-color: #ffffff;
+
+                        @media (max-width: 576px) {
+                            display: none;
+                        }
                     }
                 }
 

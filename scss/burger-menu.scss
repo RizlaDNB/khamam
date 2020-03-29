@@ -1,0 +1,29 @@
+.burger-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 0%;
+    height: 100%;
+
+    opacity: 0;
+
+    background: url(../img/bg_marble_black.jpg) center no-repeat;
+    background-position: cover;
+
+    padding-top: 70px;
+
+    color: #ffffff;
+
+    transition: all 0.3s ease;
+
+    pointer-events: none;
+}
+
+.burger-menu--active {
+    width: 100%;
+
+    opacity: 1;
+
+    pointer-events: auto;
+}

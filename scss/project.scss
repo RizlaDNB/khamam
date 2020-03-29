@@ -17,15 +17,21 @@ $fontColorAlt: #F5723C;
 
     padding-top: 90px;
 
+    @media (max-width: 1550px) {
+        padding-right: 0px;
+    }
+
     @media (max-width: 992px) {
         padding-top: 40px;
+    }
+
+    @media (max-width: 576px) {
+        min-height: auto;
     }
 
     &-wrapper {
         display: flex;
         justify-content: space-between;
-
-        min-height: 1485px;
     }
 
     &__header {
@@ -95,6 +101,18 @@ $fontColorAlt: #F5723C;
 
             position: relative;
 
+            @media (max-width: 1200px) {
+                padding-right: 45px;
+            }
+
+            @media (max-width: 576px) {
+                padding-top: 30px;
+                padding-left: 30px;
+                padding-right: 30px;
+
+                min-height: auto;
+            }
+
             &::before {
                 content: '';
                 position: absolute;
@@ -107,10 +125,19 @@ $fontColorAlt: #F5723C;
                 background-color: #ffffff;
 
                 transform: rotate(-45deg);
+
+                @media (max-width: 576px) {
+                    display: none;
+                }
             }
 
             img {
                 display: block;
+
+                @media (max-width: 576px) {
+                    width: 60px;
+                    height: 70px;
+                }
             }
 
             h2 {
@@ -119,21 +146,26 @@ $fontColorAlt: #F5723C;
                 @include fontGilroyBold();
                 font-size: 24px;
                 line-height: 39px;
+
+                @media (max-width: 576px) {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
             }
 
             p {
                 margin: 0;
                 @include fontGilroyMedium();
                 font-size: 17px;
-                line-height: 24px;
+                line-height: 22px;
             }
 
             &:nth-child(4) {
                 margin-bottom: -90px;
-            }
 
-            @media (max-width: 1200px) {
-                padding-right: 45px;
+                @media (max-width: 576px) {
+                    margin-bottom: -50px;
+                }
             }
         }
 
@@ -170,6 +202,12 @@ $fontColorAlt: #F5723C;
             justify-content: center;
             align-items: center;
             
+            @media (max-width: 576px) {
+                max-width: 100%;
+                min-height: 170px;
+
+                bottom: -85px;
+            }
 
             a {
                 text-decoration: none;
@@ -181,6 +219,11 @@ $fontColorAlt: #F5723C;
                 justify-content: center;
                 align-items: center;
 
+                @media (max-width: 576px) {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+
                 span {
                     @include fontGilroyBold();
                     font-size: 22px;
@@ -188,6 +231,15 @@ $fontColorAlt: #F5723C;
                     color: #ffffff;
 
                     position: relative;
+
+                    @media (max-width: 1200px) {
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+
+                    @media (max-width: 576px) {
+                        text-decoration: underline;
+                    }
 
                     &::before {
                         content: '';
@@ -199,10 +251,10 @@ $fontColorAlt: #F5723C;
                         height: 2px;
 
                         background-color: #ffffff;
-                    }
 
-                    @media (max-width: 1200px) {
-                        font-size: 20px;
+                        @media (max-width: 576px) {
+                            display: none;
+                        }
                     }
                 }
 
@@ -221,6 +273,10 @@ $fontColorAlt: #F5723C;
                     @media (max-width: 1200px) {
                         transform: rotate(-90deg) scale(0.7);
                     }
+
+                    @media (max-width: 576px) {
+                        margin-left: 0px;
+                    }
                 }
 
                 &:hover {
@@ -232,9 +288,5 @@ $fontColorAlt: #F5723C;
                 }
             }
         }
-    }
-
-    @media (max-width: 1550px) {
-        padding-right: 0px;
     }
 }

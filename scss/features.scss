@@ -29,6 +29,10 @@ $fontColorAlt: #F5723C;
                 min-height: 750px;
             }
 
+            @media (max-width: 576px) {
+                min-height: 840px;
+            }
+
             &-wrapper {
                 display: flex;
             }
@@ -70,6 +74,11 @@ $fontColorAlt: #F5723C;
 
                     @media (max-width: 992px) {
                         font-size: 65px;
+                    }
+
+                    @media (max-width: 768px) {
+                        font-size: 55px;
+                        line-height: 55px;
                     }
         
                     span {
@@ -128,6 +137,11 @@ $fontColorAlt: #F5723C;
 
                     left: -80px;
                 }
+
+                @media (max-width: 576px) {
+                    top: 210px;
+                    left: -245px;
+                }
         
                 span {
                     color: $fontColorMain;
@@ -162,6 +176,11 @@ $fontColorAlt: #F5723C;
                     top: 251px;
                     left: -165px;
                 }
+
+                @media (max-width: 576px) {
+                    top: 411px;
+                    left: -260px;
+                }
         
                 h2 {
                     margin: 0;
@@ -194,6 +213,10 @@ $fontColorAlt: #F5723C;
 
                     top: 416px;
                     left: -280px;
+                }
+
+                @media (max-width: 576px) {
+                    top: 576px;
                 }
         
                 h2 {
@@ -232,6 +255,10 @@ $fontColorAlt: #F5723C;
                     top: 580px;
                     left: 0px;
                 }
+
+                @media (max-width: 576px) {
+                    top: 740px;
+                }
             } 
         }
     }
@@ -259,6 +286,11 @@ $fontColorAlt: #F5723C;
 
                     @media (max-width: 992px) {
                         font-size: 50px;
+                        line-height: 50px;
+                    }
+
+                    @media (max-width: 768px) {
+                        font-size: 44px;
                         line-height: 50px;
                     }
                 }
@@ -293,6 +325,11 @@ $fontColorAlt: #F5723C;
                     color: $fontColorMain;
                     letter-spacing: -1px;
 
+                    @media (max-width: 768px) {
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
+
                     a {
                         color: $fontColorAlt;
                     }
@@ -315,14 +352,18 @@ $fontColorAlt: #F5723C;
                 flex-basis: 100%;
 
                 margin-top: 70px;
+                margin-right: 100px;
 
                 display: flex;
                 justify-content: flex-end;
 
-                margin-right: 100px;
 
                 @media (max-width: 992px) {
                     margin-right: 15px;
+                }
+
+                @media (max-width: 768px) {
+                    margin-top: 20px;
                 }
 
                 a {
@@ -365,6 +406,14 @@ $fontColorAlt: #F5723C;
             padding-right: 15px;
         }
 
+        @media (max-width: 768px) {
+            min-height: auto;
+        }
+
+        @media (max-width: 576px) {
+            padding-right: 0px;
+        }
+
         .services {
             position: relative;
 
@@ -375,6 +424,12 @@ $fontColorAlt: #F5723C;
                 transform: rotate(-90deg);
 
                 display: inline-block;
+
+                @media (max-width: 1550px) {
+                    transform: rotate(0deg);
+                    top: 0;
+                    left: 0;
+                }
 
                 h1 {
                     display: inline-block;
@@ -396,15 +451,14 @@ $fontColorAlt: #F5723C;
                         line-height: 65px;
                     }
 
+                    @media (max-width: 768px) {
+                        font-size: 60px;
+                        line-height: 60px;
+                    }
+
                     span {
                         color: $fontColorAlt;
                     }
-                }
-
-                @media (max-width: 1550px) {
-                    transform: rotate(0deg);
-                    top: 0;
-                    left: 0;
                 }
             }
 
@@ -414,6 +468,10 @@ $fontColorAlt: #F5723C;
                 filter: grayscale(100%);
 
                 transition: all 0.5s ease;
+
+                @media (max-width: 768px) {
+                    filter: grayscale(0%);
+                }
 
                 &:hover {
                     filter: grayscale(0%);
@@ -444,24 +502,31 @@ $fontColorAlt: #F5723C;
                     width: 100%;
                     height: 100%;
 
+                    @media (max-width: 768px) {
+                        display: flex;
+                    }
+
                     .service__header {
-                        border-top: 1px solid #ffffff;
-                        border-bottom: 1px solid #ffffff;
-
-                        display: inline-block;
-
                         h2 {
                             display: inline-block;
                             max-width: 100%;
 
-                            margin-top: 20px;
-                            margin-bottom: 20px;
+                            padding-top: 20px;
+                            padding-bottom: 20px;
 
                             @include fontGilroyMedium();
                             font-size: 36px;
                             line-height: 39px;
                             color: #ffffff;
                             letter-spacing: -1px;
+
+                            border-top: 1px solid #ffffff;
+                            border-bottom: 1px solid #ffffff;
+
+                            @media (max-width: 768px) {
+                                font-size: 24px;
+                                line-height: 28px;
+                            }
                         }
                     }
 
@@ -486,6 +551,16 @@ $fontColorAlt: #F5723C;
                             position: relative;
                             transition: all 0.5s ease;
 
+                            @media (max-width: 768px) {
+                                font-size: 20px;
+                                line-height: 23px;
+                            }
+
+                            @media (max-width: 576px) {
+                                font-size: 18px;
+                                line-height: 18px;
+                            }
+
                             &::before {
                                 content: '';
                                 position: absolute;
@@ -503,6 +578,11 @@ $fontColorAlt: #F5723C;
                             transform: rotate(-90deg);
 
                             margin-left: 35px;
+
+                            @media (max-width: 576px) {
+                                transform: scale(0.9) rotate(-90deg);
+                            }
+
                             path {
                                 stroke: #ffffff;
                                 fill: #ffffff;
@@ -525,36 +605,6 @@ $fontColorAlt: #F5723C;
                 right: 0;
                 z-index: 2;
 
-                a {
-                    .service__header {
-                        margin-top: 70px;
-                        margin-left: 115px;
-
-                        @media (max-width: 992px) {
-                            margin-left: 50px;
-                        }
-                    }
-
-                    .service__number {
-                        margin-top: 25px;
-                        margin-left: 115px;
-
-                        @media (max-width: 992px) {
-                            margin-left: 50px;
-                        }
-                    }
-
-                    .service__link {
-                        position: absolute;
-                        top: 220px;
-                        right: 70px;
-
-                        @media (max-width: 992px) {
-                            right: 50px;
-                        }
-                    }
-                }
-
                 @media (max-width: 1550px) {
                     position: relative;
 
@@ -566,6 +616,66 @@ $fontColorAlt: #F5723C;
 
                     width: auto;
                     max-width: 1080px;
+                }
+
+                @media (max-width: 768px) {
+                    min-height: 480px;
+                }
+
+                a {
+                    .service__header {
+                        margin-top: 70px;
+                        margin-left: 115px;
+
+                        @media (max-width: 992px) {
+                            margin-left: 50px;
+                        }
+
+                        @media (max-width: 768px) {
+                            margin-top: 40px;
+                            margin-left: 40px;
+                        }
+
+                        @media (max-width: 576px) {
+                            margin-left: 15px;
+                        }
+                    }
+
+                    .service__number {
+                        margin-top: 25px;
+                        margin-left: 115px;
+
+                        @media (max-width: 992px) {
+                            margin-left: 50px;
+                        }
+
+                        @media (max-width: 768px) {
+                            margin-top: 50px;
+                            margin-left: 20px;
+                        }
+                    }
+
+                    .service__link {
+                        position: absolute;
+                        top: 220px;
+                        right: 70px;
+
+                        @media (max-width: 992px) {
+                            right: 50px;
+                        }
+
+                        @media (max-width: 768px) {
+                            right: auto;
+                            top: auto;
+
+                            left: 40px;
+                            bottom: 40px;
+                        }
+
+                        @media (max-width: 576px) {
+                            left: 15px;
+                        }
+                    }
                 }
             }
 
@@ -595,6 +705,10 @@ $fontColorAlt: #F5723C;
                     max-width: 1080px;
                 }
 
+                @media (max-width: 768px) {
+                    min-height: 480px;
+                }
+
                 a {
                     .service__header {
                         margin-top: 90px;
@@ -603,14 +717,28 @@ $fontColorAlt: #F5723C;
                         @media (max-width: 992px) {
                             margin-left: 50px;
                         }
+
+                        @media (max-width: 768px) {
+                            margin-top: 40px;
+                            margin-left: 40px;
+                        }
+
+                        @media (max-width: 576px) {
+                            margin-left: 15px;
+                        }
                     }
 
                     .service__number {
-                        margin-top: 255px;
+                        margin-top: 155px;
                         margin-left: 175px;
 
                         @media (max-width: 992px) {
                             margin-left: 50px;
+                        }
+
+                        @media (max-width: 768px) {
+                            margin-top: 50px;
+                            margin-left: 20px;
                         }
                     }
 
@@ -621,6 +749,18 @@ $fontColorAlt: #F5723C;
 
                         @media (max-width: 992px) {
                             right: 50px;
+                        }
+
+                        @media (max-width: 768px) {
+                            right: auto;
+                            top: auto;
+
+                            left: 40px;
+                            bottom: 40px;
+                        }
+
+                        @media (max-width: 576px) {
+                            left: 15px;
                         }
                     }
                 }
@@ -643,6 +783,10 @@ $fontColorAlt: #F5723C;
                 @media (max-width: 992px) {
                     width: 280px;
                     height: 250px;
+                }
+
+                @media (max-width: 768px) {
+                    display: none;
                 }
 
                 img {
@@ -726,6 +870,11 @@ $fontColorAlt: #F5723C;
                         font-size: 52px;
                     }
 
+                    @media (max-width: 768px) {
+                        font-size: 40px;
+                        line-height: 44px;
+                    }
+
                     span {
                         color: $fontColorAlt;
                     }
@@ -778,6 +927,11 @@ $fontColorAlt: #F5723C;
 
                     @media (max-width: 992px) {
                         padding-left: 50px;
+                    }
+
+                    @media (max-width: 768px) {
+                        font-size: 18px;
+                        line-height: 24px;
                     }
 
                     &::before {

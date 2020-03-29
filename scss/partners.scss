@@ -56,6 +56,11 @@ $fontColorAlt: #F5723C;
                 margin-bottom: 25px;
             }
 
+            @media (max-width: 768px) {
+                font-size: 55px;
+                line-height: 60px;
+            }
+
             span {
                 color: $fontColorAlt;
             }
@@ -68,10 +73,6 @@ $fontColorAlt: #F5723C;
             font-size: 20px;
             line-height: 30px;
             color: #ffffff;
-
-            @media (max-width: 1200px) {
-                font-size: 18px;
-            }
         }
 
         a {
@@ -105,7 +106,7 @@ $fontColorAlt: #F5723C;
 
     &__cards {
         flex-basis: 50%;
-        max-width: 560px;
+        min-width: 560px;
         width: 560px;
 
         display: flex;
@@ -113,6 +114,14 @@ $fontColorAlt: #F5723C;
 
         @media (max-width: 1200px) {
             flex-basis: 100%;
+
+            max-width: 560px;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
         }
 
         .partner-card {
@@ -126,6 +135,20 @@ $fontColorAlt: #F5723C;
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @media (max-width: 768px) {
+                width: 50%;
+            }
+
+            @media (max-width: 576px) {
+                height: 132px;
+            }
+
+            img {
+                @media (max-width: 576px) {
+                    transform: scale(0.8);
+                }
+            }
 
             &--white {
                 background-color: #ffffff;

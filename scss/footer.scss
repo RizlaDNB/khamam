@@ -53,6 +53,11 @@ $fontColorAlt: #F5723C;
             @media (max-width: 992px) {
                 flex-basis: 100%;
             }
+
+            @media (max-width: 768px) {
+                max-width: 301px;
+                height: 67px;
+            }
         }
 
         p {
@@ -70,6 +75,10 @@ $fontColorAlt: #F5723C;
                 flex-basis: 100%;
 
                 text-align: center;
+            }
+
+            @media (max-width: 768px) {
+                display: none;
             }
         }
     }
@@ -92,6 +101,21 @@ $fontColorAlt: #F5723C;
             align-items: center;
         }
 
+        @media (max-width: 768px) {
+            justify-content: center;
+
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 576px) {
+            border-top: 1px solid #797979;
+            border-bottom: 1px solid #797979;
+
+            padding-bottom: 15px;
+
+            margin-top: 25px;
+        }
+
         p {
             margin: 0;
 
@@ -102,6 +126,14 @@ $fontColorAlt: #F5723C;
 
             @media (max-width: 992px) {
                 flex-basis: 50%;
+            }
+
+            @media (max-width: 768px) {
+                flex-basis: 100%;
+
+                text-align: center;
+
+                margin-bottom: 20px;
             }
         }
 
@@ -120,6 +152,12 @@ $fontColorAlt: #F5723C;
                 flex-basis: 50%;
 
                 margin: 0;
+            }
+
+            @media (max-width: 768px) {
+                flex-basis: 100%;
+
+                text-align: center;
             }
         }
     }
@@ -144,89 +182,109 @@ $fontColorAlt: #F5723C;
             margin-top: 50px;
         }
 
+        @media (max-width: 768px) {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         &__phone {
 
             @media (max-width: 1200px) {
                 flex-basis: 50%;
-
-                padding-left: 65px;
             }
 
-            @media (max-width: 992px) {
-                padding-left: 50px;
-            }
+            @media (max-width: 768px) {
+                flex-basis: 100%;
 
-            &::before {
-                content: '';
-                position: absolute;
-
-                top: 50%;
-                left: -75px;
-                transform: translateY(-50%);
-
-                width: 50px;
-                height: 50px;
-
-                background-color: $fontColorMain;
-
-                @media (max-width: 1200px) {
-                    width: 40px;
-                    height: 40px;
-    
-                    left: 10px;
-                }
-
-                @media (max-width: 992px) {
-                    left: 0;
-                }
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-
-                top: 50%;
-                left: -75px;
-                transform: translateY(-50%);
-
-                width: 50px;
-                height: 50px;
-
-                background: url(../img/footer/phone_icon.png) center no-repeat;
-
-                @media (max-width: 1200px) {
-                    width: 40px;
-                    height: 40px;
-    
-                    left: 10px;
-                }
-
-                @media (max-width: 992px) {
-                    left: 0;
-                }
+                margin-bottom: 20px;
             }
 
             a {
-                display: block;
+                display: inline-block;
                 color: $fontColorMain;
                 @include fontGilroyMedium();
                 font-size: 22px;
                 line-height: 22px;
                 text-decoration: none;
 
+                position: relative;
+
                 @media (max-width: 1200px) {
                     font-size: 20px;
+
+                    padding-left: 65px;
                 }
-            }
 
-            span {
-                color: #6C7072;
-                @include fontGilroyMedium();
-                font-size: 14px;
-                line-height: 16px;
+                @media (max-width: 992px) {
+                    padding-left: 50px;
+                }
 
-                @media (max-width: 1200px) {
-                    font-size: 12px;
+                @media (max-width: 768px) {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+    
+                    top: 50%;
+                    left: -75px;
+                    transform: translateY(-50%);
+    
+                    width: 50px;
+                    height: 50px;
+    
+                    background-color: $fontColorMain;
+    
+                    @media (max-width: 1200px) {
+                        width: 40px;
+                        height: 40px;
+        
+                        left: 10px;
+                    }
+    
+                    @media (max-width: 992px) {
+                        left: 0;
+                    }
+                }
+    
+                &::after {
+                    content: '';
+                    position: absolute;
+    
+                    top: 50%;
+                    left: -75px;
+                    transform: translateY(-50%);
+    
+                    width: 50px;
+                    height: 50px;
+    
+                    background: url(../img/footer/phone_icon.png) center no-repeat;
+    
+                    @media (max-width: 1200px) {
+                        width: 40px;
+                        height: 40px;
+        
+                        left: 10px;
+                    }
+    
+                    @media (max-width: 992px) {
+                        left: 0;
+                    }
+                }
+
+                span {
+                    display: block;
+
+                    color: #6C7072;
+                    @include fontGilroyMedium();
+                    font-size: 14px;
+                    line-height: 16px;
+    
+                    @media (max-width: 1200px) {
+                        font-size: 12px;
+                    }
                 }
             }
         }
@@ -242,20 +300,26 @@ $fontColorAlt: #F5723C;
             top: 75px;
             left: -70px;
 
-            span {
-                display: block;
-            }
-
-            a {
-                color: $fontColorAlt;
-            }
-
             @media (max-width: 1200px) {
                 position: relative;
                 top: 0;
                 left: 0;
 
                 flex-basis: 50%;
+            }
+
+            @media (max-width: 768px) {
+                flex-basis: 100%;
+
+                text-align: center;
+            }
+
+            span {
+                display: block;
+            }
+
+            a {
+                color: $fontColorAlt;
             }
         } 
     }
