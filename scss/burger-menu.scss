@@ -1,3 +1,9 @@
+@import 'mixins.scss';
+
+// VARS
+$fontColorMain: #101010;
+$fontColorAlt: #F5723C;
+
 .burger-menu {
     position: fixed;
     left: 0;
@@ -18,6 +24,26 @@
     transition: all 0.3s ease;
 
     pointer-events: none;
+
+    &-list {
+        list-style: none;
+
+        &__item {
+        }
+    }
+
+    &-text {
+        @include fontGilroyMedium();
+        font-size: 45px;
+        line-height: 50px;
+        color: #ffffff;
+        text-decoration: none;
+
+        @media (max-width: 576px) {
+            font-size: 30px;
+            line-height: 36px;
+        }
+    }
 }
 
 .burger-menu--active {

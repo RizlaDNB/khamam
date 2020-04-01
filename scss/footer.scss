@@ -108,8 +108,8 @@ $fontColorAlt: #F5723C;
         }
 
         @media (max-width: 576px) {
-            border-top: 1px solid #797979;
-            border-bottom: 1px solid #797979;
+            border-top: 2px solid #e8e8e8;
+            border-bottom: 2px solid #e8e8e8;
 
             padding-bottom: 15px;
 
@@ -321,6 +321,40 @@ $fontColorAlt: #F5723C;
             a {
                 color: $fontColorAlt;
             }
-        } 
+        }
+
+        &__arrow-up {
+            display: none;
+
+            @media (max-width: 768px) {
+                display: block;
+
+                transform: rotate(-90deg);
+
+                margin-top: 50px;
+                margin-bottom: 60px;
+            }
+
+            a {
+                text-decoration: none;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    @include fontGilroyBold();
+                    font-size: 16px;
+                    line-height: 16px;
+                    color: $fontColorMain;
+                    text-transform: uppercase;
+
+                    margin-right: 20px;
+                }
+
+                svg {
+                    transform: scale(0.75) rotate(-90deg);
+                }
+            }
+        }
     }
 }
