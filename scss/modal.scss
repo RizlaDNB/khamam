@@ -1,0 +1,419 @@
+@import 'mixins.scss';
+
+// VARS
+$fontColorMain: #101010;
+$fontColorAlt: #F5723C;
+
+.modal-consult {
+    display: none;
+
+    position: fixed;
+    z-index: 500;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    &-underlay {
+        position: fixed;
+        z-index: 1;
+
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: #000000;
+        opacity: 0.4;
+    }
+
+    &-form {
+        position: fixed;
+        z-index: 2;
+
+        top: 0;
+        right: 0;
+
+        width: 640px;
+        height: 100%;
+
+        background-color: #ffffff;
+
+        padding-left: 120px;
+        padding-right: 120px;
+        padding-top: 136px;
+
+        .form-group {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                    flex-direction: column;
+
+            position: relative;
+
+            padding-top: 20px;
+            margin-bottom: 35px;
+
+            @media (max-width: 1200px) {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            label {
+                @include fontGilroyMedium();
+                font-size: 15px;
+                line-height: 18px;
+                color: $fontColorMain;
+
+                -webkit-transition: all 0.5s ease;
+
+                transition: all 0.5s ease;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            input {
+                padding-top: 10px;
+                padding-bottom: 15px;
+
+                @include fontGilroyMedium();
+                font-size: 20px;
+                line-height: 23px;
+                color: #797979;
+                -webkit-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+
+                border: none;
+
+                &:focus {
+                    color: $fontColorAlt;
+                    -webkit-transition: all 0.5s ease;
+                    transition: all 0.5s ease;
+                }
+
+                &:focus ~ .form-group__highlight {
+                    color: $fontColorAlt;
+                    -webkit-transition: all 0.5s ease;
+                    transition: all 0.5s ease;
+                }
+
+                &:focus ~ .form-group__underline::before {
+                    width: 100%;
+                    -webkit-transition: all 0.5s ease;
+                    transition: all 0.5s ease;
+                }
+
+                &:focus ~ label {
+                    color: #797979;
+                    -webkit-transition: all 0.5s ease;
+                    transition: all 0.5s ease;
+                }
+            }
+
+            &__underline {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                width: 100%;
+                height: 2px;
+                background-color: #B8B8B8;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    height: 2px;
+                    width: 0%;
+                    background-color: $fontColorAlt;
+
+                    -webkit-transition: all 0.5s ease;
+
+                    transition: all 0.5s ease;
+                }
+            }
+
+            &__highlight {
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                @include fontGilroyMedium();
+                font-size: 14px;
+                line-height: 16px;
+                color: $fontColorMain;
+
+                -webkit-transition: all 0.5s ease;
+
+                transition: all 0.5s ease;
+            }
+
+            
+        }
+
+        .from-group--confidential {
+            margin-top: 48px;
+
+            position: relative;
+
+            padding-left: 40px;
+
+            @media (max-width: 1550px) {
+                right: 368px;
+            }
+
+            @media (max-width: 1200px) {
+                right: 0;
+
+                margin-top: 0;
+                margin-bottom: 80px;
+                margin-left: 40px;
+            }
+
+            label {
+                @include fontGilroyRegular();
+                font-size: 17px;
+                line-height: 20px;
+                color: $fontColorMain;
+
+                position: relative;
+
+                @media (max-width: 1200px) {
+                    color: #ffffff;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+
+                span {
+                    text-decoration: underline;
+                }
+            }
+
+            input {
+                &:focus {
+                    outline: none;
+                }
+
+                &:checked ~ .form-group__checkbox-indicator::before {
+                    opacity: 1;
+                    -webkit-transition: all 0.5s ease;
+                    transition: all 0.5s ease;
+                }
+
+                &:focus ~ label {
+                    color: $fontColorMain;
+                    -webkit-transition: all 0.5s ease;
+                    transition: all 0.5s ease;
+
+                    @media (max-width: 1200px) {
+                        color: #ffffff;
+                    }
+                }
+            }
+
+            .form-group__checkbox-indicator {
+                position: absolute;
+                top: 5px;
+                left: -40px;
+
+                display: block;
+                width: 20px;
+                height: 20px;
+                background-color: #202020;
+
+                @media (max-width: 1200px) {
+                    background-color: #202020;
+                    border: 1px solid #ffffff;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                            transform: translate(-50%, -50%);
+
+                    width: 100%;
+                    height: 100%;
+
+                    background: url(../img/consulting/check.png) center no-repeat;
+
+                    opacity: 0;
+                    -webkit-transition: all 0.5s ease;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+
+        .form__button {
+            margin-top: 20px;
+
+            width: 100%;
+            height: 150px;
+
+            border: none;
+            background-color: #F5723C;
+
+            display: -webkit-box;
+
+            display: flex;
+            -webkit-box-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                    align-items: center;
+
+            @media (max-width: 1550px) {
+                left: 15px;
+            }
+
+            @media (max-width: 1200px) {
+                position: relative;
+
+                left: 0;
+                bottom: 0;
+
+                margin-bottom: 40px;
+
+                min-width: 100%;
+            }
+
+            @media (max-width: 576px) {
+                min-height: 150px;
+
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            &:hover {
+                span {
+                    margin-right: 20px;
+
+                    -webkit-transition: all 0.5s ease;
+
+                    transition: all 0.5s ease;
+                }
+            }
+
+            span {
+                @include fontGilroyBold();
+                font-size: 20px;
+                line-height: 39px;
+                color: #ffffff;
+
+                margin-right: 10px;
+
+                position: relative;
+
+                -webkit-transition: all 0.5s ease;
+
+                transition: all 0.5s ease;
+
+                @media (max-width: 576px) {
+                    text-decoration: underline;
+
+                    text-align: left;
+
+                    margin-right: 0px;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+
+                    width: 100%;
+                    height: 2px;
+
+                    background-color: #ffffff;
+
+                    @media (max-width: 576px) {
+                        display: none;
+                    }
+                }
+            }
+
+            svg {
+                -webkit-transform: rotate(-90deg) scale(0.55);
+                        transform: rotate(-90deg) scale(0.55);
+                path {
+                    fill: #ffffff;
+                }
+            }
+        }
+
+        &-close {
+            position: absolute;
+            top: 0;
+            left: -110px;
+
+            border: none;
+
+            width: 110px;
+            height: 110px;
+
+            background-color: #F5723C;
+
+            font-size: 0;
+
+            span {
+                display: block;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%) rotate(-45deg);
+
+                width: 50px;
+                height: 50px;
+
+                &::before {
+                    content: '';
+
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+
+                    transform: translateY(-50%);
+
+                    width: 100%;
+                    height: 2px;
+
+                    background-color: #ffffff;
+                }
+
+                &::after {
+                    content: '';
+
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+
+                    transform: translateX(-50%);
+
+                    width: 2px;
+                    height: 100%;
+
+                    background-color: #ffffff;
+                }
+            }
+        }
+    }
+}

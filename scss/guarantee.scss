@@ -49,8 +49,10 @@ $fontColorAlt: #F5723C;
         }
 
         &__items {
+            display: -webkit-box;
             display: flex;
-            justify-content: space-between;
+            -webkit-box-pack: justify;
+                    justify-content: space-between;
             flex-wrap: wrap;
 
             position: relative;
@@ -69,8 +71,6 @@ $fontColorAlt: #F5723C;
                 background-color: #ffffff;
                 box-shadow: 0px 4px 90px rgba(0, 0, 0, 0.1);
 
-                cursor: pointer;
-
                 @media (max-width: 768px) {
                     min-height: 200px;
                     padding-left: 25px;
@@ -84,8 +84,10 @@ $fontColorAlt: #F5723C;
                 }
 
                 &__header {
+                    display: -webkit-box;
                     display: flex;
-                    align-items: center;
+                    -webkit-box-align: center;
+                            align-items: center;
 
                     position: relative;
                     z-index: 2;
@@ -125,6 +127,8 @@ $fontColorAlt: #F5723C;
                         line-height: 39px;
                         color: $fontColorMain;
 
+                        -webkit-transition: all 0.5s ease;
+
                         transition: all 0.5s ease;
 
                         @media (max-width: 768px) {
@@ -152,6 +156,8 @@ $fontColorAlt: #F5723C;
                         line-height: 24px;
                         color: $fontColorMain;
 
+                        -webkit-transition: all 0.5s ease;
+
                         transition: all 0.5s ease;
 
                         @media (max-width: 768px) {
@@ -178,6 +184,7 @@ $fontColorAlt: #F5723C;
                         height: 100%;
 
                         opacity: 0;
+                        -webkit-transition: all 0.5s ease;
                         transition: all 0.5s ease;
                     }
                 }
@@ -192,10 +199,13 @@ $fontColorAlt: #F5723C;
                     width: 35px;
                     height: 1px;
 
-                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+
+                            transform: rotate(-45deg);
 
                     background-color: #000000;
                     opacity: 0.3;
+                    -webkit-transition: all 0.5s ease;
                     transition: all 0.5s ease;
 
                     @media (max-width: 768px) {
@@ -209,6 +219,8 @@ $fontColorAlt: #F5723C;
                         span {
                             color: #ffffff;
 
+                            -webkit-transition: all 0.5s ease;
+
                             transition: all 0.5s ease;
                         }
                     }
@@ -216,6 +228,8 @@ $fontColorAlt: #F5723C;
                     .guarantees-card__content {
                         p {
                             color: #ffffff;
+
+                            -webkit-transition: all 0.5s ease;
 
                             transition: all 0.5s ease; 
                         }
@@ -259,6 +273,8 @@ $fontColorAlt: #F5723C;
         padding-top: 130px;
         padding-bottom: 120px;
 
+        display: -webkit-box;
+
         display: flex;
 
         @media (max-width: 1200px) {
@@ -281,6 +297,7 @@ $fontColorAlt: #F5723C;
             margin-right: 40px;
 
             @media (max-width: 1200px) {
+                display: -webkit-box;
                 display: flex;
                 margin-right: 0px;
             }
@@ -348,7 +365,9 @@ $fontColorAlt: #F5723C;
 
                     margin: 0;
 
-                    transform: scale(0.8);
+                    -webkit-transform: scale(0.8);
+
+                            transform: scale(0.8);
                 }
 
                 @media (max-width: 768px) {
@@ -442,7 +461,8 @@ $fontColorAlt: #F5723C;
                     position: absolute;
                     top: 50%;
                     left: 0;
-                    transform: translateY(-50%);
+                    -webkit-transform: translateY(-50%);
+                            transform: translateY(-50%);
 
                     width: 35px;
                     height: 35px;
@@ -460,7 +480,8 @@ $fontColorAlt: #F5723C;
                     position: absolute;
                     top: 50%;
                     left: 0;
-                    transform: translateY(-50%);
+                    -webkit-transform: translateY(-50%);
+                            transform: translateY(-50%);
 
                     width: 35px;
                     height: 35px;

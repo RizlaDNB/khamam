@@ -34,6 +34,7 @@ $fontColorAlt: #F5723C;
             }
 
             &-wrapper {
+                display: -webkit-box;
                 display: flex;
             }
         
@@ -41,7 +42,8 @@ $fontColorAlt: #F5723C;
                 position: relative;
                 top: 235px;
                 left: -90px;
-                transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg);
+                        transform: rotate(-90deg);
 
                 @media (max-width: 1550px) {
                     top: 155px;
@@ -59,7 +61,6 @@ $fontColorAlt: #F5723C;
                 }
         
                 h1 {
-        
                     display: inline-block;
         
                     margin: 0;
@@ -92,10 +93,15 @@ $fontColorAlt: #F5723C;
             }
 
             &__card {
+                display: -webkit-box;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                        flex-direction: column;
+                -webkit-box-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                        align-items: center;
         
                 .card__image {}
         
@@ -133,7 +139,8 @@ $fontColorAlt: #F5723C;
                 }
 
                 @media (max-width: 992px) {
-                    transform: scale(0.8);
+                    -webkit-transform: scale(0.8);
+                            transform: scale(0.8);
 
                     left: -80px;
                 }
@@ -171,7 +178,8 @@ $fontColorAlt: #F5723C;
                 }
 
                 @media (max-width: 992px) {
-                    transform: scale(0.8);
+                    -webkit-transform: scale(0.8);
+                            transform: scale(0.8);
 
                     top: 251px;
                     left: -165px;
@@ -209,7 +217,8 @@ $fontColorAlt: #F5723C;
                 }
 
                 @media (max-width: 992px) {
-                    transform: scale(0.8);
+                    -webkit-transform: scale(0.8);
+                            transform: scale(0.8);
 
                     top: 416px;
                     left: -280px;
@@ -250,7 +259,8 @@ $fontColorAlt: #F5723C;
                 }
 
                 @media (max-width: 992px) {
-                    transform: scale(0.8);
+                    -webkit-transform: scale(0.8);
+                            transform: scale(0.8);
 
                     top: 580px;
                     left: 0px;
@@ -268,8 +278,10 @@ $fontColorAlt: #F5723C;
         padding-right: 200px;
 
         .time {
+            display: -webkit-box;
             display: flex;
-            justify-content: space-between;
+            -webkit-box-pack: justify;
+                    justify-content: space-between;
             flex-wrap: wrap;
 
             &__header {
@@ -354,8 +366,11 @@ $fontColorAlt: #F5723C;
                 margin-top: 70px;
                 margin-right: 100px;
 
+                display: -webkit-box;
+
                 display: flex;
-                justify-content: flex-end;
+                -webkit-box-pack: end;
+                        justify-content: flex-end;
 
 
                 @media (max-width: 992px) {
@@ -368,13 +383,16 @@ $fontColorAlt: #F5723C;
 
                 a {
                     @media (max-width: 992px) {
-                        transform: scale(0.9);
+                        -webkit-transform: scale(0.9);
+                                transform: scale(0.9);
                     }
 
                     &:hover {
                         svg {
                             path {
                                 fill: $fontColorAlt;
+        
+                                -webkit-transition: all 0.5s ease;
         
                                 transition: all 0.5s ease;
                             }
@@ -384,6 +402,8 @@ $fontColorAlt: #F5723C;
                     svg {
                         path {
                             fill: transparent;
+    
+                            -webkit-transition: all 0.5s ease;
     
                             transition: all 0.5s ease;
                         }
@@ -421,12 +441,13 @@ $fontColorAlt: #F5723C;
                 position: relative;
                 top: 60px;
                 left: -165px;
-                transform: rotate(-90deg);
+                
+
+                transition: all 0.3s ease;
 
                 display: inline-block;
 
                 @media (max-width: 1550px) {
-                    transform: rotate(0deg);
                     top: 0;
                     left: 0;
                 }
@@ -435,12 +456,19 @@ $fontColorAlt: #F5723C;
                     display: inline-block;
                     margin: 0;
 
-
                     font-size: 80px;
                     line-height: 75px;
                     @include fontGilroyMedium();
                     color: $fontColorMain;
                     letter-spacing: -1px;
+
+                    -webkit-transform: rotate(-90deg);
+                        transform: rotate(-90deg);
+
+                    @media (max-width: 1550px) {
+                        -webkit-transform: rotate(0deg);
+                                transform: rotate(0deg);
+                    }
 
                     @media (max-width: 1200px) {
                         font-size: 74px;
@@ -465,22 +493,30 @@ $fontColorAlt: #F5723C;
             &__item {
                 position: relative;
                 
-                filter: grayscale(100%);
+                -webkit-filter: grayscale(100%);
+                
+                        filter: grayscale(100%);
+
+                -webkit-transition: all 0.5s ease;
 
                 transition: all 0.5s ease;
 
                 @media (max-width: 768px) {
-                    filter: grayscale(0%);
+                    -webkit-filter: grayscale(0%);
+                            filter: grayscale(0%);
                 }
 
                 &:hover {
-                    filter: grayscale(0%);
+                    -webkit-filter: grayscale(0%);
+                            filter: grayscale(0%);
+                    -webkit-transition: all 0.5s ease;
                     transition: all 0.5s ease;
 
                     a {
                         .service__link {
                             span {
                                 margin-right: 10px;
+                                -webkit-transition: all 0.5s ease;
                                 transition: all 0.5s ease;
                             }
 
@@ -488,6 +524,7 @@ $fontColorAlt: #F5723C;
                                 path {
                                     stroke: $fontColorAlt;
                                     fill: $fontColorAlt;
+                                    -webkit-transition: all 0.5s ease;
                                     transition: all 0.5s ease;
                                 }
                             }
@@ -503,6 +540,7 @@ $fontColorAlt: #F5723C;
                     height: 100%;
 
                     @media (max-width: 768px) {
+                        display: -webkit-box;
                         display: flex;
                     }
 
@@ -540,8 +578,10 @@ $fontColorAlt: #F5723C;
                     }
 
                     .service__link {
+                        display: -webkit-box;
                         display: flex;
-                        align-items: center;
+                        -webkit-box-align: center;
+                                align-items: center;
 
                         span {
                             @include fontGilroyBold();
@@ -549,6 +589,7 @@ $fontColorAlt: #F5723C;
                             line-height: 39px;
                             color: #ffffff;
                             position: relative;
+                            -webkit-transition: all 0.5s ease;
                             transition: all 0.5s ease;
 
                             @media (max-width: 768px) {
@@ -575,17 +616,20 @@ $fontColorAlt: #F5723C;
                         }
 
                         svg {
-                            transform: rotate(-90deg);
+                            -webkit-transform: rotate(-90deg);
+                                    transform: rotate(-90deg);
 
                             margin-left: 35px;
 
                             @media (max-width: 576px) {
-                                transform: scale(0.9) rotate(-90deg);
+                                -webkit-transform: scale(0.9) rotate(-90deg);
+                                        transform: scale(0.9) rotate(-90deg);
                             }
 
                             path {
                                 stroke: #ffffff;
                                 fill: #ffffff;
+                                -webkit-transition: all 0.5s ease;
                                 transition: all 0.5s ease;
                             }
                         }
@@ -776,9 +820,13 @@ $fontColorAlt: #F5723C;
                 height: 350px;
                 background-color: #fefefe;
 
+                display: -webkit-box;
+
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                -webkit-box-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                        align-items: center;
 
                 @media (max-width: 992px) {
                     width: 280px;
@@ -790,7 +838,8 @@ $fontColorAlt: #F5723C;
                 }
 
                 img {
-                    transform: rotate(180deg);
+                    -webkit-transform: rotate(180deg);
+                            transform: rotate(180deg);
 
                     @media (max-width: 992px) {
                         width: 196px;
@@ -844,8 +893,10 @@ $fontColorAlt: #F5723C;
         }
 
         .projects {
+            display: -webkit-box;
             display: flex;
-            justify-content: space-between;
+            -webkit-box-pack: justify;
+                    justify-content: space-between;
 
             @media (max-width: 992px) {
                 flex-wrap: wrap;
@@ -939,7 +990,8 @@ $fontColorAlt: #F5723C;
                         position: absolute;
                         top: 50%;
                         left: 28px;
-                        transform: translateY(-50%);
+                        -webkit-transform: translateY(-50%);
+                                transform: translateY(-50%);
 
                         width: 35px;
                         height: 35px;
@@ -956,7 +1008,8 @@ $fontColorAlt: #F5723C;
                         position: absolute;
                         top: 50%;
                         left: 28px;
-                        transform: translateY(-50%);
+                        -webkit-transform: translateY(-50%);
+                                transform: translateY(-50%);
 
                         width: 35px;
                         height: 35px;

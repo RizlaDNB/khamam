@@ -8,7 +8,7 @@ $fontColorAlt: #F5723C;
     position: fixed;
     left: 0;
     top: 0;
-
+    
     width: 0%;
     height: 100%;
 
@@ -20,6 +20,8 @@ $fontColorAlt: #F5723C;
     padding-top: 70px;
 
     color: #ffffff;
+
+    -webkit-transition: all 0.3s ease;
 
     transition: all 0.3s ease;
 

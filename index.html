@@ -18,15 +18,19 @@
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 <body>
+
+    <!-- CURSOR -->
+    <div class="custom-cursor"></div>
     
     <!-- PRELOADER -->
-    <div class="preloader-wrapper">
+    <!-- <div class="preloader-wrapper">
 
         <div class="preloader">
             <img src="img/preloader/vitruvian.png" alt="Natura Techno">
@@ -34,12 +38,15 @@
 
         <div class="preloader__deco-square"></div>
         <div class="preloader__progress-bar" id="preloaderProgressBar"></div>
-    </div>
+    </div> -->
 
     <div class="scroll-indicator">
         <div class="scroll-indicator__progress" id="progressBar"></div>
     </div>
 
+
+
+    <!-- NAVIGATION -->
     <nav class="nav">
         <button class="nav-button"></button>
 
@@ -146,11 +153,6 @@
     <section class="presentation" id="presentation">
 
         <div class="presentation-content">
-            <div class="presentation-content__slide-name wow fadeInRight">
-
-                <div class="slide-progress"></div>
-
-            </div>
 
             <div class="presentation-content__pattern">
                 <img src="img/pattern-slider.svg" alt="">
@@ -164,6 +166,61 @@
 
                 <div class="slide__image">
                     <img src="img/sauna.png" alt="">
+                </div>
+
+                <div class="slide__number">
+                    <h1>01</h1>
+                    <span></span>
+                    <p>5</p>
+                </div>
+
+                <div class="slide__name">
+                    <div class="slide-progress"></div>
+
+                    <span>Хамам в частном доме</span><br>
+                    <span>2019 | Москва</span>
+                </div>
+
+            </div>
+
+            <div class="slide">
+
+                <div class="slide__image">
+                    <img src="img/hamam.png" alt="">
+                </div>
+
+                <div class="slide__number">
+                    <h1>02</h1>
+                    <span></span>
+                    <p>5</p>
+                </div>
+
+                <div class="slide__name">
+                    <div class="slide-progress"></div>
+
+                    <span>Хамам в частном доме</span><br>
+                    <span>2020 | Санкт-Петербург</span>
+                </div>
+
+            </div>
+
+            <div class="slide">
+
+                <div class="slide__image">
+                    <img src="img/sauna.png" alt="">
+                </div>
+
+                <div class="slide__number">
+                    <h1>03</h1>
+                    <span></span>
+                    <p>5</p>
+                </div>
+
+                <div class="slide__name">
+                    <div class="slide-progress"></div>
+
+                    <span>Хамам в частном доме</span><br>
+                    <span>2021 | Калининград</span>
                 </div>
 
             </div>
@@ -317,8 +374,8 @@
 
                 <div class="projects">
 
-                    <div class="projects__header wow fadeInLeft">
-                        <h1>Подключаемся<br>к проекту <span>на<br>любом этапе</span></h1>
+                    <div class="projects__header">
+                        <h1 class="wow fadeInLeft">Подключаемся<br>к проекту <span>на<br>любом этапе</span></h1>
                     </div>
 
                     <div class="projects__content wow fadeInRight">
@@ -1069,15 +1126,82 @@
     </div>
 
 
+
+    <div class="modal-consult">
+        <div class="modal-consult-underlay"></div>
+
+        <div class="modal-consult-form">
+
+            <button class="modal-consult-form-close">Закрыть
+                <span></span>
+            </button>
+
+            <form class="form">
+
+                <div class="form-group fadeInRight">
+                    <input type="text" placeholder="Иван Ивановский" id="modal-customer">
+                    <span class="form-group__highlight">01</span>
+                    <span class="form-group__underline"></span>
+                    <label for="modal-customer">Ваше имя</label>
+                </div>
+
+                <div class="form-group fadeInRight">
+                    <input type="email" placeholder="Login@dom" id="modal-email">
+                    <span class="form-group__highlight">02</span>
+                    <span class="form-group__underline"></span>
+                    <label for="modal-email">Ваше e-mail</label>
+                </div>
+
+                <div class="form-group fadeInRight">
+                    <input type="text" placeholder="Задайте свой вопрос" id="modal-question">
+                    <span class="form-group__highlight">03</span>
+                    <span class="form-group__underline"></span>
+                    <label for="modal-question">Ваш вопрос</label>
+                </div>
+
+                <div class="form-group fadeInRight">
+                    <input type="text" placeholder="Прикрепите поэтажный план или проект здания" id="modal-attach">
+                    <span class="form-group__highlight">04</span>
+                    <span class="form-group__underline"></span>
+                    <label for="modal-attach">Прикрепить файл</label>
+                </div>
+
+                <button class="form__button fadeInUp">
+
+                    <span>Получить консультацию</span>
+                    <svg width="96" height="116" viewBox="0 0 96 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M93.7063 68.8104L94.4158 68.1025L93.7063 67.3946L85.4296 59.1367L84.7233 58.432L84.017 59.1367L54.8523 88.235V2V1H53.8523H42.1477H41.1477V2V88.235L11.983 59.1367L11.2767 58.432L10.5704 59.1367L2.2937 67.3946L1.58417 68.1025L2.2937 68.8104L47.2937 113.708L48 114.413L48.7063 113.708L93.7063 68.8104Z"/>
+                    </svg>
+
+                </button>
+
+                <div class="form-group from-group--confidential fadeInLeft">
+                    <label for="modal-confidential">  
+                        <input type="checkbox" id="modal-confidential" class="visually-hidden">
+                        <span class="form-group__checkbox-indicator"></span>
+                        Нажимая кнопку "Получить консультацию"<br>я принимаю <span>условия политики<br>конфиденциальности.</span>
+                    </label>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
     <script src="js/preloader.js"></script>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/scroll.min.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="js/scroll-progress-bar.js"></script>
     <script src="js/navbar-waypoints.js"></script>
     <script src="js/header-link-hover.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/burger-menu.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/slider.js"></script>
     <script src="js/wow.min.js"></script>
 
     <script>
