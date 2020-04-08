@@ -183,18 +183,6 @@ $fontColorAlt: #F5723C;
 
             padding-left: 40px;
 
-            @media (max-width: 1550px) {
-                right: 368px;
-            }
-
-            @media (max-width: 1200px) {
-                right: 0;
-
-                margin-top: 0;
-                margin-bottom: 80px;
-                margin-left: 40px;
-            }
-
             label {
                 @include fontGilroyRegular();
                 font-size: 17px;
@@ -202,15 +190,6 @@ $fontColorAlt: #F5723C;
                 color: $fontColorMain;
 
                 position: relative;
-
-                @media (max-width: 1200px) {
-                    color: #ffffff;
-                }
-
-                @media (max-width: 576px) {
-                    font-size: 16px;
-                    line-height: 19px;
-                }
 
                 span {
                     text-decoration: underline;
@@ -232,10 +211,6 @@ $fontColorAlt: #F5723C;
                     color: $fontColorMain;
                     -webkit-transition: all 0.5s ease;
                     transition: all 0.5s ease;
-
-                    @media (max-width: 1200px) {
-                        color: #ffffff;
-                    }
                 }
             }
 
@@ -248,11 +223,6 @@ $fontColorAlt: #F5723C;
                 width: 20px;
                 height: 20px;
                 background-color: #202020;
-
-                @media (max-width: 1200px) {
-                    background-color: #202020;
-                    border: 1px solid #ffffff;
-                }
 
                 &::before {
                     content: '';
@@ -290,28 +260,6 @@ $fontColorAlt: #F5723C;
                     justify-content: center;
             -webkit-box-align: center;
                     align-items: center;
-
-            @media (max-width: 1550px) {
-                left: 15px;
-            }
-
-            @media (max-width: 1200px) {
-                position: relative;
-
-                left: 0;
-                bottom: 0;
-
-                margin-bottom: 40px;
-
-                min-width: 100%;
-            }
-
-            @media (max-width: 576px) {
-                min-height: 150px;
-
-                padding-left: 10px;
-                padding-right: 10px;
-            }
 
             &:hover {
                 span {
@@ -450,63 +398,28 @@ $fontColorAlt: #F5723C;
     .modal-consult-underlay {
         opacity: 0.4;
 
-        -webkit-transition: all 0.5s linear;
+        -webkit-transition: all 0.3s linear;
 
-        transition: all 0.5s linear;
+        transition: all 0.3s linear;
     }
 
     .modal-consult-form {
         right: 0;
 
-        -webkit-transition: all 0.5s ease;
+        -webkit-transition: all 0.3s ease;
 
-        transition: all 0.5s ease;
+        transition: all 0.3s ease;
         -webkit-transition-delay: 0.5s;
                 transition-delay: 0.5s;
 
         .modal-consult-form-close {
             top: 0;
 
-            -webkit-transition: all 0.5s ease;
+            -webkit-transition: all 0.3s ease;
 
-            transition: all 0.5s ease;
-            -webkit-transition-delay: 1.5s;
-                    transition-delay: 1.5s;
-
-            span {
-                -webkit-animation-name: buttonRotate;
-                        animation-name: buttonRotate;
-                -webkit-animation-duration: 1s;
-                        animation-duration: 1s;
-                -webkit-animation-delay: 2.5s;
-                        animation-delay: 2.5s;
-                -webkit-animation-timing-function: ease;
-                        animation-timing-function: ease;
-            }
+            transition: all 0.3s ease;
+            -webkit-transition-delay: 1.3s;
+                    transition-delay: 1.3s;
         }
-    }
-}
-
-
-@-webkit-keyframes buttonRotate {
-    from {
-        -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-                transform: translate(-50%, -50%) rotate(-45deg);
-    }
-    to {
-        -webkit-transform: translate(-50%, -50%) rotate(315deg);
-                transform: translate(-50%, -50%) rotate(315deg);
-    }
-}
-
-
-@keyframes buttonRotate {
-    from {
-        -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-                transform: translate(-50%, -50%) rotate(-45deg);
-    }
-    to {
-        -webkit-transform: translate(-50%, -50%) rotate(315deg);
-                transform: translate(-50%, -50%) rotate(315deg);
     }
 }

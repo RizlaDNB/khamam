@@ -34,11 +34,11 @@ $fontColorAlt: #F5723C;
 body {
     position: relative;
 
-    padding-left: 200px;
+    padding-left: 180px;
 
     overflow-x: hidden;
 
-    cursor: none;
+    cursor: auto; // убрать
 
     @media (max-width: 1200px) {
         padding-left: 140px;
@@ -58,7 +58,7 @@ body {
 }
 
 a, button, label {
-    cursor: none;
+    cursor: auto; // убрать
 }
 
 
@@ -88,7 +88,7 @@ input[type="radio"].visually-hidden {
     top: 0;
     z-index: 4;
     
-    width: 200px;
+    width: 180px;
     height: 100%;
     background-color: #ffffff;
     box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.05);
@@ -113,7 +113,7 @@ input[type="radio"].visually-hidden {
         display: block;
 
         margin-bottom: 60px;
-        margin-left: 75px;
+        margin-left: 65px;
 
         position: relative;
 
@@ -124,6 +124,10 @@ input[type="radio"].visually-hidden {
 
         border: none;
         background-color: transparent;
+
+        &:focus {
+            outline: none;
+        }
 
         @media (max-width: 1200px) {
             margin-left: 45px;
@@ -162,7 +166,7 @@ input[type="radio"].visually-hidden {
             position: absolute;
             z-index: 2;
             top: 300px;
-            left: 46px;
+            left: 36px;
 
             opacity: 0;
 
@@ -214,7 +218,7 @@ input[type="radio"].visually-hidden {
 
         margin: 0;
         margin-top: 50px;
-        margin-left: 75px;
+        margin-left: 65px;
         padding: 0;
         padding-left: 0;
 
@@ -253,9 +257,9 @@ input[type="radio"].visually-hidden {
                 -webkit-box-align: center;
                         align-items: center;
 
-                -webkit-transition: all 0.5s ease;
+                -webkit-transition: all 0.3s ease;
 
-                transition: all 0.5s ease;
+                transition: all 0.3s ease;
 
                 &::before {
                     content: '';
@@ -271,9 +275,9 @@ input[type="radio"].visually-hidden {
                     height: 50px;
                     background-color: transparent;
     
-                    -webkit-transition: all 0.5s ease;
+                    -webkit-transition: all 0.3s ease;
     
-                    transition: all 0.5s ease;
+                    transition: all 0.3s ease;
                 }
     
                 &::after {

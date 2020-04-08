@@ -99,6 +99,10 @@ $fontColorAlt: #F5723C;
 
     cursor: none;
 
+    &:focus {
+        outline: none;
+    }
+
     @media (max-width: 768px) {
         display: none;
     }
@@ -120,6 +124,10 @@ $fontColorAlt: #F5723C;
     background-color: transparent;
 
     cursor: none;
+
+    &:focus {
+        outline: none;
+    }
 
     @media (max-width: 768px) {
         display: none;
@@ -199,23 +207,17 @@ $fontColorAlt: #F5723C;
     &__name {
         position: absolute;
 
-        width: 300px;
-        height: 90px;
-
-        position: absolute;
-
         bottom: 72px;
         left: 180px;
 
         background-color: #fefefe;
 
-        padding-top: 25px;
+        padding-top: 20px;
         padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 20px;
 
         @media (max-width: 1550px) {
-            width: 250px;
-            height: 71px;
-
             bottom: 92px;
         }
 
@@ -226,9 +228,6 @@ $fontColorAlt: #F5723C;
         @media (max-width: 768px) {
             left: 0;
             bottom: 0;
-
-            width: 300px;
-            height: 91px;
         }
 
         span {

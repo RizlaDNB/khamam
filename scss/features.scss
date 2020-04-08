@@ -129,6 +129,14 @@ $fontColorAlt: #F5723C;
         
                 border: 2px solid #F5723C;
 
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.03);
+
+                    transition: all 0.3s ease;
+                }
+
                 @media (max-width: 1550px) {
                     left: 195px;
                     top: 50px;
@@ -168,6 +176,14 @@ $fontColorAlt: #F5723C;
         
                 color: #ffffff;
 
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.03);
+
+                    transition: all 0.3s ease;
+                }
+
                 @media (max-width: 1550px) {
                     left: 95px;
                     top: 291px;
@@ -206,6 +222,14 @@ $fontColorAlt: #F5723C;
         
                 background-color: #ffffff;
                 box-shadow: 20px 10px 65px rgba(0, 0, 0, 0.1);
+
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.03);
+
+                    transition: all 0.3s ease;
+                }
 
                 @media (max-width: 1550px) {
                     left: -45px;
@@ -441,6 +465,9 @@ $fontColorAlt: #F5723C;
                 position: relative;
                 top: 60px;
                 left: -165px;
+                
+
+                -webkit-transition: all 0.3s ease;
                 
 
                 transition: all 0.3s ease;

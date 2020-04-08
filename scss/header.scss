@@ -30,10 +30,10 @@ $fontColorAlt: #F5723C;
     &-top {
         display: -webkit-box;
         display: flex;
-        -webkit-box-pack: center;
-                justify-content: center;
+        -webkit-box-pack: start;
+                justify-content: flex-start;
 
-        margin-bottom: 180px;
+        margin-bottom: 330px;
 
         @media (max-width: 1200px) {
             -webkit-box-pack: start;
@@ -43,8 +43,8 @@ $fontColorAlt: #F5723C;
         }
 
         @media (max-width: 992px) {
-            -webkit-box-pack: center;
-                    justify-content: center;
+            -webkit-box-pack: start;
+                    justify-content: flex-start;
         }
 
         @media (max-width: 768px) {
@@ -152,7 +152,7 @@ $fontColorAlt: #F5723C;
             }
 
             img {
-                width: 100%;
+                width: 370px;
 
                 @media (max-width: 992px) {
                     width: 90%;
@@ -226,14 +226,14 @@ $fontColorAlt: #F5723C;
     }
 
     &-middle {
-        margin-bottom: 175px;
+        margin-bottom: 70px;
 
         @media (max-width: 1550px) {
-            margin-bottom: 100px;
+            margin-bottom: 70px;
         }
 
         @media (max-width: 768px) {
-            margin-bottom: 60px;
+            margin-bottom: 70px;
         }
         
         h1 {
@@ -343,6 +343,8 @@ $fontColorAlt: #F5723C;
 
 .hover-link--zindex {
     z-index: 8;
+
+    transition: all 0.5s ease;
 }
 
 
@@ -552,11 +554,13 @@ $fontColorAlt: #F5723C;
 
 
 .hover__body--pleft {
-    padding-left: 0;
+    // padding-left: 0;
+
+    // transition: all 0.2s ease;
 }
 
 .header--pleft {
-    padding-left: 200px;
+    // padding-left: 180px;
 
     @media (max-width: 1200px) {
         padding-left: 140px;

@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     var cursor = document.querySelector(".custom-cursor");
-    var links = document.querySelectorAll("a");
-    var buttons = document.querySelectorAll("button");
+    var links = document.querySelectorAll(".trigger");
     var initCursor = false;
   
     for (var i = 0; i < links.length; i++) {
@@ -11,17 +10,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         cursor.classList.add("custom-cursor--link");
       });
       selfLink.addEventListener("mouseout", function() {
-        cursor.classList.remove("custom-cursor--link");
-      });
-    }
-
-    for (var i = 0; i < buttons.length; i++) {
-      var selfButton = buttons[i];
-  
-      selfButton.addEventListener("mouseover", function() {
-        cursor.classList.add("custom-cursor--link");
-      });
-      selfButton.addEventListener("mouseout", function() {
         cursor.classList.remove("custom-cursor--link");
       });
     }
