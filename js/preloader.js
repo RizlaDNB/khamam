@@ -1,8 +1,10 @@
 var images = document.images,
     imagesTotalCount = images.length,
     imagesLoadedCount = 0,
+    body = document.querySelector('body'),
     percentProgress = document.getElementById('load-percentage'),
-    preLoader = document.querySelector('.preloader-wrapper');
+    preloader = document.querySelector('.preloader-wrapper'),
+    preloaderAfter = document.querySelector('.preloader__after');
 
 
 
@@ -21,9 +23,18 @@ var images = document.images,
         
         if (imagesLoadedCount >= imagesTotalCount) {
             setTimeout(function() {
-                if (!preLoader.classList.contains('loading-done')) {
-                    preLoader.classList.add('loading-done');
-                }
-            }, 1500);
+                preloaderAfter.style.top = 0 + "%";
+            }, 500);
         }
+
+        setTimeout(function() {
+            if (preloaderAfter.style.top = 0 + "%") {
+                if (!preloader.classList.contains('loading-done')) {
+                    preloader.classList.add('loading-done');
+                }
+
+                body.classList.remove('body--lock');
+                preloaderAfter.style.top = -100 + "%";
+            }
+        }, 2500);
     }

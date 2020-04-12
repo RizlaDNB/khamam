@@ -105,6 +105,10 @@ $fontColorAlt: #F5723C;
 
             position: relative;
 
+            background-color: transparent;
+
+            transition: all 0.3s ease;
+
             @media (max-width: 1200px) {
                 padding-right: 45px;
             }
@@ -132,17 +136,21 @@ $fontColorAlt: #F5723C;
 
                         transform: rotate(-45deg);
 
+                transition: all 0.3s ease;
+
                 @media (max-width: 576px) {
                     display: none;
                 }
             }
 
-            img {
-                display: block;
+            svg {
+
+                path {
+                    transition: all 0.3s ease;
+                }
 
                 @media (max-width: 576px) {
-                    width: 60px;
-                    height: 70px;
+                    transform: scale(0.8);
                 }
             }
 
@@ -153,6 +161,8 @@ $fontColorAlt: #F5723C;
                 font-size: 24px;
                 line-height: 39px;
 
+                transition: all 0.3s ease;
+
                 @media (max-width: 576px) {
                     font-size: 20px;
                     line-height: 24px;
@@ -162,8 +172,11 @@ $fontColorAlt: #F5723C;
             p {
                 margin: 0;
                 @include fontGilroyMedium();
+                
                 font-size: 17px;
                 line-height: 22px;
+
+                transition: all 0.3s ease;
             }
 
             &:nth-child(4) {
@@ -173,24 +186,40 @@ $fontColorAlt: #F5723C;
                     margin-bottom: -50px;
                 }
             }
-        }
 
-        .project-card--white {
-            background-color: #ffffff;
+            &:hover {
+                background-color: #ffffff;
 
-            &::before {
-                top: 75px;
-                right: 0;
-                width: 155px;
-                background-color: $fontColorAlt;
-            }
+                transition: all 0.3s ease;
 
-            h2 {
-                color: $fontColorMain;
-            }
+                &::before {
+                    top: 75px;
+                    right: 0;
+                    width: 155px;
+                    background-color: $fontColorAlt;
 
-            p {
-                color: $fontColorMain;
+                    transition: all 0.3s ease;
+                }
+
+                h2 {
+                    color: $fontColorMain;
+
+                    transition: all 0.3s ease;
+                }
+
+                p {
+                    color: $fontColorMain;
+
+                    transition: all 0.3s ease;
+                }
+
+                svg {
+                    path {
+                        fill: #F5723C;
+
+                        transition: all 0.3s ease;
+                    }
+                }
             }
         }
 

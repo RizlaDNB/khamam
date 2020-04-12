@@ -20,9 +20,7 @@ var navBtn = document.querySelector('.nav-button'),
         }
 
         if (!navList.classList.contains('nav-list--active')) {
-            navListDelay = setTimeout(function(){
-                navList.classList.add('nav-list--active');
-            }, 500);
+            navList.classList.add('nav-list--active');
         }
         else {
             navList.classList.remove('nav-list--active');

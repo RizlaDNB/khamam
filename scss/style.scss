@@ -38,7 +38,7 @@ body {
 
     overflow-x: hidden;
 
-    cursor: auto; // убрать
+    cursor: none;
 
     @media (max-width: 1200px) {
         padding-left: 140px;
@@ -58,7 +58,7 @@ body {
 }
 
 a, button, label {
-    cursor: auto; // убрать
+    cursor: none;
 }
 
 
@@ -155,9 +155,21 @@ input[type="radio"].visually-hidden {
         &::after {
             bottom: 15px;
 
+            width: 50px;
+
             -webkit-transition: all 0.5s ease;
 
             transition: all 0.5s ease;
+        }
+
+        &:hover {
+            &::before {
+                width: 50px;
+            }
+
+            &::after {
+                width: 70px;
+            }
         }
 
         &-caption {
@@ -292,22 +304,24 @@ input[type="radio"].visually-hidden {
     
                     width: 50px;
                     height: 50px;
-                    border: 1px solid $fontColorAlt;
+                    border: 2px solid $fontColorAlt;
     
                     opacity: 0;
     
-                    -webkit-transition: all 0.1s ease;
+                    -webkit-transition: all 0.5s ease;
     
-                    transition: all 0.1s ease;
+                    transition: all 0.5s ease;
                 }
 
                 &:hover {
                     &::after {
                         opacity: 1;
     
-                        -webkit-transition: all 0.1s ease;
+                        -webkit-transition: all 0.5s ease;
     
-                        transition: all 0.1s ease;
+                        transition: all 0.5s ease;
+
+                        transform: translate(-50%, -50%) rotate(90deg);
                     }
                 }
                 
@@ -321,40 +335,12 @@ input[type="radio"].visually-hidden {
                     color: $fontColorMain;
                 }
             }
-
-            .nav-text {
-                position: absolute;
-                top: 50%;
-                left: 200px;
-
-                -webkit-transform: translateY(-50%);
-
-                        transform: translateY(-50%);
-
-                @include fontGilroyMedium();
-                font-size: 65px;
-                color: #ffffff;
-
-                pointer-events: none;
-
-                opacity: 0;
-
-                -webkit-transition: all 0.1s ease;
-
-                transition: all 0.1s ease;
-
-                white-space: nowrap;
-
-                @media (max-width: 992px) {
-                    font-size: 50px;
-                }
-            }
         }
 
         .selected-nav-item {
             a {
                 &::before {
-                    background-color: $fontColorAlt;
+                    border: 2px solid $fontColorAlt;
             
                     -webkit-transition: all 0.5s ease;
             
@@ -362,11 +348,25 @@ input[type="radio"].visually-hidden {
                 }
         
                 span {
-                    color: #ffffff;
+                    color: $fontColorMain;
             
                     -webkit-transition: all 0.5s ease;
             
                     transition: all 0.5s ease;
+                }
+
+                &:hover {
+                    &::before {
+                        transform: translate(-50%, -50%) rotate(90deg);
+
+                        background-color: $fontColorAlt;
+                        transition: all 0.5s ease;
+                    }
+
+                    span {
+                        color: #ffffff;
+                        transition: all 0.5s ease;
+                    }
                 }
             }
 
@@ -384,6 +384,68 @@ input[type="radio"].visually-hidden {
                     background-color: #F5723C;
                 }
             }            
+        }
+    }
+
+    &-text {
+        position: absolute;
+        z-index: -1;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        opacity: 0;
+
+        -webkit-transition: all 0.1s ease;
+
+            transition: all 0.1s ease;
+
+        a {
+            position: relative;
+            @include fontGilroyMedium();
+            font-size: 100px;
+            line-height: 78px;
+            color: #ffffff;
+
+            pointer-events: none;
+
+            text-decoration: none;
+            text-transform: uppercase;
+
+            transition: all 0.3s ease;
+
+            @media (max-width: 992px) {
+                font-size: 70px;
+                line-height: 50px;
+            }
+
+            &:hover {
+                color: #F5723C;
+            }
+
+            &:nth-child(1) {
+                left: 0;
+            }
+            &:nth-child(3) {
+                left: 260px;
+            }
+            &:nth-child(5) {
+                left: -90px;
+            }
+            &:nth-child(7) {
+                left: 140px;
+            }
+            &:nth-child(9) {
+                left: -180px;
+            }
+            &:nth-child(11) {
+                left: 100px;
+            }
+            &:nth-child(13) {
+                left: 200px;
+            }
         }
     }
 
@@ -463,6 +525,8 @@ input[type="radio"].visually-hidden {
 .nav--open {
     width: 100%;
 
+    z-index: 10;
+
     background-color: #000000;
 
     -webkit-transition: all 0.3s ease;
@@ -480,6 +544,8 @@ input[type="radio"].visually-hidden {
             -webkit-transition: all 0.5s ease;
 
             transition: all 0.5s ease;
+
+            width: 70px;
         }
 
         &::after {
@@ -492,6 +558,8 @@ input[type="radio"].visually-hidden {
             -webkit-transition: all 0.5s ease;
 
             transition: all 0.5s ease;
+
+            width: 70px;
         }
     }
 
@@ -544,6 +612,24 @@ input[type="radio"].visually-hidden {
             }
         }
     }
+
+    .nav-text {
+        z-index: 1;
+
+        opacity: 1;
+
+        -webkit-transition: all 0.5s ease;
+    
+                transition: all 0.5s ease;
+
+        transition-delay: 1s;
+
+        a {
+            pointer-events: all;
+
+            transition: all 0.3s ease;
+        }
+    }
 }
 
 
@@ -560,82 +646,16 @@ input[type="radio"].visually-hidden {
 }
 
 .nav-list--active {
-    padding-left: 400px;
-
-    -webkit-transition: all 0.5s ease;
-
-    transition: all 0.5s ease;
-
-    @media (max-width: 1200px) {
-        padding-left: 200px;
-    }
-
-    @media (max-width: 992px) {
-        padding-left: 100px;
-    }
 
     li {
-        margin-bottom: 40px;
-
         -webkit-transition: all 0.3s ease;
 
         transition: all 0.3s ease;
         -webkit-transition-delay: 0.3s;
                 transition-delay: 0.3s;
 
-        .nav-text {
-            opacity: 1;
+        opacity: 0;
 
-            left: 100px;
-
-            pointer-events: all;
-
-            -webkit-transition: all 0.5s ease;
-
-            transition: all 0.5s ease;
-        }
-
-        &:nth-child(1) {
-            .nav-text {
-                -webkit-transition-delay: 0.5s;
-                        transition-delay: 0.5s;
-            }
-        }
-        &:nth-child(2) {
-            .nav-text {
-                -webkit-transition-delay: 0.6s;
-                        transition-delay: 0.6s;
-            }
-        }
-        &:nth-child(3) {
-            .nav-text {
-                -webkit-transition-delay: 0.7s;
-                        transition-delay: 0.7s;
-            }
-        }
-        &:nth-child(4) {
-            .nav-text {
-                -webkit-transition-delay: 0.8s;
-                        transition-delay: 0.8s;
-            }
-        }
-        &:nth-child(5) {
-            .nav-text {
-                -webkit-transition-delay: 0.9s;
-                        transition-delay: 0.9s;
-            }
-        }
-        &:nth-child(6) {
-            .nav-text {
-                -webkit-transition-delay: 1s;
-                        transition-delay: 1s;
-            }
-        }
-        &:nth-child(7) {
-            .nav-text {
-                -webkit-transition-delay: 1.1s;
-                        transition-delay: 1.1s;
-            }
-        }
+        pointer-events: none;
     }
 }

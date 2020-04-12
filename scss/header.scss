@@ -240,6 +240,7 @@ $fontColorAlt: #F5723C;
             margin: 0;
 
             position: relative;
+            z-index: 7;
 
             @include fontGilroyMedium();
             font-size: 48px;
@@ -344,6 +345,12 @@ $fontColorAlt: #F5723C;
 .hover-link--zindex {
     z-index: 8;
 
+    transition: all 0.5s ease;
+}
+
+.hover-link--textcolor {
+    color: $fontColorMain !important;
+    text-decoration: none !important;
     transition: all 0.5s ease;
 }
 
@@ -549,26 +556,6 @@ $fontColorAlt: #F5723C;
     -webkit-transition: all 0.5s ease;
 
     transition: all 0.5s ease;
-}
-
-
-
-.hover__body--pleft {
-    // padding-left: 0;
-
-    // transition: all 0.2s ease;
-}
-
-.header--pleft {
-    // padding-left: 180px;
-
-    @media (max-width: 1200px) {
-        padding-left: 140px;
-    }
-
-    @media (max-width: 768px) {
-        padding-left: 0px;
-    }
 }
 
 
