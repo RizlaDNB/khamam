@@ -944,6 +944,8 @@ $fontColorAlt: #F5723C;
                     line-height: 60px;
                     color: $fontColorMain;
 
+                    transition: all 0.5s ease;
+
                     @media (max-width: 1200px) {
                         font-size: 52px;
                     }
@@ -1055,4 +1057,19 @@ $fontColorAlt: #F5723C;
             }
         } 
     }
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixheader--color {
+    color: #ffffff !important;
+
+    transition: all 0.5s ease;
 }

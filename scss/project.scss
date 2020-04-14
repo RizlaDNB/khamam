@@ -40,6 +40,10 @@ $fontColorAlt: #F5723C;
         margin-top: 50px;
         margin-right: 10px;
 
+        opacity: 0;
+
+        pointer-events: none;
+
         @media (max-width: 992px) {
             display: none;
         }
@@ -227,6 +231,8 @@ $fontColorAlt: #F5723C;
             position: relative;
             bottom: -135px;
             left: 0;
+
+            z-index: 3;
 
             max-width: 560px;
             min-height: 270px;

@@ -20,6 +20,13 @@ var images = document.images,
 
         percentProgress = (( (100 / imagesTotalCount) * imagesLoadedCount ) <<0);
         document.getElementById('preloaderProgressBar').style.width = percentProgress + "%";
+        document.getElementById('preloaderInnerProgressBarLeft').style.width = (percentProgress / 2) + "%";
+        document.getElementById('preloaderInnerProgressBarRight').style.width = (percentProgress / 2) + "%";
+
+        if (percentProgress >= 95) {
+            document.querySelector('.preloader__deco-square').classList.add('loading-done__deco');
+            document.querySelector('.preloader').classList.add('loading-done__deco');
+        }
         
         if (imagesLoadedCount >= imagesTotalCount) {
             setTimeout(function() {

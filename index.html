@@ -40,6 +40,8 @@
 
         <div class="preloader__deco-square"></div>
         <div class="preloader__progress-bar" id="preloaderProgressBar"></div>
+        <div class="preloader__innerProgressBarLeft" id="preloaderInnerProgressBarLeft"></div>
+        <div class="preloader__innerProgressBarRight" id="preloaderInnerProgressBarRight"></div>
         
     </div>
     <div class="preloader__after"></div>
@@ -375,7 +377,7 @@
                 <div class="projects">
 
                     <div class="projects__header">
-                        <h1 class="wow fadeInLeft">Подключаемся<br>к проекту <span>на<br>любом этапе</span></h1>
+                        <h1 class="fix-header absolute wow fadeInLeft">Подключаемся<br>к проекту <span>на<br>любом этапе</span></h1>
                     </div>
 
                     <div class="projects__content wow fadeInRight slow">
@@ -395,7 +397,7 @@
 
 
     <!-- PROJECT -->
-    <section class="project">
+    <section class="project fixtrack">
 
         <div class="container">
 
@@ -1274,7 +1276,8 @@
     </div>
 
 
-    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="js/jquery-1.12.4.min.js"></script> -->
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
     <script src="js/slick.min.js"></script>
@@ -1290,6 +1293,7 @@
     <script src="js/burger-menu.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/cursor.js"></script>
+    <script src="js/project-title-fix.js"></script>
 
     <script>
         new WOW().init();

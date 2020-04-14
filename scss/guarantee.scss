@@ -13,6 +13,9 @@ $fontColorAlt: #F5723C;
     padding-right: 200px;
     padding-top: 180px;
 
+    position: relative;
+    z-index: 2;
+
     @media (max-width: 1550px) {
         padding-right: 0px;
     }
