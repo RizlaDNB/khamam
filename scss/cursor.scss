@@ -13,6 +13,10 @@
   z-index: 10001;
   transform: scale(1) translate(-50%, -50%);
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   &.active {
       opacity: 0.5;
       transform: scale(0);
@@ -36,6 +40,10 @@
   pointer-events: none;
   z-index: 10000;
   transform: translate(-3px, -3px);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   &.active {
       opacity: 0.8;
@@ -71,6 +79,10 @@
   pointer-events: none;
   z-index: 10001;
   transform: scale(1) translate(-50%, -50%);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   &::before {
     content: "";

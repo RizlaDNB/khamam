@@ -6,6 +6,7 @@ $fontColorAlt: #F5723C;
 
 .burger-menu {
     position: fixed;
+    z-index: 7;
     left: 0;
     top: 0;
     
@@ -30,8 +31,7 @@ $fontColorAlt: #F5723C;
     &-list {
         list-style: none;
 
-        &__item {
-        }
+        &__item {}
     }
 
     &-text {

@@ -2,7 +2,8 @@ var navBtn = document.querySelector('.nav-button'),
     navbar = document.querySelector('.nav'),
     navPhoneBtn = document.querySelector('.nav-phone'),
     scrollIndicator = document.querySelector('.scroll-indicator'),
-    navList = document.querySelector('.nav-list');
+    navList = document.querySelector('.nav-list'),
+    navLink = document.querySelectorAll('.nav-text__link');
 
 
     navBtn.addEventListener('click', function(){
@@ -28,3 +29,11 @@ var navBtn = document.querySelector('.nav-button'),
 
 
     });
+
+    for (i = 0; i < navLink.length; i++) {
+        navLink[i].addEventListener('click', function(){
+            navList.classList.remove('nav-list--active');
+            navbar.classList.remove('nav--open');
+            navPhoneBtn.classList.remove('nav-phone--active');
+        });
+    };

@@ -63,6 +63,25 @@ $fontColorAlt: #F5723C;
 
         transition: all 0.5s ease;
 
+        @media (max-width: 992px) {
+            width: 748px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            padding-top: 20px;
+            padding-left: auto;
+            padding-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-top: 50px;
+        }
+
         .form-group {
             display: -webkit-box;
             display: flex;
@@ -93,6 +112,11 @@ $fontColorAlt: #F5723C;
                 position: absolute;
                 top: 0;
                 left: 0;
+
+                @media (max-width: 992px) {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
             }
 
             input {
@@ -107,6 +131,11 @@ $fontColorAlt: #F5723C;
                 transition: all 0.5s ease;
 
                 border: none;
+
+                @media (max-width: 992px) {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
 
                 &:focus {
                     color: $fontColorAlt;
@@ -171,6 +200,11 @@ $fontColorAlt: #F5723C;
                 -webkit-transition: all 0.5s ease;
 
                 transition: all 0.5s ease;
+
+                @media (max-width: 992px) {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
             }
 
             
@@ -183,6 +217,10 @@ $fontColorAlt: #F5723C;
 
             padding-left: 40px;
 
+            @media (max-width: 992px) {
+                margin-top: 20px;
+            }
+
             label {
                 @include fontGilroyRegular();
                 font-size: 17px;
@@ -190,6 +228,11 @@ $fontColorAlt: #F5723C;
                 color: $fontColorMain;
 
                 position: relative;
+
+                @media (max-width: 992px) {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
 
                 span {
                     text-decoration: underline;
@@ -261,6 +304,10 @@ $fontColorAlt: #F5723C;
             -webkit-box-align: center;
                     align-items: center;
 
+            @media (max-width: 992px) {
+                height: 100px;
+            }
+
             &:hover {
                 span {
                     margin-right: 20px;
@@ -284,6 +331,11 @@ $fontColorAlt: #F5723C;
                 -webkit-transition: all 0.5s ease;
 
                 transition: all 0.5s ease;
+
+                @media (max-width: 992px) {
+                    font-size: 18px;
+                    line-height: 20px;
+                }
 
                 @media (max-width: 576px) {
                     text-decoration: underline;
@@ -337,6 +389,16 @@ $fontColorAlt: #F5723C;
 
             transition: all 0.5s ease;
 
+            @media (max-width: 992px) {
+                top: 15px;
+                left: 15px;
+
+                width: 50px;
+                height: 50px;
+
+                background-color: transparent;
+            }
+
             span {
                 display: block;
 
@@ -350,6 +412,11 @@ $fontColorAlt: #F5723C;
 
                 width: 50px;
                 height: 50px;
+
+                @media (max-width: 992px) {
+                    width: 25px;
+                    height: 25px;
+                }
 
                 &::before {
                     content: '';
@@ -366,6 +433,10 @@ $fontColorAlt: #F5723C;
                     height: 2px;
 
                     background-color: #ffffff;
+
+                    @media (max-width: 992px) {
+                        background-color: #101010;
+                    }
                 }
 
                 &::after {
@@ -383,6 +454,10 @@ $fontColorAlt: #F5723C;
                     height: 100%;
 
                     background-color: #ffffff;
+
+                    @media (max-width: 992px) {
+                        background-color: #101010;
+                    }
                 }
             }
         }
