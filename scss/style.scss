@@ -389,7 +389,7 @@ input[type="radio"].visually-hidden {
 
     &-text {
         position: absolute;
-        z-index: -1;
+        z-index: 1;
 
         top: 50%;
         left: 50%;
@@ -398,11 +398,11 @@ input[type="radio"].visually-hidden {
 
         opacity: 0;
 
-        -webkit-transition: all 0.1s ease;
+        -webkit-transition: all 0.01s ease;
 
-            transition: all 0.1s ease;
+            transition: all 0.01s ease;
 
-        a {
+        &__link {
             position: relative;
             @include fontGilroyMedium();
             font-size: 100px;
@@ -422,29 +422,45 @@ input[type="radio"].visually-hidden {
             }
 
             &:hover {
-                color: #F5723C;
+                svg {
+                    text {
+                        fill: transparent;
+                        stroke: #F5723C;
+                        transition: all 0.3s ease;
+                    }
+                }
+            }
+
+            svg {
+                font: 100px 'Gilroy Bold';
+                width: 540px;
+                height: 80px;
+
+                text {
+                    fill: white;
+                    stroke: white;
+                    stroke-width: 2px;
+                    transition: all 0.3s ease;
+                }
             }
 
             &:nth-child(1) {
-                left: 0;
+                left: 40px;
+            }
+            &:nth-child(2) {
+                left: 240px;
             }
             &:nth-child(3) {
-                left: 260px;
+                left: -50px;
+            }
+            &:nth-child(4) {
+                left: 320px;
             }
             &:nth-child(5) {
-                left: -90px;
+                left: 120px;
             }
-            &:nth-child(7) {
-                left: 140px;
-            }
-            &:nth-child(9) {
-                left: -180px;
-            }
-            &:nth-child(11) {
-                left: 100px;
-            }
-            &:nth-child(13) {
-                left: 200px;
+            &:nth-child(6) {
+                left: 160px;
             }
         }
     }
@@ -582,16 +598,6 @@ input[type="radio"].visually-hidden {
             top: 175px;
         }
     }
-    
-    .nav-list__item {
-        padding-left: 0px;
-
-        a {
-            span {
-                color: #6C7072;
-            }
-        }
-    }
 
     .nav-background {
         opacity: 1;
@@ -601,33 +607,23 @@ input[type="radio"].visually-hidden {
         transition: all 1s ease;
     }
 
-    .selected-nav-item {
-        a {
-            span {
-                color: #ffffff;
-        
-                -webkit-transition: all 0.5s ease;
-        
-                transition: all 0.5s ease;
-            }
-        }
+    .nav-list {
+        opacity: 0;
+
+        transition: all 0.01s ease;
     }
 
     .nav-text {
-        z-index: 1;
-
         opacity: 1;
 
-        -webkit-transition: all 0.5s ease;
+        -webkit-transition: all 1s ease;
     
-                transition: all 0.5s ease;
+                transition: all 1s ease;
 
         transition-delay: 1s;
 
         a {
             pointer-events: all;
-
-            transition: all 0.3s ease;
         }
     }
 }

@@ -3501,14 +3501,14 @@ input[type="radio"].visually-hidden {
       background-color: #F5723C; }
   .nav-text {
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    -webkit-transition: all 0.1s ease;
-    transition: all 0.1s ease; }
-    .nav-text a {
+    -webkit-transition: all 0.01s ease;
+    transition: all 0.01s ease; }
+    .nav-text__link {
       position: relative;
       font-family: 'Gilroy Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: 100px;
@@ -3519,25 +3519,34 @@ input[type="radio"].visually-hidden {
       text-transform: uppercase;
       transition: all 0.3s ease; }
       @media (max-width: 992px) {
-        .nav-text a {
+        .nav-text__link {
           font-size: 70px;
           line-height: 50px; } }
-      .nav-text a:hover {
-        color: #F5723C; }
-      .nav-text a:nth-child(1) {
-        left: 0; }
-      .nav-text a:nth-child(3) {
-        left: 260px; }
-      .nav-text a:nth-child(5) {
-        left: -90px; }
-      .nav-text a:nth-child(7) {
-        left: 140px; }
-      .nav-text a:nth-child(9) {
-        left: -180px; }
-      .nav-text a:nth-child(11) {
-        left: 100px; }
-      .nav-text a:nth-child(13) {
-        left: 200px; }
+      .nav-text__link:hover svg text {
+        fill: transparent;
+        stroke: #F5723C;
+        transition: all 0.3s ease; }
+      .nav-text__link svg {
+        font: 100px 'Gilroy Bold';
+        width: 540px;
+        height: 80px; }
+        .nav-text__link svg text {
+          fill: white;
+          stroke: white;
+          stroke-width: 2px;
+          transition: all 0.3s ease; }
+      .nav-text__link:nth-child(1) {
+        left: 40px; }
+      .nav-text__link:nth-child(2) {
+        left: 240px; }
+      .nav-text__link:nth-child(3) {
+        left: -50px; }
+      .nav-text__link:nth-child(4) {
+        left: 320px; }
+      .nav-text__link:nth-child(5) {
+        left: 120px; }
+      .nav-text__link:nth-child(6) {
+        left: 160px; }
   .nav-background {
     position: absolute;
     z-index: 0;
@@ -3617,27 +3626,20 @@ input[type="radio"].visually-hidden {
     @media (max-width: 1200px) {
       .nav--open .nav-button-caption {
         top: 175px; } }
-  .nav--open .nav-list__item {
-    padding-left: 0px; }
-    .nav--open .nav-list__item a span {
-      color: #6C7072; }
   .nav--open .nav-background {
     opacity: 1;
     -webkit-transition: all 1s ease;
     transition: all 1s ease; }
-  .nav--open .selected-nav-item a span {
-    color: #ffffff;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease; }
+  .nav--open .nav-list {
+    opacity: 0;
+    transition: all 0.01s ease; }
   .nav--open .nav-text {
-    z-index: 1;
     opacity: 1;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
     transition-delay: 1s; }
     .nav--open .nav-text a {
-      pointer-events: all;
-      transition: all 0.3s ease; }
+      pointer-events: all; }
 
 .nav-phone--active {
   opacity: 1;
