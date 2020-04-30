@@ -32,16 +32,17 @@ var images = document.images,
             setTimeout(function() {
                 preloaderAfter.style.top = 0 + "%";
             }, 500);
+
+            setTimeout(function() {
+                preloaderAfter.style.top = -100 + "%";
+            }, 2500);
         }
 
         setTimeout(function() {
-            if (preloaderAfter.style.top = 0 + "%") {
-                if (!preloader.classList.contains('loading-done')) {
-                    preloader.classList.add('loading-done');
-                }
-
-                body.classList.remove('body--lock');
-                preloaderAfter.style.top = -100 + "%";
+            if (!preloader.classList.contains('loading-done')) {
+                preloader.classList.add('loading-done');
             }
+
+            body.classList.remove('body--lock');
         }, 2500);
     }
